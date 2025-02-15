@@ -26,8 +26,7 @@ public class Game {
     public void runGame() {
         InputHandler inputHandler = new InputHandler(answer);
         printGreetingMessage();
-        for (int i = 0; i < attemptsLeft; i++){
-            try {
+        for (int i = 0; i < attemptsLeft; i++) {
                 String inputString = inputHandler.readString();
                 if (answer.equals(inputString)){
                     gameState = false;
@@ -37,9 +36,6 @@ public class Game {
                     currentPlayer.countBullsCows(answer);
                     GiveHint(currentPlayer);
                 }
-            } catch (IOException e){
-                System.err.println("Input error" + e.getMessage());
-            }
         }
         finishGame();
     }
