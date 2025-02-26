@@ -1,6 +1,8 @@
-public class PopCommand implements Command{
-    private String variable;
-    private double value;
+package commands;
+
+import environment.ExecutionContext;
+
+public class PopCommand implements Command {
     @Override
     public void execute(ExecutionContext context, String[] args) {
         if (context.getStack().isEmpty()) {

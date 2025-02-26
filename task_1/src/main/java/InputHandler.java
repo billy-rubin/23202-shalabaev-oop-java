@@ -16,10 +16,10 @@ public class InputHandler {
             String line;
             while ((line = reader.readLine()) != null) {
                 line = line.trim();
-                if (line.isEmpty() || line.startsWith("#")) {
+                if (line.isEmpty()) {
                     continue;
                 }
-                commands.add(line); // Добавляем команду в список
+                commands.add(line);
             }
         } catch (IOException e) {
             throw new RuntimeException("Error while reading input", e);

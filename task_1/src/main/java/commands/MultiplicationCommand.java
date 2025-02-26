@@ -1,4 +1,8 @@
-public class MultiplicationCommand implements Command{
+package commands;
+
+import environment.ExecutionContext;
+
+public class MultiplicationCommand implements Command {
     @Override
     public void execute(ExecutionContext context, String[] args) {
         double var2 = context.getStack().pop();

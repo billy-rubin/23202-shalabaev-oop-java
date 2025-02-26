@@ -1,3 +1,7 @@
+package commands;
+
+import environment.ExecutionContext;
+
 public class DefineCommand implements Command {
     @Override
     public void execute(ExecutionContext context, String[] args){
@@ -9,8 +13,8 @@ public class DefineCommand implements Command {
                 throw new IllegalArgumentException("Name of the variable can't be a number!");
             }
             value = Double.parseDouble(args[1]);
-        } catch (Exception e){
-            throw e;
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException(e.getMessage());
         }
         context.getVariables().put(variable, value);
     }
