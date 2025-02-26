@@ -1,0 +1,516 @@
+2025-02-26 18:48:19 INFO  Calculator - Calculator successfully initialized
+2025-02-26 18:48:19 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 18:48:19 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 18:48:19 INFO  Calculator - Command received: PUSH a 
+2025-02-26 18:48:19 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 18:48:19 INFO  Calculator - Command received: SQRT 
+2025-02-26 18:48:19 INFO  Calculator - Command executed: SQRT 
+2025-02-26 18:48:19 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 18:48:19 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 18:48:19 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 18:48:19 INFO  Calculator - Command received: PRINT 
+2025-02-26 18:48:19 INFO  Calculator - Command executed: PRINT 
+2025-02-26 18:50:40 INFO  Calculator - Calculator successfully initialized
+2025-02-26 18:50:40 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 18:50:40 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 18:50:40 INFO  Calculator - Command received: PUSH a 
+2025-02-26 18:50:40 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 18:50:40 INFO  Calculator - Command received: SQRT 
+2025-02-26 18:50:40 INFO  Calculator - Command executed: SQRT 
+2025-02-26 18:50:40 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 18:50:40 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 18:50:40 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 18:50:40 INFO  Calculator - Command received: PRINT 
+2025-02-26 18:50:40 INFO  Calculator - Command executed: PRINT 
+2025-02-26 18:51:17 INFO  Calculator - Calculator successfully initialized
+2025-02-26 18:51:17 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 18:51:17 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 18:51:17 INFO  Calculator - Command received: PUSH a 
+2025-02-26 18:51:17 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 18:51:17 INFO  Calculator - Command received: SQRT 
+2025-02-26 18:51:17 INFO  Calculator - Command executed: SQRT 
+2025-02-26 18:51:17 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 18:51:17 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 18:51:17 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 18:51:17 INFO  Calculator - Command received: PRINT 
+2025-02-26 18:51:17 INFO  Calculator - Command executed: PRINT 
+2025-02-26 18:52:14 INFO  Calculator - Calculator successfully initialized
+2025-02-26 18:52:14 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 18:52:14 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 18:52:14 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 18:52:14 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 18:52:14 INFO  Calculator - Command received: PUSH a 
+2025-02-26 18:52:14 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 18:52:14 INFO  Calculator - Command received: ADD a b 
+2025-02-26 18:52:14 ERROR Calculator - Error while executing command: ADD
+java.util.EmptyStackException: null
+	at java.base/java.util.Stack.peek(Stack.java:103)
+	at java.base/java.util.Stack.pop(Stack.java:85)
+	at commands.AddCommand.execute(AddCommand.java:10)
+	at Calculator.run(Calculator.java:36)
+	at Main.main(Main.java:9)
+2025-02-26 18:52:14 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 18:52:14 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 18:52:14 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 18:52:14 INFO  Calculator - Command received: PRINT 
+2025-02-26 18:52:14 ERROR Calculator - Error while executing command: PRINT
+java.util.EmptyStackException: null
+	at java.base/java.util.Stack.peek(Stack.java:103)
+	at commands.PrintCommand.execute(PrintCommand.java:8)
+	at Calculator.run(Calculator.java:36)
+	at Main.main(Main.java:9)
+2025-02-26 18:52:27 INFO  Calculator - Calculator successfully initialized
+2025-02-26 18:52:27 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 18:52:27 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 18:52:27 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 18:52:27 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 18:52:27 INFO  Calculator - Command received: PUSH a 
+2025-02-26 18:52:27 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 18:52:27 INFO  Calculator - Command received: ADD a 5 
+2025-02-26 18:52:27 ERROR Calculator - Error while executing command: ADD
+java.util.EmptyStackException: null
+	at java.base/java.util.Stack.peek(Stack.java:103)
+	at java.base/java.util.Stack.pop(Stack.java:85)
+	at commands.AddCommand.execute(AddCommand.java:10)
+	at Calculator.run(Calculator.java:36)
+	at Main.main(Main.java:9)
+2025-02-26 18:52:27 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 18:52:27 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 18:52:27 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 18:52:27 INFO  Calculator - Command received: PRINT 
+2025-02-26 18:52:27 ERROR Calculator - Error while executing command: PRINT
+java.util.EmptyStackException: null
+	at java.base/java.util.Stack.peek(Stack.java:103)
+	at commands.PrintCommand.execute(PrintCommand.java:8)
+	at Calculator.run(Calculator.java:36)
+	at Main.main(Main.java:9)
+2025-02-26 18:53:48 INFO  Calculator - Calculator successfully initialized
+2025-02-26 18:53:48 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 18:53:48 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 18:53:48 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 18:53:48 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 18:53:48 INFO  Calculator - Command received: PUSH a 
+2025-02-26 18:53:48 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 18:53:48 INFO  Calculator - Command received: PUSH b 
+2025-02-26 18:53:48 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 18:53:48 INFO  Calculator - Command received: ADD 
+2025-02-26 18:53:48 ERROR Calculator - Error while executing command: ADD
+java.lang.IllegalArgumentException: Calc is performing illegal calculations
+
+	at commands.AddCommand.execute(AddCommand.java:16)
+	at Calculator.run(Calculator.java:36)
+	at Main.main(Main.java:9)
+2025-02-26 18:53:48 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 18:53:48 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 18:53:48 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 18:53:48 INFO  Calculator - Command received: PRINT 
+2025-02-26 18:53:48 INFO  Calculator - Command executed: PRINT 
+2025-02-26 18:54:15 INFO  Calculator - Calculator successfully initialized
+2025-02-26 18:54:15 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 18:54:15 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 18:54:15 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 18:54:15 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 18:54:15 INFO  Calculator - Command received: PUSH a 
+2025-02-26 18:54:15 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 18:54:15 INFO  Calculator - Command received: PUSH b 
+2025-02-26 18:54:15 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 18:54:15 INFO  Calculator - Command received: POP a 
+2025-02-26 18:54:15 INFO  Calculator - Command executed: POP a 
+2025-02-26 18:54:15 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 18:54:15 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 18:54:15 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 18:54:15 INFO  Calculator - Command received: PRINT 
+2025-02-26 18:54:15 INFO  Calculator - Command executed: PRINT 
+2025-02-26 18:54:27 INFO  Calculator - Calculator successfully initialized
+2025-02-26 18:54:27 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 18:54:27 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 18:54:27 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 18:54:27 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 18:54:27 INFO  Calculator - Command received: PUSH a 
+2025-02-26 18:54:27 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 18:54:27 INFO  Calculator - Command received: PUSH b 
+2025-02-26 18:54:27 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 18:54:27 INFO  Calculator - Command received: POP 
+2025-02-26 18:54:27 INFO  Calculator - Command executed: POP 
+2025-02-26 18:54:27 INFO  Calculator - Command received: POP 
+2025-02-26 18:54:27 INFO  Calculator - Command executed: POP 
+2025-02-26 18:54:27 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 18:54:27 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 18:54:27 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 18:54:27 INFO  Calculator - Command received: PRINT 
+2025-02-26 18:54:27 ERROR Calculator - Error while executing command: PRINT
+java.util.EmptyStackException: null
+	at java.base/java.util.Stack.peek(Stack.java:103)
+	at commands.PrintCommand.execute(PrintCommand.java:8)
+	at Calculator.run(Calculator.java:36)
+	at Main.main(Main.java:9)
+2025-02-26 19:18:40 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:18:40 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:18:40 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:18:40 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:18:40 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:18:40 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:18:40 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:18:40 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:18:40 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 19:18:40 INFO  Calculator - Command received: POP 
+2025-02-26 19:18:40 INFO  Calculator - Command executed: POP 
+2025-02-26 19:18:40 INFO  Calculator - Command received: POP 
+2025-02-26 19:18:40 INFO  Calculator - Command executed: POP 
+2025-02-26 19:18:40 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:18:40 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:18:40 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:18:40 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:18:40 ERROR Calculator - Error while executing command: PRINT
+java.util.EmptyStackException: null
+	at java.base/java.util.Stack.peek(Stack.java:103)
+	at commands.PrintCommand.execute(PrintCommand.java:8)
+	at Calculator.run(Calculator.java:36)
+	at Main.main(Main.java:9)
+2025-02-26 19:18:57 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:18:57 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:18:57 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:18:57 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:18:57 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:18:57 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:18:57 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:18:57 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:18:57 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 19:18:57 INFO  Calculator - Command received: POP 
+2025-02-26 19:18:57 INFO  Calculator - Command executed: POP 
+2025-02-26 19:18:57 INFO  Calculator - Command received: POP 
+2025-02-26 19:18:57 INFO  Calculator - Command executed: POP 
+2025-02-26 19:18:57 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:18:57 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:18:57 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:18:57 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:18:57 ERROR Calculator - Error while executing command: PRINT
+java.util.EmptyStackException: null
+	at java.base/java.util.Stack.peek(Stack.java:103)
+	at commands.PrintCommand.execute(PrintCommand.java:8)
+	at Calculator.run(Calculator.java:36)
+	at Main.main(Main.java:9)
+2025-02-26 19:19:04 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:19:04 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:19:04 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:19:04 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:19:04 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:19:04 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:19:04 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:19:04 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:19:04 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 19:19:04 INFO  Calculator - Command received: POP 
+2025-02-26 19:19:04 INFO  Calculator - Command executed: POP 
+2025-02-26 19:19:04 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:19:04 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:19:04 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:19:04 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:19:04 INFO  Calculator - Command executed: PRINT 
+2025-02-26 19:19:13 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:19:13 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:19:13 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:19:13 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:19:13 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:19:13 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:19:13 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:19:13 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:19:13 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:19:13 INFO  Calculator - Command received: POP 
+2025-02-26 19:19:13 INFO  Calculator - Command executed: POP 
+2025-02-26 19:19:13 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:19:13 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:19:13 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:19:13 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:19:13 INFO  Calculator - Command executed: PRINT 
+2025-02-26 19:19:18 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:19:18 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:19:18 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:19:18 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:19:18 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:19:18 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:19:18 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:19:18 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:19:18 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 19:19:18 INFO  Calculator - Command received: POP 
+2025-02-26 19:19:18 INFO  Calculator - Command executed: POP 
+2025-02-26 19:19:18 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:19:18 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:19:18 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:19:18 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:19:18 INFO  Calculator - Command executed: PRINT 
+2025-02-26 19:19:26 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:19:26 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:19:26 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:19:26 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:19:26 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:19:26 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:19:26 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:19:26 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:19:26 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 19:19:26 INFO  Calculator - Command received: ADD 
+2025-02-26 19:19:26 ERROR Calculator - Error while executing command: ADD
+java.lang.IllegalArgumentException: Calc is performing illegal calculations
+
+	at commands.AddCommand.execute(AddCommand.java:16)
+	at Calculator.run(Calculator.java:36)
+	at Main.main(Main.java:9)
+2025-02-26 19:19:26 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:19:26 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:19:26 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:19:26 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:19:26 INFO  Calculator - Command executed: PRINT 
+2025-02-26 19:19:34 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:19:34 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:19:34 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:19:34 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:19:34 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:19:34 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:19:34 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:19:34 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:19:34 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 19:19:34 INFO  Calculator - Command received: MUL 
+2025-02-26 19:19:34 INFO  Calculator - Command executed: MUL 
+2025-02-26 19:19:34 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:19:34 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:19:34 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:19:34 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:19:34 INFO  Calculator - Command executed: PRINT 
+2025-02-26 19:19:41 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:19:41 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:19:41 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:19:41 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:19:41 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:19:41 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:19:41 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:19:41 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:19:41 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 19:19:41 INFO  Calculator - Command received: SUB 
+2025-02-26 19:19:41 ERROR Calculator - Error while executing command: SUB
+java.lang.RuntimeException: SubtractCommand
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:35)
+	at Main.main(Main.java:9)
+2025-02-26 19:19:41 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:19:41 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:19:41 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:19:41 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:19:41 INFO  Calculator - Command executed: PRINT 
+2025-02-26 19:19:49 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:19:49 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:19:49 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:19:49 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:19:49 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:19:49 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:19:49 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:19:49 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:19:49 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 19:19:49 INFO  Calculator - Command received: DIV 
+2025-02-26 19:19:49 INFO  Calculator - Command executed: DIV 
+2025-02-26 19:19:49 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:19:49 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:19:49 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:19:49 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:19:49 INFO  Calculator - Command executed: PRINT 
+2025-02-26 19:20:22 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:20:22 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:20:22 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:20:22 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:20:22 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:20:22 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:20:22 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:20:22 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:20:22 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 19:20:22 INFO  Calculator - Command received: ADD 
+2025-02-26 19:20:22 INFO  Calculator - Command executed: ADD 
+2025-02-26 19:20:22 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:20:22 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:20:22 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:20:22 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:20:22 INFO  Calculator - Command executed: PRINT 
+2025-02-26 19:20:29 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:20:29 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:20:29 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:20:29 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:20:29 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:20:29 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:20:29 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:20:29 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:20:29 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 19:20:29 INFO  Calculator - Command received: SUB 
+2025-02-26 19:20:29 ERROR Calculator - Error while executing command: SUB
+java.lang.RuntimeException: SubtractCommand
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:35)
+	at Main.main(Main.java:9)
+2025-02-26 19:20:29 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:20:29 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:20:29 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:20:29 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:20:29 INFO  Calculator - Command executed: PRINT 
+2025-02-26 19:21:34 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:21:34 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:21:34 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:21:34 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:21:34 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:21:34 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:21:34 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:21:34 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:21:34 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 19:21:34 INFO  Calculator - Command received: SUB 
+2025-02-26 19:21:34 ERROR Calculator - Error while executing command: SUB
+java.lang.RuntimeException: SubtractCommand
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:35)
+	at Main.main(Main.java:9)
+2025-02-26 19:21:34 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:21:34 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:21:34 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:21:34 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:21:34 INFO  Calculator - Command executed: PRINT 
+2025-02-26 19:21:57 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:21:57 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:21:57 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:21:57 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:21:57 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:21:57 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:21:57 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:21:57 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:21:57 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 19:21:57 INFO  Calculator - Command received: SUB 
+2025-02-26 19:21:57 ERROR Calculator - Error while executing command: SUB
+java.lang.IllegalArgumentException: Calc is performing illegal calculations
+
+	at commands.SubtractCommand.execute(SubtractCommand.java:15)
+	at Calculator.run(Calculator.java:36)
+	at Main.main(Main.java:9)
+2025-02-26 19:21:57 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:21:57 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:21:57 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:21:57 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:21:57 INFO  Calculator - Command executed: PRINT 
+2025-02-26 19:22:44 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:22:44 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:22:44 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:22:44 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:22:44 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:22:44 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:22:44 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:22:44 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:22:44 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 19:22:44 INFO  Calculator - Command received: SUB 
+2025-02-26 19:22:44 INFO  Calculator - Command executed: SUB 
+2025-02-26 19:22:44 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:22:44 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:22:44 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:22:44 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:22:44 INFO  Calculator - Command executed: PRINT 
+2025-02-26 19:25:23 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:25:23 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:25:23 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:25:23 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:25:23 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:25:23 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:25:23 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:25:23 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:25:23 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 19:25:23 INFO  Calculator - Command received: SUB 
+2025-02-26 19:25:23 INFO  Calculator - Command executed: SUB 
+2025-02-26 19:25:23 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:25:23 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:25:23 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:25:23 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:25:23 INFO  Calculator - Command executed: PRINT 
+2025-02-26 19:25:46 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:25:46 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:25:46 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:25:46 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:25:46 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:25:46 INFO  Calculator - Command received: DEFINE b 5 
+2025-02-26 19:25:46 INFO  Calculator - Command executed: DEFINE b 5 
+2025-02-26 19:25:46 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:25:46 INFO  Calculator - Command executed: PUSH b 
+2025-02-26 19:25:46 INFO  Calculator - Command received: SUB 
+2025-02-26 19:25:46 INFO  Calculator - Command executed: SUB 
+2025-02-26 19:25:46 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:25:46 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:25:46 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:25:46 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:25:46 INFO  Calculator - Command executed: PRINT 
+2025-02-26 19:26:05 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:26:05 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:26:05 INFO  Calculator - Command executed: DEFINE a 4 
+2025-02-26 19:26:05 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:26:05 INFO  Calculator - Command executed: PUSH a 
+2025-02-26 19:26:05 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:26:05 ERROR Calculator - Error while executing command: PUSH
+java.util.NoSuchElementException: Unknown variable: b
+	at commands.PushCommand.execute(PushCommand.java:15)
+	at Calculator.run(Calculator.java:36)
+	at Main.main(Main.java:9)
+2025-02-26 19:26:05 INFO  Calculator - Command received: SUB 
+2025-02-26 19:26:05 ERROR Calculator - Error while executing command: SUB
+java.util.EmptyStackException: null
+	at java.base/java.util.Stack.peek(Stack.java:103)
+	at java.base/java.util.Stack.pop(Stack.java:85)
+	at commands.SubtractCommand.execute(SubtractCommand.java:9)
+	at Calculator.run(Calculator.java:36)
+	at Main.main(Main.java:9)
+2025-02-26 19:26:05 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:26:05 INFO  commands.Command - Comment line received bebebbebbbububu 
+2025-02-26 19:26:05 INFO  Calculator - Command executed: // bebebbebbbububu 
+2025-02-26 19:26:05 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:26:05 ERROR Calculator - Error while executing command: PRINT
+java.util.EmptyStackException: null
+	at java.base/java.util.Stack.peek(Stack.java:103)
+	at commands.PrintCommand.execute(PrintCommand.java:8)
+	at Calculator.run(Calculator.java:36)
+	at Main.main(Main.java:9)
+2025-02-26 19:33:43 ERROR Calculator - Error while initializing calculator, program is terminated 
+java.lang.RuntimeException: Invalid configuration, inStream parameter is null
+	at CommandFactory.readConfigFile(CommandFactory.java:21)
+	at CommandFactory.<init>(CommandFactory.java:13)
+	at Calculator.<init>(Calculator.java:18)
+	at Main.main(Main.java:6)
+2025-02-26 19:33:43 INFO  Calculator - Calculator successfully initialized
+2025-02-26 19:33:43 INFO  Calculator - Command received: DEFINE a 4 
+2025-02-26 19:33:43 ERROR Calculator - Error while executing command: DEFINE
+java.lang.NullPointerException: Cannot invoke "CommandFactory.createCommand(String)" because "this.factory" is null
+	at Calculator.run(Calculator.java:40)
+	at Main.main(Main.java:9)
+2025-02-26 19:33:43 INFO  Calculator - Command received: PUSH a 
+2025-02-26 19:33:43 ERROR Calculator - Error while executing command: PUSH
+java.lang.NullPointerException: Cannot invoke "CommandFactory.createCommand(String)" because "this.factory" is null
+	at Calculator.run(Calculator.java:40)
+	at Main.main(Main.java:9)
+2025-02-26 19:33:43 INFO  Calculator - Command received: PUSH b 
+2025-02-26 19:33:43 ERROR Calculator - Error while executing command: PUSH
+java.lang.NullPointerException: Cannot invoke "CommandFactory.createCommand(String)" because "this.factory" is null
+	at Calculator.run(Calculator.java:40)
+	at Main.main(Main.java:9)
+2025-02-26 19:33:43 INFO  Calculator - Command received: SUB 
+2025-02-26 19:33:43 ERROR Calculator - Error while executing command: SUB
+java.lang.NullPointerException: Cannot invoke "CommandFactory.createCommand(String)" because "this.factory" is null
+	at Calculator.run(Calculator.java:40)
+	at Main.main(Main.java:9)
+2025-02-26 19:33:43 INFO  Calculator - Command received: // bebebbebbbububu 
+2025-02-26 19:33:43 ERROR Calculator - Error while executing command: //
+java.lang.NullPointerException: Cannot invoke "CommandFactory.createCommand(String)" because "this.factory" is null
+	at Calculator.run(Calculator.java:40)
+	at Main.main(Main.java:9)
+2025-02-26 19:33:43 INFO  Calculator - Command received: PRINT 
+2025-02-26 19:33:43 ERROR Calculator - Error while executing command: PRINT
+java.lang.NullPointerException: Cannot invoke "CommandFactory.createCommand(String)" because "this.factory" is null
+	at Calculator.run(Calculator.java:40)
+	at Main.main(Main.java:9)
+2025-02-26 19:34:30 ERROR Calculator - Error while initializing calculator, program is terminated 
+java.lang.RuntimeException: Invalid configuration, inStream parameter is null
+	at CommandFactory.readConfigFile(CommandFactory.java:21)
+	at CommandFactory.<init>(CommandFactory.java:13)
+	at Calculator.<init>(Calculator.java:18)
+	at Main.main(Main.java:6)
+2025-02-26 19:34:52 ERROR Calculator - Error while initializing calculator, program is terminated 
+java.lang.RuntimeException: Invalid configuration, inStream parameter is null
+	at CommandFactory.readConfigFile(CommandFactory.java:21)
+	at CommandFactory.<init>(CommandFactory.java:13)
+	at Calculator.<init>(Calculator.java:18)
+	at Main.main(Main.java:6)
