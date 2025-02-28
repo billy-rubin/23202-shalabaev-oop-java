@@ -15,7 +15,7 @@ public class CommandFactory {
 
     public void readConfigFile(){
         try {
-            InputStream input = CommandFactory.class.getResourceAsStream("/commands.properties");
+            InputStream input = CommandFactory.class.getResourceAsStream("/command.properties");
             properties.load(input);
         } catch (NullPointerException e){
             throw new RuntimeException("Invalid configuration, " + e.getMessage());

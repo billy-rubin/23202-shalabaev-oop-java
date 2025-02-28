@@ -3,13 +3,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class InputHandler {
     public List<String> readFromFile(String[] args) {
         List<String> commands = new ArrayList<>();
-
         try (BufferedReader reader = args.length > 0
                 ? new BufferedReader(new FileReader(args[0]))
                 : new BufferedReader(new InputStreamReader(System.in))) {
@@ -24,7 +22,6 @@ public class InputHandler {
         } catch (IOException e) {
             throw new RuntimeException("Error while reading input", e);
         }
-
         return commands;
     }
 }

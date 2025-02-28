@@ -12,6 +12,7 @@ public class DivisionCommand implements Command {
         if (res > Double.MAX_VALUE || res < Double.MIN_VALUE || res == Double.POSITIVE_INFINITY || res == Double.NEGATIVE_INFINITY) {
             context.getStack().push(var1);
             context.getStack().push(var2);
+            System.out.println("Division by zero is forbidden");
             throw new IllegalArgumentException("Calc is performing illegal calculations\n");
         }
 

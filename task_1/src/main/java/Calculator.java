@@ -20,7 +20,6 @@ public class Calculator {
             logger.error("Error while initializing calculator, program is terminated ", e);
             System.exit(1);
         }
-
     }
 
     public void run(List<String> commands) {
@@ -35,26 +34,18 @@ public class Calculator {
                 commandArgs[i - 1] = parts[i];
             }
 
-            logger.info("Command received: {} {}", commandName, toString(commandArgs));
+            logger.info("Command received: {} {}", commandName, commandArgs);
 
             try {
                 Command command = factory.createCommand(commandName);
                 command.execute(context, commandArgs);
-                logger.info("Command executed: {} {}", commandName, toString(commandArgs));
+                logger.info("Command executed: {} {}", commandName, commandArgs);
             } catch (Exception e) {
                 logger.error("Error while executing command: {}", commandName, e);
-                System.exit(1);
             }
         }
     }
-
-
-    private String toString(String[] args) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < args.length; i++) {
-            sb.append(args[i]);
-            sb.append(" ");
-        }
-        return sb.toString();
+    public ExecutionContext getContext() {
+        return context;
     }
 }

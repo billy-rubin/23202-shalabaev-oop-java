@@ -1,6 +1,4 @@
 DEFINE a 4
 PUSH a
-PUSH b
-SUB
-// bebebbebbbububu
+SQRT
 PRINT

@@ -1,8 +1,6 @@
 <configuration>
-    <!-- Имя файла для логов -->
     <property name="LOG_FILE" value="logs/application.log" />
 
-    <!-- Аппендер для записи в файл -->
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
         <file>${LOG_FILE}</file>
         <encoder>
@@ -10,7 +8,6 @@
         </encoder>
     </appender>
 
-    <!-- Настройка корневого логгера -->
     <root level="info">
         <appender-ref ref="FILE" />
     </root>
