@@ -298,3 +298,302 @@ java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
 2025-03-03 08:09:39 INFO  Calculator - Command executed: SQRT []
 2025-03-03 08:09:39 INFO  Calculator - Command received: PRINT []
 2025-03-03 08:09:39 INFO  Calculator - Command executed: PRINT []
+2025-03-03 09:31:45 INFO  Calculator - Calculator successfully initialized
+2025-03-03 09:31:45 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 09:31:45 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 09:31:45 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 09:31:45 INFO  Calculator - Command executed: PUSH [a]
+2025-03-03 09:31:45 INFO  Calculator - Command received: SQRT []
+2025-03-03 09:31:45 INFO  Calculator - Command executed: SQRT []
+2025-03-03 09:31:45 INFO  Calculator - Command received: PRINT []
+2025-03-03 09:31:45 INFO  Calculator - Command executed: PRINT []
+2025-03-03 09:31:45 INFO  Calculator - Command received: EXIT []
+2025-03-03 09:31:45 ERROR Calculator - Error while executing command: EXIT
+java.lang.RuntimeException: commands/ExitCommand;
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:40)
+	at Main.main(Main.java:7)
+2025-03-03 09:31:45 INFO  Calculator - Command received: // [bebenabrwanbeaerae]
+2025-03-03 09:31:45 INFO  commands.Command - Comment line received bebenabrwanbeaerae 
+2025-03-03 09:31:45 INFO  Calculator - Command executed: // [bebenabrwanbeaerae]
+2025-03-03 09:37:24 INFO  Calculator - Calculator successfully initialized
+2025-03-03 09:37:24 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 09:37:24 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 09:37:24 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 09:37:24 INFO  Calculator - Command executed: PUSH [a]
+2025-03-03 09:37:24 INFO  Calculator - Command received: SQRT []
+2025-03-03 09:37:24 INFO  Calculator - Command executed: SQRT []
+2025-03-03 09:37:24 INFO  Calculator - Command received: PRINT []
+2025-03-03 09:37:24 INFO  Calculator - Command executed: PRINT []
+2025-03-03 09:37:24 INFO  Calculator - Command received: EXIT []
+2025-03-03 09:37:24 ERROR Calculator - Error while executing command: EXIT
+java.lang.RuntimeException: commands/ExitCommand;
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:41)
+	at Main.main(Main.java:7)
+2025-03-03 09:37:24 INFO  Calculator - Command received: // [bebenabrwanbeaerae]
+2025-03-03 09:37:24 INFO  commands.Command - Comment line received bebenabrwanbeaerae 
+2025-03-03 09:37:24 INFO  Calculator - Command executed: // [bebenabrwanbeaerae]
+2025-03-03 09:37:44 INFO  Calculator - Calculator successfully initialized
+2025-03-03 09:37:44 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 09:37:44 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 09:37:44 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 09:37:44 ERROR Calculator - Error while executing command: PUSH
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at Calculator.run(Calculator.java:40)
+	at Main.main(Main.java:7)
+2025-03-03 09:37:44 INFO  Calculator - Command received: SQRT []
+2025-03-03 09:37:44 ERROR Calculator - Error while executing command: SQRT
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 0
+	at Calculator.run(Calculator.java:40)
+	at Main.main(Main.java:7)
+2025-03-03 09:37:44 INFO  Calculator - Command received: PRINT []
+2025-03-03 09:37:44 ERROR Calculator - Error while executing command: PRINT
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 0
+	at Calculator.run(Calculator.java:40)
+	at Main.main(Main.java:7)
+2025-03-03 09:37:44 INFO  Calculator - Command received: EXIT []
+2025-03-03 09:37:44 ERROR Calculator - Error while executing command: EXIT
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 0
+	at Calculator.run(Calculator.java:40)
+	at Main.main(Main.java:7)
+2025-03-03 09:37:44 INFO  Calculator - Command received: // [bebenabrwanbeaerae]
+2025-03-03 09:37:44 ERROR Calculator - Error while executing command: //
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at Calculator.run(Calculator.java:40)
+	at Main.main(Main.java:7)
+2025-03-03 09:37:56 INFO  Calculator - Calculator successfully initialized
+2025-03-03 09:37:56 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 09:37:56 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 09:37:56 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 09:37:56 INFO  Calculator - Command executed: PUSH [a]
+2025-03-03 09:37:56 INFO  Calculator - Command received: SQRT []
+2025-03-03 09:37:56 INFO  Calculator - Command executed: SQRT []
+2025-03-03 09:37:56 INFO  Calculator - Command received: PRINT []
+2025-03-03 09:37:56 INFO  Calculator - Command executed: PRINT []
+2025-03-03 09:37:56 INFO  Calculator - Command received: EXIT []
+2025-03-03 09:37:56 ERROR Calculator - Error while executing command: EXIT
+java.lang.RuntimeException: commands/ExitCommand;
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:41)
+	at Main.main(Main.java:7)
+2025-03-03 09:37:56 INFO  Calculator - Command received: // [bebenabrwanbeaerae]
+2025-03-03 09:37:56 INFO  commands.Command - Comment line received bebenabrwanbeaerae 
+2025-03-03 09:37:56 INFO  Calculator - Command executed: // [bebenabrwanbeaerae]
+2025-03-03 09:44:03 INFO  Calculator - Calculator successfully initialized
+2025-03-03 09:44:03 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 09:44:26 INFO  Calculator - Calculator successfully initialized
+2025-03-03 09:44:26 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 09:44:26 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 09:44:26 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 09:44:26 INFO  Calculator - Command executed: PUSH [a]
+2025-03-03 09:44:26 INFO  Calculator - Command received: SQRT []
+2025-03-03 09:44:26 INFO  Calculator - Command executed: SQRT []
+2025-03-03 09:44:26 INFO  Calculator - Command received: PRINT []
+2025-03-03 09:44:26 INFO  Calculator - Command executed: PRINT []
+2025-03-03 09:44:26 INFO  Calculator - Command received: EXIT []
+2025-03-03 09:44:26 ERROR Calculator - Error while executing command: EXIT
+java.lang.RuntimeException: commands/ExitCommand;
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:42)
+	at Main.main(Main.java:9)
+2025-03-03 09:44:26 INFO  Calculator - Command received: // [bebenabrwanbeaerae]
+2025-03-03 09:44:26 INFO  commands.Command - Comment line received bebenabrwanbeaerae 
+2025-03-03 09:44:26 INFO  Calculator - Command executed: // [bebenabrwanbeaerae]
+2025-03-03 09:46:02 INFO  Calculator - Calculator successfully initialized
+2025-03-03 09:46:02 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 09:46:02 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 09:46:02 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 09:46:02 INFO  Calculator - Command executed: PUSH [a]
+2025-03-03 09:46:02 INFO  Calculator - Command received: SQRT []
+2025-03-03 09:46:02 INFO  Calculator - Command executed: SQRT []
+2025-03-03 09:46:02 INFO  Calculator - Command received: PRINT []
+2025-03-03 09:46:02 INFO  Calculator - Command executed: PRINT []
+2025-03-03 09:46:02 INFO  Calculator - Command received: EXIT []
+2025-03-03 09:46:02 ERROR Calculator - Error while executing command: EXIT
+java.lang.RuntimeException: commands/ExitCommand;
+	at CommandFactory.createCommand(CommandFactory.java:38)
+	at Calculator.run(Calculator.java:42)
+	at Main.main(Main.java:9)
+2025-03-03 09:46:02 INFO  Calculator - Command received: // [bebenabrwanbeaerae]
+2025-03-03 09:46:02 INFO  commands.Command - Comment line received bebenabrwanbeaerae 
+2025-03-03 09:46:02 INFO  Calculator - Command executed: // [bebenabrwanbeaerae]
+2025-03-03 09:47:00 INFO  Calculator - Calculator successfully initialized
+2025-03-03 09:47:00 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 09:47:00 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 09:47:00 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 09:47:00 INFO  Calculator - Command executed: PUSH [a]
+2025-03-03 09:47:00 INFO  Calculator - Command received: SQRT []
+2025-03-03 09:47:00 INFO  Calculator - Command executed: SQRT []
+2025-03-03 09:47:00 INFO  Calculator - Command received: PRINT []
+2025-03-03 09:47:00 INFO  Calculator - Command executed: PRINT []
+2025-03-03 09:47:00 INFO  Calculator - Command received: EXIT []
+2025-03-03 09:47:00 ERROR Calculator - Error while executing command: EXIT
+java.lang.RuntimeException: commands/ExitCommand;
+	at CommandFactory.createCommand(CommandFactory.java:38)
+	at Calculator.run(Calculator.java:42)
+	at Main.main(Main.java:9)
+2025-03-03 09:47:00 INFO  Calculator - Command received: // [bebenabrwanbeaerae]
+2025-03-03 09:47:00 INFO  commands.Command - Comment line received bebenabrwanbeaerae 
+2025-03-03 09:47:00 INFO  Calculator - Command executed: // [bebenabrwanbeaerae]
+2025-03-03 09:51:04 INFO  Calculator - Calculator successfully initialized
+2025-03-03 09:51:04 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 09:51:04 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 09:51:04 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 09:51:04 INFO  Calculator - Command executed: PUSH [a]
+2025-03-03 09:51:04 INFO  Calculator - Command received: SQRT []
+2025-03-03 09:51:04 INFO  Calculator - Command executed: SQRT []
+2025-03-03 09:51:04 INFO  Calculator - Command received: PRINT []
+2025-03-03 09:51:04 INFO  Calculator - Command executed: PRINT []
+2025-03-03 09:51:04 INFO  Calculator - Command received: EXIT []
+2025-03-03 09:51:04 ERROR Calculator - Error while executing command: EXIT
+java.lang.RuntimeException: CLassNotFoundException
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:42)
+	at Main.main(Main.java:9)
+2025-03-03 09:51:04 INFO  Calculator - Command received: // [bebenabrwanbeaerae]
+2025-03-03 09:51:04 INFO  commands.Command - Comment line received bebenabrwanbeaerae 
+2025-03-03 09:51:04 INFO  Calculator - Command executed: // [bebenabrwanbeaerae]
+2025-03-03 10:09:36 INFO  Calculator - Calculator successfully initialized
+2025-03-03 10:09:36 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 10:09:36 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 10:09:36 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 10:09:36 INFO  Calculator - Command executed: PUSH [a]
+2025-03-03 10:09:36 INFO  Calculator - Command received: SQRT []
+2025-03-03 10:09:36 INFO  Calculator - Command executed: SQRT []
+2025-03-03 10:09:36 INFO  Calculator - Command received: PRINT []
+2025-03-03 10:09:36 INFO  Calculator - Command executed: PRINT []
+2025-03-03 10:09:36 INFO  Calculator - Command received: EXIT []
+2025-03-03 10:09:36 ERROR Calculator - Error while executing command: EXIT
+java.lang.RuntimeException: CLassNotFoundException
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:45)
+	at Main.main(Main.java:8)
+2025-03-03 10:09:36 INFO  Calculator - Command received: // [bebenabrwanbeaerae]
+2025-03-03 10:09:36 INFO  commands.Command - Comment line received bebenabrwanbeaerae 
+2025-03-03 10:09:36 INFO  Calculator - Command executed: // [bebenabrwanbeaerae]
+2025-03-03 10:11:28 INFO  Calculator - Calculator successfully initialized
+2025-03-03 10:11:41 INFO  Calculator - Calculator successfully initialized
+2025-03-03 10:11:41 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 10:11:41 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 10:11:41 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 10:11:41 INFO  Calculator - Command executed: PUSH [a]
+2025-03-03 10:11:41 INFO  Calculator - Command received: SQRT []
+2025-03-03 10:11:41 INFO  Calculator - Command executed: SQRT []
+2025-03-03 10:11:41 INFO  Calculator - Command received: PRINT []
+2025-03-03 10:11:41 INFO  Calculator - Command executed: PRINT []
+2025-03-03 10:11:41 INFO  Calculator - Command received: EXIT []
+2025-03-03 10:11:41 ERROR Calculator - Error while executing command: EXIT
+java.lang.RuntimeException: CLassNotFoundException
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:50)
+	at Main.main(Main.java:8)
+2025-03-03 10:11:41 INFO  Calculator - Command received: // [bebenabrwanbeaerae]
+2025-03-03 10:11:41 INFO  commands.Command - Comment line received bebenabrwanbeaerae 
+2025-03-03 10:11:41 INFO  Calculator - Command executed: // [bebenabrwanbeaerae]
+2025-03-03 10:12:00 INFO  Calculator - Calculator successfully initialized
+2025-03-03 10:12:00 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 10:12:00 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 10:12:00 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 10:12:00 INFO  Calculator - Command executed: PUSH [a]
+2025-03-03 10:12:00 INFO  Calculator - Command received: SQRT []
+2025-03-03 10:12:00 INFO  Calculator - Command executed: SQRT []
+2025-03-03 10:12:00 INFO  Calculator - Command received: PRINT []
+2025-03-03 10:12:00 INFO  Calculator - Command executed: PRINT []
+2025-03-03 10:12:00 INFO  Calculator - Command received: EXIT []
+2025-03-03 10:12:00 ERROR Calculator - Error while executing command: EXIT
+java.lang.RuntimeException: CLassNotFoundException
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:50)
+	at Main.main(Main.java:8)
+2025-03-03 10:12:00 INFO  Calculator - Command received: // [bebenabrwanbeaerae]
+2025-03-03 10:12:00 INFO  commands.Command - Comment line received bebenabrwanbeaerae 
+2025-03-03 10:12:00 INFO  Calculator - Command executed: // [bebenabrwanbeaerae]
+2025-03-03 10:12:08 INFO  Calculator - Calculator successfully initialized
+2025-03-03 10:12:08 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 10:12:08 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 10:12:08 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 10:12:08 INFO  Calculator - Command executed: PUSH [a]
+2025-03-03 10:12:08 INFO  Calculator - Command received: SQRT []
+2025-03-03 10:12:08 INFO  Calculator - Command executed: SQRT []
+2025-03-03 10:12:08 INFO  Calculator - Command received: PRINT []
+2025-03-03 10:12:08 INFO  Calculator - Command executed: PRINT []
+2025-03-03 10:12:08 INFO  Calculator - Command received: EXIT []
+2025-03-03 10:12:08 ERROR Calculator - Error while executing command: EXIT
+java.lang.RuntimeException: CLassNotFoundException
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:50)
+	at Main.main(Main.java:8)
+2025-03-03 10:12:08 INFO  Calculator - Command received: // [bebenabrwanbeaerae]
+2025-03-03 10:12:08 INFO  commands.Command - Comment line received bebenabrwanbeaerae 
+2025-03-03 10:12:08 INFO  Calculator - Command executed: // [bebenabrwanbeaerae]
+2025-03-03 10:13:44 INFO  Calculator - Calculator successfully initialized
+2025-03-03 10:13:44 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 10:18:06 INFO  Calculator - Calculator successfully initialized
+2025-03-03 10:18:06 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 10:18:06 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 10:18:06 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 10:18:06 INFO  Calculator - Command executed: PUSH [a]
+2025-03-03 10:18:06 INFO  Calculator - Command received: SQRT []
+2025-03-03 10:18:06 INFO  Calculator - Command executed: SQRT []
+2025-03-03 10:18:06 INFO  Calculator - Command received: PRINT []
+2025-03-03 10:18:06 INFO  Calculator - Command executed: PRINT []
+2025-03-03 10:18:06 INFO  Calculator - Command received: EXIT []
+2025-03-03 10:18:06 ERROR Calculator - Error while executing command: EXIT
+java.lang.RuntimeException: CLassNotFoundException
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:48)
+	at Main.main(Main.java:8)
+2025-03-03 10:18:06 INFO  Calculator - Command received: // [bebenabrwanbeaerae]
+2025-03-03 10:18:06 INFO  commands.Command - Comment line received bebenabrwanbeaerae 
+2025-03-03 10:18:06 INFO  Calculator - Command executed: // [bebenabrwanbeaerae]
+2025-03-03 10:19:49 INFO  Calculator - Calculator successfully initialized
+2025-03-03 10:19:49 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 10:19:49 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 10:19:49 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 10:19:49 INFO  Calculator - Command executed: PUSH [a]
+2025-03-03 10:19:49 INFO  Calculator - Command received: SQRT []
+2025-03-03 10:19:49 ERROR Calculator - Error while executing command: SQRT
+java.lang.RuntimeException: CLassNotFoundException
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:48)
+	at Main.main(Main.java:8)
+2025-03-03 10:19:49 INFO  Calculator - Command received: PRINT []
+2025-03-03 10:19:49 INFO  Calculator - Command executed: PRINT []
+2025-03-03 10:19:49 INFO  Calculator - Command received: EXIT []
+2025-03-03 10:19:49 ERROR Calculator - Error while executing command: EXIT
+java.lang.RuntimeException: CLassNotFoundException
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:48)
+	at Main.main(Main.java:8)
+2025-03-03 10:19:49 INFO  Calculator - Command received: // [bebenabrwanbeaerae]
+2025-03-03 10:19:49 INFO  commands.Command - Comment line received bebenabrwanbeaerae 
+2025-03-03 10:19:49 INFO  Calculator - Command executed: // [bebenabrwanbeaerae]
+2025-03-03 10:20:14 INFO  Calculator - Calculator successfully initialized
+2025-03-03 10:20:14 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 10:20:14 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 10:20:14 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 10:20:14 INFO  Calculator - Command executed: PUSH [a]
+2025-03-03 10:20:14 INFO  Calculator - Command received: SQRT []
+2025-03-03 10:20:14 INFO  Calculator - Command executed: SQRT []
+2025-03-03 10:20:14 INFO  Calculator - Command received: PRINT []
+2025-03-03 10:20:14 INFO  Calculator - Command executed: PRINT []
+2025-03-03 10:20:14 INFO  Calculator - Command received: EXIT []
+2025-03-03 10:20:14 ERROR Calculator - Error while executing command: EXIT
+java.lang.RuntimeException: CLassNotFoundException
+	at CommandFactory.createCommand(CommandFactory.java:37)
+	at Calculator.run(Calculator.java:48)
+	at Main.main(Main.java:8)
+2025-03-03 10:20:14 INFO  Calculator - Command received: // [bebenabrwanbeaerae]
+2025-03-03 10:20:14 INFO  commands.Command - Comment line received bebenabrwanbeaerae 
+2025-03-03 10:20:14 INFO  Calculator - Command executed: // [bebenabrwanbeaerae]
+2025-03-03 10:22:24 INFO  Calculator - Calculator successfully initialized
+2025-03-03 10:22:24 INFO  Calculator - Command received: DEFINE [a, 4]
+2025-03-03 10:22:24 INFO  Calculator - Command executed: DEFINE [a, 4]
+2025-03-03 10:22:24 INFO  Calculator - Command received: PUSH [a]
+2025-03-03 10:22:24 INFO  Calculator - Command executed: PUSH [a]
+2025-03-03 10:22:24 INFO  Calculator - Command received: SQRT []
+2025-03-03 10:22:24 INFO  Calculator - Command executed: SQRT []
+2025-03-03 10:22:24 INFO  Calculator - Command received: PRINT []
+2025-03-03 10:22:24 INFO  Calculator - Command executed: PRINT []
+2025-03-03 10:22:24 INFO  Calculator - Command received: EXIT []

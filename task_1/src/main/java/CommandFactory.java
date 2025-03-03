@@ -24,18 +24,23 @@ public class CommandFactory {
         }
     }
 
-    public Command createCommand(String command){
-        String commandName = properties.getProperty(command);
-        if (commandName.isEmpty()){
+    public Command createCommand(String command) {
+        String propertyKey = properties.getProperty(command);
+        if (propertyKey.isEmpty()) {
             throw new IllegalArgumentException("Error" + command + "There's no such command in config file");
         }
         Command cmd;
         try {
-            cmd = (Command) Class.forName(commandName).getDeclaredConstructor().newInstance();
-        } catch (ClassNotFoundException | NoSuchMethodException | InstantiationException | IllegalAccessException |
-                 InvocationTargetException e){
+            cmd = (Command) Class.forName(propertyKey).getDeclaredConstructor().newInstance();
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException("CLassNotFound Exception");
+        } catch (NoSuchMethodException e){
+            throw new RuntimeException("NoSuchMethod Exception");
+        } catch (InstantiationException | IllegalAccessException |
+                InvocationTargetException e){
             throw new RuntimeException(e.getMessage());
         }
+
         return cmd;
     }
 }

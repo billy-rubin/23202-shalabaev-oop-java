@@ -1,6 +1,7 @@
 import commands.Command;
 import environment.ExecutionContext;
-import java.util.List;
+
+import java.io.IOException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,10 +12,10 @@ public class Calculator {
     public InputHandler inputHandler;
     private static final Logger logger = LoggerFactory.getLogger(Calculator.class);
 
-    Calculator() {
+    Calculator(String[] args) {
         try {
             context = new ExecutionContext();
-            inputHandler = new InputHandler();
+            inputHandler = new InputHandler(args);
             factory = new CommandFactory();
         } catch (RuntimeException e) {
             logger.error("Error while initializing calculator, program is terminated ", e);
@@ -22,27 +23,35 @@ public class Calculator {
         }
     }
 
-    public void run(List<String> commands) {
+    public void run() {
         logger.info("Calculator successfully initialized");
+        String line;
+        try {
+            while ((line = inputHandler.reader.readLine()) != null) {
+                line = line.trim();
+                if (line.isEmpty()) {
+                    continue;
+                }
+                String[] parts = line.split(" ");
+                String commandName = parts[0].toUpperCase();
 
-        for (String line : commands) {
-            String[] parts = line.split(" ");
-            String commandName = parts[0].toUpperCase();
+                String[] commandArgs = new String[parts.length - 1];
+                for (int i = 1; i < parts.length; i++) {
+                    commandArgs[i - 1] = parts[i];
+                }
 
-            String[] commandArgs = new String[parts.length - 1];
-            for (int i = 1; i < parts.length; i++) {
-                commandArgs[i - 1] = parts[i];
+                logger.info("Command received: {} {}", commandName, commandArgs);
+
+                try {
+                    Command command = factory.createCommand(commandName);
+                    command.execute(context, commandArgs);
+                    logger.info("Command executed: {} {}", commandName, commandArgs);
+                } catch (Exception e) {
+                    logger.error("Error while executing command: {}", commandName, e);
+                }
             }
-
-            logger.info("Command received: {} {}", commandName, commandArgs);
-
-            try {
-                Command command = factory.createCommand(commandName);
-                command.execute(context, commandArgs);
-                logger.info("Command executed: {} {}", commandName, commandArgs);
-            } catch (Exception e) {
-                logger.error("Error while executing command: {}", commandName, e);
-            }
+        } catch (IOException e){
+            logger.error("Error while reading file");
         }
     }
     public ExecutionContext getContext() {
