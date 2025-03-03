@@ -16,7 +16,7 @@ public class Calculator {
             context = new ExecutionContext();
             inputHandler = new InputHandler();
             factory = new CommandFactory();
-        } catch (RuntimeException e){
+        } catch (RuntimeException e) {
             logger.error("Error while initializing calculator, program is terminated ", e);
             System.exit(1);
         }

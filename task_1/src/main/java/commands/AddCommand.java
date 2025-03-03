@@ -9,7 +9,7 @@ public class AddCommand implements Command {
         double var1 = context.getStack().pop();
         double res = var1 + var2;
 
-        if (res > Double.MAX_VALUE || res < Double.MIN_VALUE) {
+        if (res > Double.MAX_VALUE || res < Double.MAX_VALUE * (-1)) {
             context.getStack().push(var1);
             context.getStack().push(var2);
             throw new IllegalArgumentException("Calc is performing illegal calculations\n");

@@ -15,7 +15,7 @@ public class InputHandler {
             while ((line = reader.readLine()) != null) {
                 line = line.trim();
                 if (line.isEmpty()) {
-                    continue;
+                    break;
                 }
                 commands.add(line);
             }

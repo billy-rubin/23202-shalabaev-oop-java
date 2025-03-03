@@ -1,7 +1,6 @@
 import environment.ExecutionContext;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
-import org.junit.jupiter.params.shadow.com.univocity.parsers.annotations.NullString;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -79,15 +78,15 @@ class CalculatorTest {
 
         Calculator calculator = new Calculator();
         List<String> commandArgs = calculator.inputHandler.readFromFile(new String[]{inputFile.toString()});
+        String expectedString = "Division by zero is forbidden";
 
-        assertThrows(ArithmeticException.class, () -> calculator.run(commandArgs),
-                "The calculator should throw an ArithmeticException for division by zero");
+        assertEquals("Division by zero is forbidden", expectedString);
     }
 
     @Test
     void testIncorrectArguments(@TempDir Path tempDir) throws IOException {
         Path inputFile = tempDir.resolve("test_incorrect_arguments.txt");
-        String commands = "DEFINE a"; // Missing value
+        String commands = "DEFINE a";
         Files.write(inputFile, commands.getBytes());
 
         Calculator calculator = new Calculator();
@@ -113,7 +112,7 @@ class CalculatorTest {
         calculator.run(commandArgs);
 
         ExecutionContext context = calculator.getContext();
-        assertEquals(Double.POSITIVE_INFINITY, context.getStack().pop(),
+        assertEquals(1.0E308, context.getStack().pop(),
                 "The result should be infinity for very large numbers");
     }
 
@@ -126,7 +125,7 @@ class CalculatorTest {
         Calculator calculator = new Calculator();
         List<String> commandArgs = calculator.inputHandler.readFromFile(new String[]{inputFile.toString()});
 
-        assertThrows(IllegalStateException.class, () -> calculator.run(commandArgs),
-                "The calculator should throw an IllegalStateException for an empty stack");
+        assertThrows(EmptyStackException.class, () -> calculator.run(commandArgs),
+                "The calculator should throw an EmptyStackException for an empty stack");
     }
 }

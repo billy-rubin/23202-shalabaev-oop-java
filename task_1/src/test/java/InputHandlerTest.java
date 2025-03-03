@@ -11,7 +11,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class InputHandlerTest {
     @Test
     void testReadFromFile(@TempDir Path tempDir) throws IOException {
-        // Создаем временный файл с командами
         Path inputFile = tempDir.resolve("test_input.txt");
         String commands = """
                 DEFINE a 4
@@ -22,13 +21,11 @@ class InputHandlerTest {
                 """;
         Files.write(inputFile, commands.getBytes());
 
-        // Читаем команды из файла
         InputHandler inputHandler = new InputHandler();
         List<String> result = inputHandler.readFromFile(new String[]{inputFile.toString()});
 
-        // Проверяем результат
-        assertEquals(5, result.size(), "Должно быть 5 команд");
-        assertEquals("DEFINE a 4", result.get(0), "Первая команда должна быть DEFINE a 4");
-        assertEquals("PRINT", result.get(4), "Последняя команда должна быть PRINT");
+        assertEquals(5, result.size(), "Must be 5 commands");
+        assertEquals("DEFINE a 4", result.get(0), "First command must be DEFINE a 4");
+        assertEquals("PRINT", result.get(4), "Last command must be PRINT");
     }
 }
