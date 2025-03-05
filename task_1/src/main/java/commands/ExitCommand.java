@@ -5,7 +5,7 @@ import environment.ExecutionContext;
 public class ExitCommand implements Command{
     @Override
     public void execute(ExecutionContext context, String[] args){
-        System.out.println("bipka");
+        logger.info("Command executed: EXIT {}", (Object) args);
         System.exit(0);
     }
 }

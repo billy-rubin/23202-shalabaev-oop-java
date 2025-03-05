@@ -1,7 +1,10 @@
 import commands.Command;
 import environment.ExecutionContext;
 
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,13 +12,13 @@ import org.slf4j.LoggerFactory;
 public class Calculator {
     private ExecutionContext context;
     private CommandFactory factory;
-    public InputHandler inputHandler;
+    //public InputHandler inputHandler;
     private static final Logger logger = LoggerFactory.getLogger(Calculator.class);
 
-    Calculator(String[] args) {
+    Calculator() {
         try {
             context = new ExecutionContext();
-            inputHandler = new InputHandler(args);
+            //inputHandler = new InputHandler(args);
             factory = new CommandFactory();
         } catch (RuntimeException e) {
             logger.error("Error while initializing calculator, program is terminated ", e);
@@ -23,15 +26,19 @@ public class Calculator {
         }
     }
 
-    public void run() {
+    public void run(String[] args) {
         logger.info("Calculator successfully initialized");
         String line;
-        try {
-            while ((line = inputHandler.reader.readLine()) != null) {
-                line = line.trim();
+        try (Scanner reader = args.length > 0
+                ? new Scanner(new FileReader(args[0]))
+                : new Scanner(new InputStreamReader(System.in))) {
+
+            while (reader.hasNextLine()) {
+                line = reader.nextLine().trim();
                 if (line.isEmpty()) {
                     continue;
                 }
+
                 String[] parts = line.split(" ");
                 String commandName = parts[0].toUpperCase();
 

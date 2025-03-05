@@ -12,6 +12,7 @@ public class AddCommand implements Command {
         if (res > Double.MAX_VALUE || res < Double.MAX_VALUE * (-1)) {
             context.getStack().push(var1);
             context.getStack().push(var2);
+            context.getStack().push(Double.POSITIVE_INFINITY);
             throw new IllegalArgumentException("Calc is performing illegal calculations\n");
         }
 

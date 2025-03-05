@@ -1,6 +1,5 @@
 DEFINE a 4
-PUSH a
-SQRT
-PRINT
-EXIT
-// bebenabrwanbeaerae
+                PUSH a
+                PUSH 2
+                ADD
+                PRINT

@@ -9,7 +9,7 @@ public class DivisionCommand implements Command {
         double var1 = context.getStack().pop();
         double res = var1 / var2;
 
-        if ( res == Double.POSITIVE_INFINITY || res == Double.NEGATIVE_INFINITY) {
+        if (res == Double.POSITIVE_INFINITY || res == Double.NEGATIVE_INFINITY) {
             context.getStack().push(var1);
             context.getStack().push(var2);
             System.out.println("Division by zero is forbidden");
