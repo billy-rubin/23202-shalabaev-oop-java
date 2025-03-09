@@ -2,10 +2,9 @@ public class Game {
     private String answer;
     private boolean gameState;
     private int attemptsLeft;
-    private int numberLength;
     private InputHandler inputHandler;
 
-    void giveHint(Guess currentPlayer){
+    void giveHint(Guess currentPlayer) {
         System.out.println("Number of bulls = " + currentPlayer.getBulls() + "\n" +
                 "Number of cows = " + currentPlayer.getCows());
     }
@@ -17,8 +16,7 @@ public class Game {
     Game(int attemptsNum, int digitsNumber){
         this.gameState = true;
         this.attemptsLeft = attemptsNum;
-        this.numberLength = digitsNumber;
-        Generator generator = new Generator(numberLength);
+        Generator generator = new Generator(digitsNumber);
         answer = generator.generate().toString();
         inputHandler = new InputHandler(answer);
     }
@@ -27,7 +25,7 @@ public class Game {
         printGreetingMessage();
         for (int i = 0; i < attemptsLeft; i++) {
             String inputString = inputHandler.readString();
-            if (answer.equals(inputString)){
+            if (answer.equals(inputString)) {
                 gameState = false;
                 finishGame();
             } else {
@@ -55,9 +53,5 @@ public class Game {
             System.out.println("You lost :(\n" + "The secret number was: " + answer);
             gameState = false;
         }
-    }
-
-    public boolean getGameState(){
-        return this.gameState;
     }
 }
