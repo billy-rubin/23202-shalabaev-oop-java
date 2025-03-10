@@ -37,10 +37,6 @@ public class Game {
         finishGame();
     }
 
-    public void setGameState(boolean gameState) {
-        this.gameState = gameState;
-    }
-
     void printGreetingMessage(){
         System.out.println("Greetings player! Try to guess the 4-digit hidden number in " + attemptsLeft + " attempts!");
     }

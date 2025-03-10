@@ -62,7 +62,6 @@ class GameTest {
     @Test
     void testFinishGameLose() {
         Game game = new Game(1, 4);
-        game.setGameState(true);
 
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         PrintStream originalOut = System.out;

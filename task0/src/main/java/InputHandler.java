@@ -15,13 +15,11 @@ public class InputHandler {
             while ((c = System.in.read()) != '\n') {
                 if (permitted_symbols.indexOf((char) c) == -1) {
                     System.err.println("Invalid input, your guess should contain only digits!");
-                    System.exit(0);
                 }
                 inputString.append((char) c);
             }
             if (inputString.length() != answer.length()) {
                 System.err.println("The length of your guess should match the length of hidden word!");
-                System.exit(0);
             }
         } catch (IOException e){
             System.err.println("Input error" + e.getMessage());
