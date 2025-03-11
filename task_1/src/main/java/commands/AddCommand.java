@@ -5,17 +5,15 @@ import environment.ExecutionContext;
 public class AddCommand implements Command {
     @Override
     public void execute(ExecutionContext context, String[] args) {
-        double var2 = context.getStack().pop();
-        double var1 = context.getStack().pop();
+        double var2 = context.popStack();
+        double var1 = context.popStack();
         double res = var1 + var2;
-
         if (res > Double.MAX_VALUE || res < Double.MAX_VALUE * (-1)) {
-            context.getStack().push(var1);
-            context.getStack().push(var2);
-            context.getStack().push(Double.POSITIVE_INFINITY);
+            context.pushStack(var1);
+            context.pushStack(var2);
+            context.pushStack(Double.POSITIVE_INFINITY);
             throw new IllegalArgumentException("Calc is performing illegal calculations\n");
         }
-
-        context.getStack().push(res);
+        context.pushStack(res);
     }
 }

@@ -12,13 +12,11 @@ import org.slf4j.LoggerFactory;
 public class Calculator {
     private ExecutionContext context;
     private CommandFactory factory;
-    //public InputHandler inputHandler;
     private static final Logger logger = LoggerFactory.getLogger(Calculator.class);
 
     Calculator() {
         try {
             context = new ExecutionContext();
-            //inputHandler = new InputHandler(args);
             factory = new CommandFactory();
         } catch (RuntimeException e) {
             logger.error("Error while initializing calculator, program is terminated ", e);
@@ -26,7 +24,7 @@ public class Calculator {
         }
     }
 
-    public void run(String[] args) {
+    public void run(String[] args) throws Exception{
         logger.info("Calculator successfully initialized");
         String line;
         try (Scanner reader = args.length > 0
@@ -55,10 +53,12 @@ public class Calculator {
                     logger.info("Command executed: {} {}", commandName, commandArgs);
                 } catch (Exception e) {
                     logger.error("Error while executing command: {}", commandName, e);
+                    throw e;
                 }
             }
         } catch (IOException e){
             logger.error("Error while reading file");
+            throw e;
         }
     }
     public ExecutionContext getContext() {

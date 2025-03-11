@@ -2,16 +2,10 @@ import environment.ExecutionContext;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
-import org.slf4j.LoggerFactory;
-import ch.qos.logback.classic.Level;
-import ch.qos.logback.classic.Logger;
-import ch.qos.logback.classic.spi.ILoggingEvent;
-import ch.qos.logback.core.read.ListAppender;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.List;
+import java.util.EmptyStackException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -29,10 +23,14 @@ class CalculatorTest {
         Files.write(inputFile, commands.getBytes());
 
         Calculator calculator = new Calculator();
-        calculator.run(new String[]{inputFile.toString()});
+        try{
+            calculator.run(new String[]{inputFile.toString()});
+        } catch (Exception e){
+            throw new RuntimeException();
+        }
 
         ExecutionContext context = calculator.getContext();
-        assertEquals(6.0, context.getStack().pop());
+        assertEquals(6.0, context.popStack());
     }
 
     @Test
@@ -49,23 +47,28 @@ class CalculatorTest {
         Files.write(inputFile, commands.getBytes());
 
         Calculator calculator = new Calculator();
-        calculator.run(new String[]{inputFile.toString()});
-
+        try{
+            calculator.run(new String[]{inputFile.toString()});
+        } catch (Exception e){
+            throw new RuntimeException();
+        }
         ExecutionContext context = calculator.getContext();
-        assertEquals(-1.0, context.getStack().pop());
+        assertEquals(-1.0, context.popStack());
     }
 
     @Test
     void testEmptyInput(@TempDir Path tempDir) throws IOException {
         Path inputFile = tempDir.resolve("test_empty_input.txt");
-        String commands = "";
-        Files.write(inputFile, commands.getBytes());
+        Files.write(inputFile, "".getBytes());
 
         Calculator calculator = new Calculator();
-        calculator.run(new String[]{inputFile.toString()});
-
+        try{
+            calculator.run(new String[]{inputFile.toString()});
+        } catch (Exception e){
+            throw new RuntimeException();
+        }
         ExecutionContext context = calculator.getContext();
-        assertTrue(context.getStack().isEmpty(), "The stack should be empty for an empty input");
+        assertTrue(context.isStackEmpty(), "The stack should be empty for an empty input");
     }
 
     @Test
@@ -79,11 +82,13 @@ class CalculatorTest {
         Files.write(inputFile, commands.getBytes());
 
         Calculator calculator = new Calculator();
-        calculator.run(new String[]{inputFile.toString()});
-        String expectedString = "Division by zero is forbidden";
 
-        assertEquals("Division by zero is forbidden", expectedString);
+        Exception thrown = assertThrows(IllegalArgumentException.class,
+                () -> calculator.run(new String[]{inputFile.toString()}));
+
+        assertTrue(thrown.getMessage().contains("Division by zero is forbidden"));
     }
+
     @Test
     void testLargeTest(@TempDir Path tempDir) throws IOException {
         Path inputFile = tempDir.resolve("large_test.txt");
@@ -91,7 +96,6 @@ class CalculatorTest {
         for (int i = 1; i <= 1000; i++) {
             commands.append("PUSH ").append(i).append("\n");
         }
-
         for (int i = 0; i < 100; i++) {
             commands.append("POP\n");
         }
@@ -99,116 +103,55 @@ class CalculatorTest {
         Files.write(inputFile, commands.toString().getBytes());
 
         Calculator calculator = new Calculator();
-        calculator.run(new String[]{inputFile.toString()});
-        ExecutionContext context = calculator.getContext();
-        assertEquals(900, context.getStack().size());
-
-        assertEquals(900, context.getStack().pop());
+        try{
+            calculator.run(new String[]{inputFile.toString()});
+        } catch (Exception e){
+            throw new RuntimeException();
+        }        ExecutionContext context = calculator.getContext();
+        assertEquals(900, context.getStackSize());
+        assertEquals(900, context.popStack());
     }
 
     @Test
     void testIncorrectArguments(@TempDir Path tempDir) throws IOException {
-        Logger CalculatorLogger = (Logger) LoggerFactory.getLogger(Calculator.class);
-        ListAppender<ILoggingEvent> listAppender = new ListAppender<>();
-        listAppender.start();
-        CalculatorLogger.addAppender(listAppender);
-
         Path inputFile = tempDir.resolve("test_incorrect_arguments.txt");
-        String commands = "DEFINE a";
-        Files.write(inputFile, commands.getBytes());
+        Files.write(inputFile, "DEFINE a".getBytes());
 
         Calculator calculator = new Calculator();
-        calculator.run(new String[]{inputFile.toString()});
 
-        List<ILoggingEvent> logsList = listAppender.list;
-        assertEquals("Calculator successfully initialized", logsList.get(0)
-                .getMessage());
-        assertEquals(Level.INFO, logsList.get(0)
-                .getLevel());
+        assertThrows(ArrayIndexOutOfBoundsException.class,
+                () -> calculator.run(new String[]{inputFile.toString()}));
 
-        assertEquals("Command received: {} {}", logsList.get(1)
-                .getMessage());
-        assertEquals(Level.INFO, logsList.get(1)
-                .getLevel());
-        assertEquals("Error while executing command: {}", logsList.get(2)
-                .getMessage());
-        assertEquals(Level.ERROR, logsList.get(2)
-                .getLevel());
     }
 
     @Test
     void testLargeNumbers(@TempDir Path tempDir) throws IOException {
-        Logger CalculatorLogger = (Logger) LoggerFactory.getLogger(Calculator.class);
-        ListAppender<ILoggingEvent> listAppender = new ListAppender<>();
-        listAppender.start();
-        CalculatorLogger.addAppender(listAppender);
-
         Path inputFile = tempDir.resolve("test_large_numbers.txt");
         String commands = """
-                PUSH 1.0E308
-                PUSH 1.0E308
-                MUL
-                PRINT
-                """;
+            PUSH 1.0E308
+            PUSH 1.0E308
+            MUL
+            PRINT
+            """;
         Files.write(inputFile, commands.getBytes());
 
         Calculator calculator = new Calculator();
-        calculator.run(new String[]{inputFile.toString()});
 
-        List<ILoggingEvent> logsList = listAppender.list;
-        assertEquals("Calculator successfully initialized", logsList.get(0)
-                .getMessage());
-        assertEquals(Level.INFO, logsList.get(0)
-                .getLevel());
+        Exception thrown = assertThrows(IllegalArgumentException.class,
+                () -> calculator.run(new String[]{inputFile.toString()}));
 
-        assertEquals("Command received: {} {}", logsList.get(1)
-                .getMessage());
-        assertEquals(Level.INFO, logsList.get(1)
-                .getLevel());
-        assertEquals("Command received: {} {}", logsList.get(3)
-                .getMessage());
-        assertEquals(Level.INFO, logsList.get(3)
-                .getLevel());
-        assertEquals("Command received: {} {}", logsList.get(5)
-                .getMessage());
-        assertEquals(Level.INFO, logsList.get(5)
-                .getLevel());
-        assertEquals("Error while executing command: {}", logsList.get(6)
-                .getMessage());
-        assertEquals(Level.ERROR, logsList.get(6)
-                .getLevel());
-        assertEquals(Double.POSITIVE_INFINITY,calculator.getContext().getStack().pop());
+        assertTrue(thrown.getMessage().contains("illegal calculations"));
     }
 
     @Test
-    void testEmptyStack(@TempDir Path tempDir) throws IOException{
-        Logger CalculatorLogger = (Logger) LoggerFactory.getLogger(Calculator.class);
-        ListAppender<ILoggingEvent> listAppender = new ListAppender<>();
-        listAppender.start();
-        CalculatorLogger.addAppender(listAppender);
-
+    void testEmptyStack(@TempDir Path tempDir) throws IOException {
         Path inputFile = tempDir.resolve("test_empty_stack.txt");
-        String commands = "ADD";
-
-        Files.write(inputFile, commands.getBytes());
+        Files.write(inputFile, "ADD".getBytes());
 
         Calculator calculator = new Calculator();
-        calculator.run(new String[]{inputFile.toString()});
 
-        List<ILoggingEvent> logsList = listAppender.list;
-        assertEquals("Calculator successfully initialized", logsList.get(0)
-                .getMessage());
-        assertEquals(Level.INFO, logsList.get(0)
-                .getLevel());
-
-        assertEquals("Command received: {} {}", logsList.get(1)
-                .getMessage());
-        assertEquals(Level.INFO, logsList.get(1)
-                .getLevel());
-        assertEquals("Error while executing command: {}", logsList.get(2)
-                .getMessage());
-        assertEquals(Level.ERROR, logsList.get(2)
-                .getLevel());
+        assertThrows(EmptyStackException.class,
+                () -> calculator.run(new String[]{inputFile.toString()}));
 
     }
 }

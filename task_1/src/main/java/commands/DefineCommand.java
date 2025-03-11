@@ -16,6 +16,6 @@ public class DefineCommand implements Command {
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException(e.getMessage());
         }
-        context.getVariables().put(variable, value);
+        context.putPair(variable, value);
     }
 }
