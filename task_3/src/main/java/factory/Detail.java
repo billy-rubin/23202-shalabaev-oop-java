@@ -1,9 +1,11 @@
 package factory;
 
 public abstract class Detail {
-    private final String ID;
-    Detail(String ID){
+    private String ID;
+    Detail(String ID) {
         this.ID = ID;
     }
-    abstract public String getID();
+    public String getID() {
+        return ID;
+    }
 }

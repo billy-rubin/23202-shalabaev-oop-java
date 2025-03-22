@@ -15,7 +15,7 @@ public class Worker implements Runnable{
 
     @Override
     public void run() {
-        while (true){
+        while (!Thread.currentThread().isInterrupted()){
             try {
                 BodyDetail body = (BodyDetail) detailStorages.get(BodyDetail.class).get();
                 MotorDetail motor = (MotorDetail) detailStorages.get(MotorDetail.class).get();

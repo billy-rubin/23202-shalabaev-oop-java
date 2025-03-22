@@ -12,7 +12,7 @@ public class Dealer implements Runnable {
 
     @Override
     public void run() {
-        while (true) {
+        while (!Thread.currentThread().isInterrupted()) {
             try {
                 Car car = carStorage.get();
                 System.out.println("Dealer " + this + " sold car " + car);

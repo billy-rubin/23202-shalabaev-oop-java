@@ -91,7 +91,7 @@ public class Factory {
             workers.addTask(new Task(worker));
         }
 
-        for (int i = 0; i < dealersNum; i++) {
+        for (int i = 0; i < 2; i++) {
             Dealer dealer = new Dealer(carStorage, 1000000);
             dealers.addTask(new Task(dealer));
 
