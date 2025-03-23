@@ -1,5 +1,6 @@
 package threadpool;
 
+import factory.Worker;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -37,6 +38,16 @@ public class ThreadPool {
         }
     }
 
+    public void notifyAllWorkers() {
+        for (PooledThread thread : availableThreads) {
+            Task task = thread.getTask();
+            if (task != null && task.getTask() instanceof Worker) {
+                Worker worker = (Worker) task.getTask();
+                worker.notifyNewCarNeeded();
+            }
+        }
+    }
+
     public synchronized void shutdown() {
         if (isRunning) {
             isRunning = false;
@@ -47,9 +58,6 @@ public class ThreadPool {
                 thread.interrupt();
                 thread.finish();
             }
-            notifyAll();
         }
     }
-
-
 }

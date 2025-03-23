@@ -1,13 +1,12 @@
 package factory;
 
 public class Dealer implements Runnable {
-    private int dealerDelay;
-    private Storage<Car> carStorage;
-    private int soldCars;
+    private final Storage<Car> carStorage;
+    private final int dealerDelay;
 
-    Dealer(Storage<Car> carStorage, int delay) {
+    public Dealer(Storage<Car> carStorage, int dealerDelay) {
         this.carStorage = carStorage;
-        this.dealerDelay = delay;
+        this.dealerDelay = dealerDelay;
     }
 
     @Override
@@ -15,12 +14,11 @@ public class Dealer implements Runnable {
         while (!Thread.currentThread().isInterrupted()) {
             try {
                 Car car = carStorage.get();
-                System.out.println("Dealer " + this + " sold car " + car);
-                soldCars++;
+                System.out.println("Dealer sold car: " + car);
                 Thread.sleep(dealerDelay);
             } catch (InterruptedException e) {
+                System.out.println("Dealer interrupted");
                 Thread.currentThread().interrupt();
-                return;
             }
         }
     }

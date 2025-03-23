@@ -17,6 +17,15 @@ class PooledThread extends Thread {
         taskQueue.clear();
     }
 
+    /**
+     * Возвращает текущую задачу.
+     *
+     * @return Текущая задача.
+     */
+    public Task getTask() {
+        return taskQueue.peek();
+    }
+
     @Override
     public void run() {
         while (isRunning || !taskQueue.isEmpty()) {

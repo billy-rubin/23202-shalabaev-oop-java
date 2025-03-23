@@ -1,7 +1,7 @@
 StorageBodySize=100
 StorageMotorSize=100
 StorageAccessorySize=100
-StorageAutoSize=100
+StorageAutoSize=10
 AccessorySuppliers=5
 BodySuppliers=1
 MotorSuppliers=1

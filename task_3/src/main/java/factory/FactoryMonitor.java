@@ -1,40 +1,34 @@
 package factory;
 
-import java.util.Map;
+import threadpool.ThreadPool;
 
 public class FactoryMonitor implements Runnable {
-    private final Storage<Car> carStorage;
-    private final Map<Class<? extends Detail>, Storage<? extends Detail>> detailStorages;
+    private final Storage<Car> carStorage; // Склад готовой продукции
+    private final ThreadPool workers; // Пул рабочих
 
-    public FactoryMonitor(Storage<Car> carStorage, Map<Class<? extends Detail>, Storage<? extends Detail>> detailStorages) {
+    public FactoryMonitor(Storage<Car> carStorage, ThreadPool workers) {
         this.carStorage = carStorage;
-        this.detailStorages = detailStorages;
+        this.workers = workers;
     }
 
     @Override
     public void run() {
         try {
-            while (true) {
+            while (!Thread.currentThread().isInterrupted()) {
                 synchronized (carStorage) {
-                    while (carStorage.size() >= 0) {
+                    // Ждем, пока склад не станет неполным
+                    while (carStorage.isFull()) {
                         carStorage.wait();
                     }
                 }
-                if (hasEnoughDetails()) {
-                    System.out.println("FactoryMonitor: Requesting new car assembly");
-                } else {
-                    System.out.println("FactoryMonitor: Not enough details to assemble a new car");
-                }
+
+                // Уведомляем рабочих о необходимости сборки новых машин
+                //System.out.println("FactoryMonitor: Requesting new car assembly");
+                workers.notifyAllWorkers();
             }
         } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
             System.out.println("FactoryMonitor interrupted");
+            Thread.currentThread().interrupt();
         }
-    }
-
-    private boolean hasEnoughDetails() {
-        return detailStorages.get(BodyDetail.class).size() > 0 &&
-                detailStorages.get(MotorDetail.class).size() > 0 &&
-                detailStorages.get(AccessoryDetail.class).size() > 0;
     }
 }

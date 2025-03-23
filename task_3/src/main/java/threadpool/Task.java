@@ -1,17 +1,17 @@
 package threadpool;
 
 public class Task {
-    private Runnable task;
+    private final Runnable task;
 
     public Task(Runnable task) {
         this.task = task;
     }
 
-    Runnable getTask(){
+    public Runnable getTask() {
         return task;
     }
 
-    public void execute(){
+    public void execute() {
         task.run();
     }
 }
