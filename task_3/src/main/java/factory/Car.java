@@ -12,15 +12,15 @@ public class Car extends Detail{
         this.motor = motor;
     }
 
-    public BodyDetail getBody(){
-        return body;
+    public String getBodyID() {
+        return body.getID();
     }
 
-    public AccessoryDetail getAccessory(){
-        return accessory;
+    public String  getAccessoryID() {
+        return accessory.getID();
     }
 
-    public MotorDetail getMotor(){
-        return motor;
+    public String getMotorID() {
+        return motor.getID();
     }
 }

@@ -2,8 +2,11 @@ package factory;
 
 import threadpool.Task;
 import threadpool.ThreadPool;
-
+import gui.FactoryGUI;
+import javax.swing.Timer;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Factory {
@@ -65,14 +68,23 @@ public class Factory {
         Storage<AccessoryDetail> accessoryDetailStorage = (Storage<AccessoryDetail>) detailStorages.get(AccessoryDetail.class);
 
         int suppliersNum = accessorySuppliersNum + motorSuppliersNum + bodySuppliersNum;
+        int accessorySuppliersDelay, bodySuppliersDelay, motorSuppliersDelay;
+        accessorySuppliersDelay = bodySuppliersDelay = motorSuppliersDelay = suppliersDelay;
         Supplier<? extends Detail> supplier;
+        List<Supplier<AccessoryDetail>> accessorySuppliers = new ArrayList<>();
+        List<Supplier<BodyDetail>> bodySuppliers = new ArrayList<>();
+        List<Supplier<MotorDetail>> motorSuppliers = new ArrayList<>();
+
         for (int i = 0; i < suppliersNum; i++) {
             if (i < accessorySuppliersNum) {
-                supplier = new Supplier<>(AccessoryDetail.class, accessoryDetailStorage, suppliersDelay);
-            } else if (i < accessorySuppliersNum + motorSuppliersNum) {
-                supplier = new Supplier<>(BodyDetail.class, bodyDetailStorage, suppliersDelay);
+                supplier = new Supplier<>(AccessoryDetail.class, accessoryDetailStorage, accessorySuppliersDelay);
+                accessorySuppliers.add((Supplier<AccessoryDetail>) supplier);
+            } else if (i < accessorySuppliersNum + bodySuppliersNum) {
+                supplier = new Supplier<>(BodyDetail.class, bodyDetailStorage, bodySuppliersDelay);
+                bodySuppliers.add((Supplier<BodyDetail>) supplier);
             } else {
-                supplier = new Supplier<>(MotorDetail.class, motorDetailStorage, suppliersDelay);
+                supplier = new Supplier<>(MotorDetail.class, motorDetailStorage, motorSuppliersDelay);
+                motorSuppliers.add((Supplier<MotorDetail>) supplier);
             }
             suppliers.addTask(new Task(supplier));
         }
@@ -82,10 +94,34 @@ public class Factory {
             workers.addTask(new Task(worker));
         }
 
+        int dealerDelay = 3000;
+        List<Dealer> dealersList = new ArrayList<>();
         for (int i = 0; i < dealersNum; i++) {
-            Dealer dealer = new Dealer(carStorage, 1000000);
+            Dealer dealer = new Dealer(carStorage, dealerDelay);
             dealers.addTask(new Task(dealer));
+            dealersList.add(dealer);
         }
+
+        FactoryGUI gui = new FactoryGUI(bodySuppliers, motorSuppliers, accessorySuppliers, dealersList,
+                bodyDetailStorage.getCapacity(), motorDetailStorage.getCapacity(),
+                accessoryDetailStorage.getCapacity(), carStorage.getCapacity(),
+                bodySuppliersDelay, motorSuppliersDelay, accessorySuppliersDelay, dealerDelay);
+        gui.setVisible(true);
+
+        Timer timer = new Timer(1000, e -> {
+            int total_sold_cars = 0;
+            for (Dealer dealer : dealersList) {
+                total_sold_cars += dealer.getSoldCarsNum();
+            }
+            gui.updateStats(
+                    bodyDetailStorage.size(),
+                    motorDetailStorage.size(),
+                    accessoryDetailStorage.size(),
+                    carStorage.size(),
+                    total_sold_cars
+            );
+        });
+        timer.start();
 
         while (carStorage.size() < 10) {
             System.out.println("Accessories -" + accessoryDetailStorage.size());

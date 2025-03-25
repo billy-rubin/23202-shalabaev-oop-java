@@ -9,7 +9,7 @@ public class Worker implements Runnable {
     private final Map<Class<? extends Detail>, Storage<? extends Detail>> detailStorages;
     private final Storage<Car> carStorage;
     private final Lock lock = new ReentrantLock();
-    private final Condition newCarNeeded = lock.newCondition(); // Условие для уведомления о необходимости сборки
+    private final Condition newCarNeeded = lock.newCondition();
 
     public Worker(Map<Class<? extends Detail>, Storage<? extends Detail>> detailStorages) {
         this.detailStorages = detailStorages;
@@ -22,7 +22,6 @@ public class Worker implements Runnable {
             try {
                 lock.lock();
                 try {
-                    // Ждем уведомления о необходимости сборки новой машины
                     while (carStorage.isFull()) {
                         newCarNeeded.await();
                     }
@@ -30,11 +29,10 @@ public class Worker implements Runnable {
                     lock.unlock();
                 }
 
-                // Собираем машину
                 BodyDetail body = (BodyDetail) detailStorages.get(BodyDetail.class).get();
                 MotorDetail motor = (MotorDetail) detailStorages.get(MotorDetail.class).get();
                 AccessoryDetail accessory = (AccessoryDetail) detailStorages.get(AccessoryDetail.class).get();
-                Car car = new Car("", body, motor, accessory);
+                Car car = new Car(IdGenerator.generateId(Car.class), body, motor, accessory);
                 carStorage.put(car);
                 System.out.println("Worker " + this + " assembled car: " + car);
             } catch (InterruptedException e) {
@@ -45,9 +43,6 @@ public class Worker implements Runnable {
         }
     }
 
-    /**
-     * Уведомляет рабочего о необходимости сборки новой машины.
-     */
     public void notifyNewCarNeeded() {
         lock.lock();
         try {

@@ -59,6 +59,10 @@ public class Storage<T extends Detail> implements Putable<T> {
         }
     }
 
+    public int getCapacity(){
+        return capacity;
+    }
+
     public boolean isFull() {
         lock.lock();
         try {

@@ -7,7 +7,6 @@ public class IdGenerator {
     private static volatile Map<Class<?>, Integer> idCounters = new HashMap<>();
 
     public static String generateId(Class<?> type) {
-        // Получаем текущий счетчик для типа
         int idCounter = idCounters.getOrDefault(type, 0);
 
         String prefix = getPrefix(type);
