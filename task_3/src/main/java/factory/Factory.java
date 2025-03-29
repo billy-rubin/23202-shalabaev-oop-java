@@ -1,5 +1,6 @@
 package factory;
 
+import logger.*;
 import threadpool.Task;
 import threadpool.ThreadPool;
 import gui.FactoryGUI;
@@ -23,20 +24,27 @@ public class Factory {
     private int accessorySuppliersNum;
     private int bodySuppliersNum;
     private int motorSuppliersNum;
+    private Logger logger;
 
-    public Factory(Map<String, Integer> input) {
+    public Factory(String[] args) {
+        HashMap<String, Integer> input = new HashMap<>();
+        input = ConfigHandler.readConfigFile(args);
         this.config = new HashMap<>(input);
         this.logSale = input.getOrDefault("LogSale", 0) == 1;
+        if (logSale) {
+            this.logger = logSale ? new FileLogger() : new NullLogger();
+            logger.info("Logging initialized");
+        }
         this.detailStorages = new HashMap<>();
         initializeStorages();
         initializeProduction();
     }
 
     private void initializeStorages() {
-        detailStorages.put(BodyDetail.class, new Storage<>(BodyDetail.class, config.getOrDefault("StorageBodySize", 100), suppliersDelay));
-        detailStorages.put(MotorDetail.class, new Storage<>(MotorDetail.class, config.getOrDefault("StorageMotorSize", 100), suppliersDelay));
-        detailStorages.put(AccessoryDetail.class, new Storage<>(AccessoryDetail.class, config.getOrDefault("StorageAccessorySize", 100), suppliersDelay));
-        detailStorages.put(Car.class, new Storage<>(Car.class, config.getOrDefault("StorageAutoSize", 100), suppliersDelay));
+        detailStorages.put(BodyDetail.class, new Storage<>(BodyDetail.class, config.getOrDefault("StorageBodySize", 100)));
+        detailStorages.put(MotorDetail.class, new Storage<>(MotorDetail.class, config.getOrDefault("StorageMotorSize", 100)));
+        detailStorages.put(AccessoryDetail.class, new Storage<>(AccessoryDetail.class, config.getOrDefault("StorageAccessorySize", 100)));
+        detailStorages.put(Car.class, new Storage<>(Car.class, config.getOrDefault("StorageAutoSize", 100)));
     }
 
     private void initializeProduction() {
@@ -53,14 +61,14 @@ public class Factory {
 
         this.factoryMonitor = new FactoryMonitor(
                 (Storage<Car>) detailStorages.get(Car.class),
-                workers
-        );
+                workers, logger);
 
         new Thread(factoryMonitor, "FactoryMonitor").start();
+        logger.info("Production successfully initialized and ready to perform");
     }
 
     public void start() {
-        System.out.println("Production has been started");
+        logger.info("Production has been started");
 
         Storage<Car> carStorage = (Storage<Car>) detailStorages.get(Car.class);
         Storage<MotorDetail> motorDetailStorage = (Storage<MotorDetail>) detailStorages.get(MotorDetail.class);
@@ -70,36 +78,41 @@ public class Factory {
         int suppliersNum = accessorySuppliersNum + motorSuppliersNum + bodySuppliersNum;
         int accessorySuppliersDelay, bodySuppliersDelay, motorSuppliersDelay;
         accessorySuppliersDelay = bodySuppliersDelay = motorSuppliersDelay = suppliersDelay;
+        int dealerDelay = 3000;
+
         Supplier<? extends Detail> supplier;
         List<Supplier<AccessoryDetail>> accessorySuppliers = new ArrayList<>();
         List<Supplier<BodyDetail>> bodySuppliers = new ArrayList<>();
         List<Supplier<MotorDetail>> motorSuppliers = new ArrayList<>();
-
-        for (int i = 0; i < suppliersNum; i++) {
-            if (i < accessorySuppliersNum) {
-                supplier = new Supplier<>(AccessoryDetail.class, accessoryDetailStorage, accessorySuppliersDelay);
-                accessorySuppliers.add((Supplier<AccessoryDetail>) supplier);
-            } else if (i < accessorySuppliersNum + bodySuppliersNum) {
-                supplier = new Supplier<>(BodyDetail.class, bodyDetailStorage, bodySuppliersDelay);
-                bodySuppliers.add((Supplier<BodyDetail>) supplier);
-            } else {
-                supplier = new Supplier<>(MotorDetail.class, motorDetailStorage, motorSuppliersDelay);
-                motorSuppliers.add((Supplier<MotorDetail>) supplier);
-            }
-            suppliers.addTask(new Task(supplier));
-        }
-
-        for (int i = 0; i < workersNum; i++) {
-            Worker worker = new Worker(detailStorages);
-            workers.addTask(new Task(worker));
-        }
-
-        int dealerDelay = 3000;
         List<Dealer> dealersList = new ArrayList<>();
-        for (int i = 0; i < dealersNum; i++) {
-            Dealer dealer = new Dealer(carStorage, dealerDelay);
-            dealers.addTask(new Task(dealer));
-            dealersList.add(dealer);
+
+        try {
+            for (int i = 0; i < suppliersNum; i++) {
+                if (i < accessorySuppliersNum) {
+                    supplier = new Supplier<>(AccessoryDetail.class, accessoryDetailStorage, accessorySuppliersDelay, logger);
+                    accessorySuppliers.add((Supplier<AccessoryDetail>) supplier);
+                } else if (i < accessorySuppliersNum + bodySuppliersNum) {
+                    supplier = new Supplier<>(BodyDetail.class, bodyDetailStorage, bodySuppliersDelay, logger);
+                    bodySuppliers.add((Supplier<BodyDetail>) supplier);
+                } else {
+                    supplier = new Supplier<>(MotorDetail.class, motorDetailStorage, motorSuppliersDelay, logger);
+                    motorSuppliers.add((Supplier<MotorDetail>) supplier);
+                }
+                suppliers.addTask(new Task(supplier));
+            }
+
+            for (int i = 0; i < workersNum; i++) {
+                Worker worker = new Worker(detailStorages, logger);
+                workers.addTask(new Task(worker));
+            }
+
+            for (int i = 0; i < dealersNum; i++) {
+                Dealer dealer = new Dealer(carStorage, dealerDelay, logger);
+                dealers.addTask(new Task(dealer));
+                dealersList.add(dealer);
+            }
+        } catch (IllegalStateException e){
+            logger.info(e.getMessage());
         }
 
         FactoryGUI gui = new FactoryGUI(bodySuppliers, motorSuppliers, accessorySuppliers, dealersList,
@@ -122,8 +135,8 @@ public class Factory {
             );
         });
         timer.start();
-
-        while (carStorage.size() < 10) {
+        /*
+        while (true) {
             System.out.println("Accessories -" + accessoryDetailStorage.size());
             System.out.println("Bodies -" + bodyDetailStorage.size());
             System.out.println("Motors -" + motorDetailStorage.size());
@@ -135,6 +148,7 @@ public class Factory {
                 break;
             }
         }
+        */
     }
 
     private void shutdownProduction() {

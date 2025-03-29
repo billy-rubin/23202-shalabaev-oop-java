@@ -57,7 +57,7 @@ public class FactoryGUI extends JFrame {
         this.accessorySuppliers = accessorySuppliers;
         this.dealers = dealers;
 
-        setTitle("🚗 Factory Control Panel");
+        setTitle("Factory Control Panel");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(900, 650);
         setMinimumSize(new Dimension(800, 600));
@@ -103,7 +103,7 @@ public class FactoryGUI extends JFrame {
         stats_panel.setBorder(BorderFactory.createCompoundBorder(
                 new TitledBorder(
                         new LineBorder(new Color(70, 130, 180), 2, true),
-                        "📊 Factory Statistics",
+                        " Factory Statistics",
                         TitledBorder.CENTER, TitledBorder.TOP,
                         new Font("Segoe UI", Font.BOLD, 16),
                         new Color(70, 130, 180)
@@ -124,7 +124,7 @@ public class FactoryGUI extends JFrame {
         car_storage_pb = new JProgressBar(0, car_storage_capacity);
         styleProgressBar(car_storage_pb);
 
-        sold_cars_label = createStyledLabel("🚘 Sold cars: 0", labelFont, labelColor);
+        sold_cars_label = createStyledLabel(" Sold cars: 0", labelFont, labelColor);
 
         stats_panel.add(body_storage_label);
         stats_panel.add(motor_storage_label);
@@ -142,7 +142,7 @@ public class FactoryGUI extends JFrame {
         control_panel.setBorder(BorderFactory.createCompoundBorder(
                 new TitledBorder(
                         new LineBorder(new Color(70, 130, 180), 2, true),
-                        "⚙️ Control Panel",
+                        " Control Panel",
                         TitledBorder.CENTER, TitledBorder.TOP,
                         new Font("Segoe UI", Font.BOLD, 16),
                         new Color(70, 130, 180)

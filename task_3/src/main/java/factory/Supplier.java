@@ -1,16 +1,20 @@
 package factory;
 
+import logger.Logger;
+
 import java.lang.reflect.InvocationTargetException;
 
 public class Supplier<T extends Detail> implements Runnable {
     private final Class<T> detailClass;
-    private volatile int delay;// Задержка между поставками (в миллисекундах)
+    private volatile int delay;
     private Putable<T> detailStorage;
+    private Logger logger;
 
-    public Supplier(Class<T> detailClass, Storage<T> detailStorage, int delay) {
+    public Supplier(Class<T> detailClass, Storage<T> detailStorage, int delay, Logger logger) {
         this.detailClass = detailClass;
         this.detailStorage = detailStorage;
         this.delay = delay;
+        this.logger = logger;
     }
 
     public void setDelay(int delay) {
@@ -21,9 +25,9 @@ public class Supplier<T extends Detail> implements Runnable {
         T detail;
         try {
             detail = detailClass.getDeclaredConstructor(String.class).newInstance(IdGenerator.generateId(detailClass));
-            System.out.println("Detail ID - " + detail.getID());
+            logger.info("Detail ID - " + detail.getID());
         } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e){
-            throw new RuntimeException(e);
+            throw new RuntimeException("Failed to create detail ", e);
         }
         return detail;
     }
@@ -34,11 +38,11 @@ public class Supplier<T extends Detail> implements Runnable {
             try {
                 T detail = createDetail();
                 detailStorage.put(detail);
-                System.out.println("Supplier done his work");
+                logger.info("Supplier " + detailClass + " done his work");
                 Thread.sleep(delay);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
-                return;
+                logger.warn(detailClass + " Supplier has been interrupted");
             }
         }
 

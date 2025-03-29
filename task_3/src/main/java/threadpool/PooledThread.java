@@ -17,11 +17,6 @@ class PooledThread extends Thread {
         taskQueue.clear();
     }
 
-    /**
-     * Возвращает текущую задачу.
-     *
-     * @return Текущая задача.
-     */
     public Task getTask() {
         return taskQueue.peek();
     }
@@ -37,8 +32,7 @@ class PooledThread extends Thread {
                         taskQueue.wait();
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
-                        System.err.println("Thread was interrupted: " + getName());
-                        return;
+                        throw new RuntimeException("Thread was interrupted: " + getName());
                     }
                 }
                 // Берем задачу из очереди
@@ -49,7 +43,7 @@ class PooledThread extends Thread {
                 try {
                     task.execute();
                 } catch (Exception e) {
-                    System.err.println("Task execution failed: " + e.getMessage());
+                    throw new RuntimeException("Task execution failed: " + e.getMessage());
                 }
             }
         }

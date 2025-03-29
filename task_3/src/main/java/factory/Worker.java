@@ -4,16 +4,18 @@ import java.util.Map;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
+import logger.Logger;
 public class Worker implements Runnable {
     private final Map<Class<? extends Detail>, Storage<? extends Detail>> detailStorages;
     private final Storage<Car> carStorage;
     private final Lock lock = new ReentrantLock();
     private final Condition newCarNeeded = lock.newCondition();
+    private Logger logger;
 
-    public Worker(Map<Class<? extends Detail>, Storage<? extends Detail>> detailStorages) {
+    public Worker(Map<Class<? extends Detail>, Storage<? extends Detail>> detailStorages, Logger logger) {
         this.detailStorages = detailStorages;
         this.carStorage = (Storage<Car>) detailStorages.get(Car.class);
+        this.logger = logger;
     }
 
     @Override
@@ -34,11 +36,10 @@ public class Worker implements Runnable {
                 AccessoryDetail accessory = (AccessoryDetail) detailStorages.get(AccessoryDetail.class).get();
                 Car car = new Car(IdGenerator.generateId(Car.class), body, motor, accessory);
                 carStorage.put(car);
-                System.out.println("Worker " + this + " assembled car: " + car);
+                logger.info("Worker " + this + " assembled car: " + car);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
-                System.out.println("Worker interrupted: " + Thread.currentThread().getName());
-                return;
+                logger.warn("Worker interrupted: " + Thread.currentThread().getName());
             }
         }
     }

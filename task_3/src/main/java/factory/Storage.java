@@ -9,16 +9,14 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Storage<T extends Detail> implements Putable<T> {
     private final int capacity;
     private final Queue<T> items = new LinkedList<>();
-    private final int delay;
     private final Class<T> type;
 
     private final Lock lock = new ReentrantLock();
     private final Condition notFull = lock.newCondition();
     private final Condition notEmpty = lock.newCondition();
 
-    public Storage(Class<T> detailType, int capacity, int delay) {
+    public Storage(Class<T> detailType, int capacity) {
         this.capacity = capacity;
-        this.delay = delay;
         this.type = detailType;
     }
 

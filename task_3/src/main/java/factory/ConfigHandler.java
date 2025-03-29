@@ -1,3 +1,5 @@
+package factory;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
@@ -18,7 +20,7 @@ public class ConfigHandler {
                         int value = Integer.parseInt(strValue);
                         input.put(key, value);
                     } catch (NumberFormatException e) {
-                        throw new RuntimeException("Value is missing");
+                        throw new RuntimeException("Invalid config file format ", e.getCause());
                     }
                 }
             }

@@ -1,13 +1,17 @@
 package factory;
 
+import logger.Logger;
+
 public class Dealer implements Runnable {
     private final Storage<Car> carStorage;
     private int dealerDelay;
     private int soldCarsNum;
+    private Logger logger;
 
-    public Dealer(Storage<Car> carStorage, int dealerDelay) {
+    public Dealer(Storage<Car> carStorage, int dealerDelay, Logger logger) {
         this.carStorage = carStorage;
         this.dealerDelay = dealerDelay;
+        this.logger = logger;
     }
 
     public void setDelay(int delay){
@@ -19,12 +23,12 @@ public class Dealer implements Runnable {
         while (!Thread.currentThread().isInterrupted()) {
             try {
                 Car car = carStorage.get();
-                System.out.println("Dealer sold car: " + car);
+                logger.info("Dealer sold car: " + car);
                 ++soldCarsNum;
                 Thread.sleep(dealerDelay);
             } catch (InterruptedException e) {
-                System.out.println("Dealer interrupted");
                 Thread.currentThread().interrupt();
+                logger.warn("Dealer has been interrupted");
             }
         }
     }
