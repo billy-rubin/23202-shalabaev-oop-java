@@ -21,7 +21,6 @@ public class ThreadPool {
 
         for (int i = 0; i < threadsNum; i++) {
             PooledThread thread = new PooledThread("Worker-" + i, taskQueue, isRunning);
-            System.out.println("Worker-" + i);
             thread.start();
             this.availableThreads.add(thread);
         }
@@ -51,8 +50,8 @@ public class ThreadPool {
     public synchronized void shutdown() {
         if (isRunning) {
             isRunning = false;
-            synchronized (this) {
-                notifyAll();
+            synchronized (taskQueue) {
+                taskQueue.notifyAll();
             }
             for (PooledThread thread : availableThreads) {
                 thread.interrupt();

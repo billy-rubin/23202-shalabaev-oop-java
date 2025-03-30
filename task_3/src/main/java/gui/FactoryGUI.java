@@ -77,23 +77,23 @@ public class FactoryGUI extends JFrame {
         JPanel control_panel = createControlPanel(body_supplier_delay, motor_supplier_delay,
                 accessory_supplier_delay, dealer_delay);
 
-        // Добавление компонентов с отступами
+        // Компоненты с отступами
         add(stats_panel, BorderLayout.CENTER);
         add(control_panel, BorderLayout.SOUTH);
 
-        // Добавим логотип в верхнюю часть
+        // Логотип в верхнюю часть
         JPanel headerPanel = new JPanel();
         headerPanel.setBackground(new Color(70, 130, 180));
         headerPanel.setBorder(BorderFactory.createEmptyBorder(10, 0, 10, 0));
 
         JLabel titleLabel = new JLabel("AUTOMOBILE FACTORY CONTROL PANEL");
-        titleLabel.setFont(new Font("Segoe UI", Font.BOLD, 24));
+        titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
         titleLabel.setForeground(Color.WHITE);
         headerPanel.add(titleLabel);
 
         add(headerPanel, BorderLayout.NORTH);
         setIconImage(Toolkit.getDefaultToolkit().getImage("C:/Users/rumit/IdeaProjects/23202-shalabaev-oop-java/task_3/src/main/resources/icon.jpg"));
-        // Центрируем окно
+        // Центрирование окна
         setLocationRelativeTo(null);
     }
 
@@ -105,7 +105,7 @@ public class FactoryGUI extends JFrame {
                         new LineBorder(new Color(70, 130, 180), 2, true),
                         " Factory Statistics",
                         TitledBorder.CENTER, TitledBorder.TOP,
-                        new Font("Segoe UI", Font.BOLD, 16),
+                        new Font("Arial", Font.BOLD, 16),
                         new Color(70, 130, 180)
                 ),
                 new EmptyBorder(10, 15, 15, 15)
@@ -113,7 +113,7 @@ public class FactoryGUI extends JFrame {
         stats_panel.setBackground(Color.WHITE);
 
         // Стилизация меток
-        Font labelFont = new Font("Segoe UI", Font.PLAIN, 14);
+        Font labelFont = new Font("Arial", Font.PLAIN, 14);
         Color labelColor = new Color(60, 60, 60);
 
         body_storage_label = createStyledLabel("Body storage: 0/" + body_storage_capacity, labelFont, labelColor);
@@ -144,7 +144,7 @@ public class FactoryGUI extends JFrame {
                         new LineBorder(new Color(70, 130, 180), 2, true),
                         " Control Panel",
                         TitledBorder.CENTER, TitledBorder.TOP,
-                        new Font("Segoe UI", Font.BOLD, 16),
+                        new Font("Arial", Font.BOLD, 16),
                         new Color(70, 130, 180)
                 ),
                 new EmptyBorder(15, 15, 15, 15)
@@ -153,22 +153,22 @@ public class FactoryGUI extends JFrame {
 
         // Создание слайдеров
         body_speed_label = createStyledLabel("Body supplier delay (ms): " + body_delay,
-                new Font("Segoe UI", Font.BOLD, 13),
+                new Font("Arial", Font.BOLD, 13),
                 new Color(70, 70, 70));
         body_supplier_speed = createSlider(100, 10000, body_delay, body_speed_label);
 
         motor_speed_label = createStyledLabel("Motor supplier delay (ms): " + motor_delay,
-                new Font("Segoe UI", Font.BOLD, 13),
+                new Font("Arial", Font.BOLD, 13),
                 new Color(70, 70, 70));
         motor_supplier_speed = createSlider(100, 10000, motor_delay, motor_speed_label);
 
         accessory_speed_label = createStyledLabel("Accessory supplier delay (ms): " + accessory_delay,
-                new Font("Segoe UI", Font.BOLD, 13),
+                new Font("Arial", Font.BOLD, 13),
                 new Color(70, 70, 70));
         accessory_supplier_speed = createSlider(100, 10000, accessory_delay, accessory_speed_label);
 
         dealer_speed_label = createStyledLabel("Dealer delay (ms): " + dealer_delay,
-                new Font("Segoe UI", Font.BOLD, 13),
+                new Font("Arial", Font.BOLD, 13),
                 new Color(70, 70, 70));
         dealer_speed = createSlider(100, 10000, dealer_delay, dealer_speed_label);
 
@@ -195,7 +195,7 @@ public class FactoryGUI extends JFrame {
 
     private void styleProgressBar(JProgressBar progressBar) {
         progressBar.setStringPainted(true);
-        progressBar.setFont(new Font("Segoe UI", Font.PLAIN, 12));
+        progressBar.setFont(new Font("Arial", Font.PLAIN, 12));
         progressBar.setValue(0);
         progressBar.setString("0/" + car_storage_capacity);
         progressBar.setForeground(new Color(76, 175, 80));
@@ -282,7 +282,7 @@ public class FactoryGUI extends JFrame {
             motor_storage_label.setText("Motor storage: " + motor_storage + "/" + motor_storage_capacity);
             accessory_storage_label.setText("Accessory storage: " + accessory_storage + "/" + accessory_storage_capacity);
             car_storage_label.setText("Car storage: " + car_storage + "/" + car_storage_capacity);
-            sold_cars_label.setText("🚘 Sold cars: " + sold_cars);
+            sold_cars_label.setText("Sold cars: " + sold_cars);
             car_storage_pb.setValue(car_storage);
             car_storage_pb.setString(car_storage + "/" + car_storage_capacity);
 

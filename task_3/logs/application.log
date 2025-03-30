@@ -1,0 +1,63 @@
+2025-03-30 16:26:06 INFO  logger.FileLogger - Logging initialized
+2025-03-30 16:26:06 INFO  logger.FileLogger - Production successfully initialized and ready to perform
+2025-03-30 16:26:06 INFO  logger.FileLogger - Production has been started
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - MTR5
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - MTR6
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - ACS2
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - BDY6
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - MTR4
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - BDY0
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - MTR7
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - MTR1
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - MTR8
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - MTR3
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - ACS4
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - MTR2
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - ACS3
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - BDY1
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - MTR9
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - ACS0
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - ACS1
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - BDY3
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - MTR0
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - BDY2
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - BDY9
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - BDY8
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - BDY4
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - BDY7
+2025-03-30 16:26:06 INFO  logger.FileLogger - Detail ID - BDY5
+2025-03-30 16:26:06 INFO  logger.FileLogger - Dealer sold car: factory.Car@66779cd2
+2025-03-30 16:26:06 INFO  logger.FileLogger - Dealer sold car: factory.Car@794d78d0
+2025-03-30 16:26:06 INFO  logger.FileLogger - Dealer sold car: factory.Car@1ea4439
+2025-03-30 16:26:06 INFO  logger.FileLogger - Dealer sold car: factory.Car@47f8d11d
+2025-03-30 16:26:06 INFO  logger.FileLogger - Dealer sold car: factory.Car@2c28f928
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.BodyDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.AccessoryDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.BodyDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.MotorDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.AccessoryDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.MotorDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.AccessoryDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.BodyDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.BodyDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.MotorDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.MotorDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.MotorDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.BodyDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.MotorDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.BodyDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.BodyDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.BodyDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.BodyDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.MotorDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.MotorDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.BodyDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.MotorDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.AccessoryDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.AccessoryDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Supplier class factory.MotorDetail done his work
+2025-03-30 16:26:06 INFO  logger.FileLogger - Worker factory.Worker@493f264a assembled car: factory.Car@47f8d11d
+2025-03-30 16:26:06 INFO  logger.FileLogger - Worker factory.Worker@22ef0305 assembled car: factory.Car@2c28f928
+2025-03-30 16:26:06 INFO  logger.FileLogger - Worker factory.Worker@778a8851 assembled car: factory.Car@794d78d0
+2025-03-30 16:26:06 INFO  logger.FileLogger - Worker factory.Worker@f2dabac assembled car: factory.Car@1ea4439
+2025-03-30 16:26:06 INFO  logger.FileLogger - Worker factory.Worker@237516d8 assembled car: factory.Car@66779cd2

@@ -1,19 +1,17 @@
 package factory;
 
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Map;
 
 public class IdGenerator {
-    private static volatile Map<Class<?>, Integer> idCounters = new HashMap<>();
+    private static final Map<Class<?>, AtomicInteger> idCounters = new ConcurrentHashMap<>();
 
     public static String generateId(Class<?> type) {
-        int idCounter = idCounters.getOrDefault(type, 0);
+        idCounters.putIfAbsent(type, new AtomicInteger(0));
+        int idCounter = idCounters.get(type).getAndIncrement();
 
-        String prefix = getPrefix(type);
-        String id = prefix + idCounter;
-
-        idCounters.put(type, idCounter + 1);
-        return id;
+        return getPrefix(type) + idCounter;
     }
 
     private static String getPrefix(Class<?> type) {

@@ -41,10 +41,10 @@ public class Factory {
     }
 
     private void initializeStorages() {
-        detailStorages.put(BodyDetail.class, new Storage<>(BodyDetail.class, config.getOrDefault("StorageBodySize", 100)));
-        detailStorages.put(MotorDetail.class, new Storage<>(MotorDetail.class, config.getOrDefault("StorageMotorSize", 100)));
-        detailStorages.put(AccessoryDetail.class, new Storage<>(AccessoryDetail.class, config.getOrDefault("StorageAccessorySize", 100)));
-        detailStorages.put(Car.class, new Storage<>(Car.class, config.getOrDefault("StorageAutoSize", 100)));
+        detailStorages.put(BodyDetail.class, new Storage<>(config.getOrDefault("StorageBodySize", 100)));
+        detailStorages.put(MotorDetail.class, new Storage<>(config.getOrDefault("StorageMotorSize", 100)));
+        detailStorages.put(AccessoryDetail.class, new Storage<>(config.getOrDefault("StorageAccessorySize", 100)));
+        detailStorages.put(Car.class, new Storage<>(config.getOrDefault("StorageAutoSize", 100)));
     }
 
     private void initializeProduction() {

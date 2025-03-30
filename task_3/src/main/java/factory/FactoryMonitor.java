@@ -1,12 +1,10 @@
 package factory;
 
-import org.slf4j.LoggerFactory;
 import threadpool.ThreadPool;
 import logger.Logger;
 public class FactoryMonitor implements Runnable {
-    private static final org.slf4j.Logger log = LoggerFactory.getLogger(FactoryMonitor.class);
-    private final Storage<Car> carStorage; // Склад готовой продукции
-    private final ThreadPool workers;// Пул рабочих
+    private final Storage<Car> carStorage;
+    private final ThreadPool workers;
     private Logger logger;
 
     public FactoryMonitor(Storage<Car> carStorage, ThreadPool workers, Logger logger) {
@@ -20,15 +18,13 @@ public class FactoryMonitor implements Runnable {
         try {
             while (!Thread.currentThread().isInterrupted()) {
                 synchronized (carStorage) {
-                    // Ждем, пока склад не станет неполным
                     while (carStorage.isFull()) {
                         logger.info("Car storage is full");
                         carStorage.wait();
                     }
+                    //logger.info("Car storage is no longer full, waking up workers");
+                    carStorage.notifyAll();
                 }
-
-                // Уведомляем рабочих о необходимости сборки новых машин
-                //logger.info("FactoryMonitor: Requesting new car assembly");
                 workers.notifyAllWorkers();
             }
         } catch (InterruptedException e) {

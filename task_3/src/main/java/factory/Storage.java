@@ -9,15 +9,13 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Storage<T extends Detail> implements Putable<T> {
     private final int capacity;
     private final Queue<T> items = new LinkedList<>();
-    private final Class<T> type;
 
     private final Lock lock = new ReentrantLock();
     private final Condition notFull = lock.newCondition();
     private final Condition notEmpty = lock.newCondition();
 
-    public Storage(Class<T> detailType, int capacity) {
+    public Storage(int capacity) {
         this.capacity = capacity;
-        this.type = detailType;
     }
 
     @Override
@@ -62,20 +60,6 @@ public class Storage<T extends Detail> implements Putable<T> {
     }
 
     public boolean isFull() {
-        lock.lock();
-        try {
-            return items.size() >= capacity;
-        } finally {
-            lock.unlock();
-        }
-    }
-
-    public boolean isEmpty() {
-        lock.lock();
-        try {
-            return items.isEmpty();
-        } finally {
-            lock.unlock();
-        }
+        return items.size() >= capacity;
     }
 }
