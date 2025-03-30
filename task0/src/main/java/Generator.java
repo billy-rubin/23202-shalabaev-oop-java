@@ -5,7 +5,10 @@ import java.util.Set;
 public class Generator {
     private static final Random random = new Random();
     private int digitsNumber;
-    Generator(int digitsNumber){
+    public Generator(int digitsNumber) {
+        if (digitsNumber > 10){
+            throw new IllegalArgumentException("Length of the secret number must be under 10 digits!");
+        }
         this.digitsNumber = digitsNumber;
     }
     public Integer generate() {

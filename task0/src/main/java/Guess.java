@@ -1,35 +1,10 @@
 public class Guess {
-    private String guess;
-    private int bulls = 0; //полное совпадение
-    private int cows = 0; //частичное совпадение
+    private int bulls;
+    private int cows;
 
-    public Guess(String guess){
-        this.guess = guess;
-    }
-
-    public void countBullsCows(String answer) {
-        boolean[] usedAnswer = new boolean[answer.length()];
-        boolean[] usedInput = new boolean[guess.length()];
-
-        for (int i = 0; i < answer.length(); i++) {
-            if (guess.charAt(i) == answer.charAt(i)) {
-                bulls++;
-                usedAnswer[i] = true;
-                usedInput[i] = true;
-            }
-        }
-
-        for (int i = 0; i < guess.length(); i++) {
-            if (usedInput[i])
-                continue;
-            for (int j = 0; j < answer.length(); j++) {
-                if (!usedAnswer[j] && guess.charAt(i) == answer.charAt(j)) {
-                    cows++;
-                    usedAnswer[j] = true;
-                    break;
-                }
-            }
-        }
+    public Guess(int bullsNum, int cowsNum){
+        bulls = bullsNum;
+        cows = cowsNum;
     }
 
     public int getBulls(){
@@ -38,5 +13,15 @@ public class Guess {
 
     public int getCows(){
         return cows;
+    }
+
+    public void setBulls(int bulls) {
+        System.out.println(bulls);
+        this.bulls = bulls;
+        System.out.println(bulls);
+    }
+
+    public void setCows(int cows) {
+        this.cows = cows;
     }
 }

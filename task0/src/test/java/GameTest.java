@@ -1,97 +1,73 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.jupiter.api.AfterEach;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
+import static org.junit.jupiter.api.Assertions.*;
 
 class GameTest {
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final PrintStream originalOut = System.out;
+    private final InputStream originalIn = System.in;
 
-    @Test
-    void testPrintGreetingMessage() {
-        Game game = new Game(5, 4);
+    @BeforeEach
+    void setUp() {
+        System.setOut(new PrintStream(outContent));
+    }
 
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        PrintStream originalOut = System.out;
-        System.setOut(new PrintStream(outputStream));
-
-        game.printGreetingMessage();
-
+    @AfterEach
+    void restoreStreams() {
         System.setOut(originalOut);
-
-        String output = outputStream.toString();
-        assertTrue(output.contains("Greetings player! Try to guess the 4-digit hidden number in 5 attempts!"));
+        System.setIn(originalIn);
     }
 
     @Test
-    void testFinishGameWin() {
-        String inputExpected = "Greetings player! Try to guess the 4-digit hidden number in 5 attempts!\r\n" + "Number of bulls = 3\n" + "Number of cows = 0\r\n";
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        PrintStream originalOut = System.out;
-        System.setOut(new PrintStream(outputStream));
+    void wrongLengthTest() {
+        String input = "1234123\n";
+        String expectedOutput = "The length of your guess should match the length of hidden word!";
 
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+        Game game = new Game(1, 4);
+
+        game.runGame();
+
+        assertTrue(outContent.toString().contains(expectedOutput));
+    }
+
+    @Test
+    void rightNumberTest() {
+        Game game = new Game(1, 4);
+        String input = game.getAnswer() + "\n";
+        InputStream originalInputStream = System.in;
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+        game.runGame();
+        System.setIn(originalInputStream);
+        assertTrue(outContent.toString().contains("You won!"));
+    }
+
+
+    @Test
+    void countBullsAndCowsTest() {
         Game game = new Game(5, 4);
         String answer = game.getAnswer();
-        String test = answer.substring(0, 3);
+        String testGuess = answer.substring(0, 3);
+
         String symPool = "0123456789";
-        for (int i = 0; i < symPool.length(); i++) {
-            if (!(test + symPool.charAt(i)).equals(answer)) {
-                test = test + symPool.charAt(i);
+        for (char c : symPool.toCharArray()) {
+            if (!answer.contains(String.valueOf(c))) {
+                testGuess += c;
                 break;
             }
         }
 
-        String input = test;
-        ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(input.getBytes());
-        InputStream originalInputStream = System.in;
+        System.setIn(new ByteArrayInputStream(testGuess.getBytes()));
+        game.countBullsCows(testGuess);
 
-        System.setIn(byteArrayInputStream);
-        System.out.println("bipka");
-        try {
-            game.runGame();
-
-        } catch (Exception e) {
-            String output = outputStream.toString().trim();
-            assertEquals(inputExpected, output);
-        }
-        System.setOut(originalOut);
-        System.setIn(originalInputStream);
-    }
-
-    @Test
-    void testFinishGameLose() {
-        Game game = new Game(1, 4);
-
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        PrintStream originalOut = System.out;
-        System.setOut(new PrintStream(outputStream));
-
-        game.finishGame();
-
-        System.setOut(originalOut);
-
-        String output = outputStream.toString();
-        assertTrue(output.contains("You lost :("));
-        assertTrue(output.contains("The secret number was: " + game.getAnswer()));
-    }
-
-    @Test
-    void testGiveHint() {
-        Game game = new Game(5, 4);
-        Guess guess = new Guess("1234");
-        guess.countBullsCows(game.getAnswer());
-
-        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        PrintStream originalOut = System.out;
-        System.setOut(new PrintStream(outputStream));
-
-        game.giveHint(guess);
-
-        System.setOut(originalOut);
-
-        String output = outputStream.toString();
-        assertTrue(output.contains("Number of bulls = " + guess.getBulls()));
-        assertTrue(output.contains("Number of cows = " + guess.getCows()));
+        assertEquals(3, game.currentPlayer.getBulls());
+        assertEquals(0, game.currentPlayer.getCows());
     }
 }

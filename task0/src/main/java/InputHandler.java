@@ -4,7 +4,7 @@ public class InputHandler {
     private String answer;
     private final String permitted_symbols = "0123456789";
 
-    InputHandler(String answer){
+    public InputHandler(String answer){
         this.answer = answer;
     }
 
@@ -14,7 +14,7 @@ public class InputHandler {
         try {
             while ((c = System.in.read()) != '\n') {
                 if (permitted_symbols.indexOf((char) c) == -1) {
-                    System.err.println("Invalid input, your guess should contain only digits!");
+                    System.out.println("Invalid input, your guess should contain only digits!");
                 }
                 inputString.append((char) c);
             }
