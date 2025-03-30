@@ -34,11 +34,11 @@ public class ExecutionContext {
         }
     }
 
-    public Double getVarValue(String var){
+    public Double getVariable(String var){
         return variables.get(var);
     }
 
-    public void putPair(String variable, Double value){
+    public void putVariable(String variable, Double value){
         variables.put(variable, value);
     }
 

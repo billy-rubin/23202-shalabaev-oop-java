@@ -7,7 +7,7 @@ import java.util.NoSuchElementException;
 public class PushCommand implements Command {
     @Override
     public void execute(ExecutionContext context, String[] args) {
-        Double value = context.getVarValue(args[0]);
+        Double value = context.getVariable(args[0]);
         if (value == null) {
             try {
                 value = Double.parseDouble(args[0]);

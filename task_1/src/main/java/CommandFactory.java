@@ -26,8 +26,9 @@ public class CommandFactory {
 
     public Command createCommand(String command) {
         String propertyKey = properties.getProperty(command);
-        if (propertyKey.isEmpty()) {
-            throw new IllegalArgumentException("Error" + command + "There's no such command in config file");
+        if (propertyKey == null) {
+            System.out.println(command + " such command doesn't exist, check that command is typed correctly");
+            throw new IllegalArgumentException("Error " + command + " There's no such command in config file");
         }
         Command cmd;
         try {

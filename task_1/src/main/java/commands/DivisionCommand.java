@@ -12,7 +12,7 @@ public class DivisionCommand implements Command {
             context.pushStack(var1);
             context.pushStack(var2);
             System.out.println("Division by zero is forbidden");
-            throw new IllegalArgumentException("Division by zero is forbidden\n");
+            throw new ArithmeticException("Division by zero is forbidden\n");
         }
         context.pushStack(res);
     }

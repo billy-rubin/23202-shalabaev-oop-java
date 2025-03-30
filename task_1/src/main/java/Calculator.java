@@ -24,7 +24,7 @@ public class Calculator {
         }
     }
 
-    public void run(String[] args) throws Exception{
+    public void run(String[] args){
         logger.info("Calculator successfully initialized");
         String line;
         try (Scanner reader = args.length > 0
@@ -53,12 +53,11 @@ public class Calculator {
                     logger.info("Command executed: {} {}", commandName, commandArgs);
                 } catch (Exception e) {
                     logger.error("Error while executing command: {}", commandName, e);
-                    throw e;
                 }
             }
         } catch (IOException e){
             logger.error("Error while reading file");
-            throw e;
+            System.exit(1);
         }
     }
     public ExecutionContext getContext() {

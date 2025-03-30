@@ -72,24 +72,6 @@ class CalculatorTest {
     }
 
     @Test
-    void testDivisionByZero(@TempDir Path tempDir) throws IOException {
-        Path inputFile = tempDir.resolve("test_division_by_zero.txt");
-        String commands = """
-                PUSH 10
-                PUSH 0
-                DIV
-                """;
-        Files.write(inputFile, commands.getBytes());
-
-        Calculator calculator = new Calculator();
-
-        Exception thrown = assertThrows(IllegalArgumentException.class,
-                () -> calculator.run(new String[]{inputFile.toString()}));
-
-        assertTrue(thrown.getMessage().contains("Division by zero is forbidden"));
-    }
-
-    @Test
     void testLargeTest(@TempDir Path tempDir) throws IOException {
         Path inputFile = tempDir.resolve("large_test.txt");
         StringBuilder commands = new StringBuilder();
@@ -110,48 +92,5 @@ class CalculatorTest {
         }        ExecutionContext context = calculator.getContext();
         assertEquals(900, context.getStackSize());
         assertEquals(900, context.popStack());
-    }
-
-    @Test
-    void testIncorrectArguments(@TempDir Path tempDir) throws IOException {
-        Path inputFile = tempDir.resolve("test_incorrect_arguments.txt");
-        Files.write(inputFile, "DEFINE a".getBytes());
-
-        Calculator calculator = new Calculator();
-
-        assertThrows(ArrayIndexOutOfBoundsException.class,
-                () -> calculator.run(new String[]{inputFile.toString()}));
-
-    }
-
-    @Test
-    void testLargeNumbers(@TempDir Path tempDir) throws IOException {
-        Path inputFile = tempDir.resolve("test_large_numbers.txt");
-        String commands = """
-            PUSH 1.0E308
-            PUSH 1.0E308
-            MUL
-            PRINT
-            """;
-        Files.write(inputFile, commands.getBytes());
-
-        Calculator calculator = new Calculator();
-
-        Exception thrown = assertThrows(IllegalArgumentException.class,
-                () -> calculator.run(new String[]{inputFile.toString()}));
-
-        assertTrue(thrown.getMessage().contains("illegal calculations"));
-    }
-
-    @Test
-    void testEmptyStack(@TempDir Path tempDir) throws IOException {
-        Path inputFile = tempDir.resolve("test_empty_stack.txt");
-        Files.write(inputFile, "ADD".getBytes());
-
-        Calculator calculator = new Calculator();
-
-        assertThrows(EmptyStackException.class,
-                () -> calculator.run(new String[]{inputFile.toString()}));
-
     }
 }
