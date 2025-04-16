@@ -63,7 +63,6 @@ public class Factory {
                 (Storage<Car>) detailStorages.get(Car.class),
                 workers, logger);
 
-        new Thread(factoryMonitor, "FactoryMonitor").start();
         logger.info("Production successfully initialized and ready to perform");
     }
 
@@ -71,6 +70,8 @@ public class Factory {
         logger.info("Production has been started");
 
         Storage<Car> carStorage = (Storage<Car>) detailStorages.get(Car.class);
+        carStorage.setListener(factoryMonitor);
+
         Storage<MotorDetail> motorDetailStorage = (Storage<MotorDetail>) detailStorages.get(MotorDetail.class);
         Storage<BodyDetail> bodyDetailStorage = (Storage<BodyDetail>) detailStorages.get(BodyDetail.class);
         Storage<AccessoryDetail> accessoryDetailStorage = (Storage<AccessoryDetail>) detailStorages.get(AccessoryDetail.class);

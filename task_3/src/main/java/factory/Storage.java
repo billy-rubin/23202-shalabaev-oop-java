@@ -9,13 +9,17 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Storage<T extends Detail> implements Putable<T> {
     private final int capacity;
     private final Queue<T> items = new LinkedList<>();
-
+    private StorageListener listener;
     private final Lock lock = new ReentrantLock();
     private final Condition notFull = lock.newCondition();
     private final Condition notEmpty = lock.newCondition();
 
     public Storage(int capacity) {
         this.capacity = capacity;
+    }
+
+    public void setListener(StorageListener listener) {
+        this.listener = listener;
     }
 
     @Override
@@ -40,6 +44,11 @@ public class Storage<T extends Detail> implements Putable<T> {
             }
             T item = items.poll();
             notFull.signal();
+
+            if (listener != null) {
+                listener.onCarRemoved();  // Уведомляем FactoryMonitor
+            }
+
             return item;
         } finally {
             lock.unlock();
@@ -55,7 +64,7 @@ public class Storage<T extends Detail> implements Putable<T> {
         }
     }
 
-    public int getCapacity(){
+    public int getCapacity() {
         return capacity;
     }
 
