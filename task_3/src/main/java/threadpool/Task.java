@@ -1,17 +1,7 @@
 package threadpool;
 
-public class Task {
-    private final Runnable task;
-
-    public Task(Runnable task) {
-        this.task = task;
-    }
-
-    public Runnable getTask() {
-        return task;
-    }
-
-    public void execute() {
-        task.run();
-    }
+public interface Task {
+    public void execute() throws InterruptedException;
+    public String getTaskName();
+    public void setParameters(int parameter);
 }

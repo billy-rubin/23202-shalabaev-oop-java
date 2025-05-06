@@ -1,7 +1,7 @@
 package factory;
 
 public class AccessoryDetail extends Detail{
-    AccessoryDetail(String  ID) {
+    public AccessoryDetail(String  ID) {
         super(ID);
     }
 }

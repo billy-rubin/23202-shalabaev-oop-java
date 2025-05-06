@@ -1,12 +1,17 @@
 package threadpool;
 
-import java.util.concurrent.ConcurrentLinkedQueue;
+import factory.Factory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.ArrayDeque;
 
 class PooledThread extends Thread {
-    private final ConcurrentLinkedQueue<Task> taskQueue;
+    private final ArrayDeque<Task> taskQueue;
     private boolean isRunning;
+    private Logger logger = LoggerFactory.getLogger(Factory.class.getName());
 
-    public PooledThread(String name, ConcurrentLinkedQueue<Task> taskQueue, boolean isRunning) {
+    public PooledThread(String name, ArrayDeque<Task> taskQueue, boolean isRunning) {
         super(name);
         this.isRunning = isRunning;
         this.taskQueue = taskQueue;
@@ -23,10 +28,10 @@ class PooledThread extends Thread {
 
     @Override
     public void run() {
+        Task task = null;
         while (isRunning || !taskQueue.isEmpty()) {
-            Task task = null;
             synchronized (taskQueue) {
-                while (taskQueue.isEmpty() && isRunning) {
+                if (taskQueue.isEmpty() && isRunning) {
                     try {
                         System.out.println("awaitning");
                         taskQueue.wait();
@@ -34,18 +39,18 @@ class PooledThread extends Thread {
                         Thread.currentThread().interrupt();
                         throw new RuntimeException("Thread was interrupted: " + getName());
                     }
-                }
-                // Берем задачу из очереди
-                task = taskQueue.poll();
-            }
-            // Если задача найдена, выполняем ее
-            if (task != null) {
-                try {
-                    task.execute();
-                } catch (Exception e) {
-                    throw new RuntimeException("Task execution failed: " + e.getMessage());
+                    continue;
+                } else {
+                    task = taskQueue.remove();
                 }
             }
+
+            try {
+                task.execute();
+            } catch (InterruptedException e){
+                logger.info("THREAD POOL :: INTERRUPTED " + task.getTaskName());
+            }
+            logger.info(getName() + " got the job " + task.getTaskName());
         }
         System.out.println(getName() + " is shutting down");
     }

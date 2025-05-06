@@ -1,7 +1,7 @@
 package factory;
 
 public class MotorDetail extends Detail{
-    MotorDetail(String ID){
+    public MotorDetail(String ID){
         super(ID);
     }
 }

@@ -2,66 +2,49 @@ package factory;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class Storage<T extends Detail> implements Putable<T> {
     private final int capacity;
     private final Queue<T> items = new LinkedList<>();
-    private StorageListener listener;
-    private final Lock lock = new ReentrantLock();
-    private final Condition notFull = lock.newCondition();
-    private final Condition notEmpty = lock.newCondition();
+    private final Object listener = new Object();
 
     public Storage(int capacity) {
         this.capacity = capacity;
     }
 
-    public void setListener(StorageListener listener) {
+   /* public void setListener(StorageListener listener) {
         this.listener = listener;
-    }
+    }*/
 
     @Override
     public void put(T item) throws InterruptedException {
-        lock.lock();
-        try {
+        synchronized (listener) {
             while (items.size() >= capacity) {
-                notFull.await();
+                listener.wait();
             }
             items.add(item);
-            notEmpty.signal();
-        } finally {
-            lock.unlock();
+            listener.notifyAll();
+            //listener.onDetailAdded(item.getClass());
         }
     }
 
     public T get() throws InterruptedException {
-        lock.lock();
-        try {
+        synchronized (listener) {
             while (items.isEmpty()) {
-                notEmpty.await();
+                listener.wait();
             }
             T item = items.poll();
-            notFull.signal();
-
-            if (listener != null) {
-                listener.onCarRemoved();  // Уведомляем FactoryMonitor
+            listener.notify();
+            /*if (item instanceof Car) {
+                listener.onCarRemoved();
             }
-
+             */
             return item;
-        } finally {
-            lock.unlock();
         }
     }
 
     public int size() {
-        lock.lock();
-        try {
-            return items.size();
-        } finally {
-            lock.unlock();
-        }
+        return items.size();
     }
 
     public int getCapacity() {

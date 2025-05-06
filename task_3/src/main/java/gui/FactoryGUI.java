@@ -1,47 +1,42 @@
 package gui;
 
-import factory.AccessoryDetail;
-import factory.BodyDetail;
-import factory.MotorDetail;
-import factory.Supplier;
-import factory.*;
+import threadpool.Task;
 
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
-import java.util.List;
 
 public class FactoryGUI extends JFrame {
-    private  JSlider body_supplier_speed;
-    private  JSlider motor_supplier_speed;
-    private  JSlider accessory_supplier_speed;
-    private  JSlider dealer_speed;
+    private JSlider body_supplier_speed;
+    private JSlider motor_supplier_speed;
+    private JSlider accessory_supplier_speed;
+    private JSlider dealer_speed;
 
     private JLabel body_speed_label;
     private JLabel motor_speed_label;
     private JLabel accessory_speed_label;
     private JLabel dealer_speed_label;
 
-    private  JLabel body_storage_label;
-    private  JLabel motor_storage_label;
-    private  JLabel accessory_storage_label;
-    private  JLabel car_storage_label;
+    private JLabel body_storage_label;
+    private JLabel motor_storage_label;
+    private JLabel accessory_storage_label;
+    private JLabel car_storage_label;
 
-    private  JLabel sold_cars_label;
-    private  JProgressBar car_storage_pb;
+    private JLabel sold_cars_label;
+    private JProgressBar car_storage_pb;
 
     private final int body_storage_capacity;
     private final int motor_storage_capacity;
     private final int accessory_storage_capacity;
     private final int car_storage_capacity;
 
-    private final List<Supplier<BodyDetail>> bodySuppliers;
-    private final List<Supplier<MotorDetail>> motorSuppliers;
-    private final List<Supplier<AccessoryDetail>> accessorySuppliers;
-    private final List<Dealer> dealers;
+    // Экземпляры задач
+    private final Task supplyBodies;
+    private final Task supplyMotos;
+    private final Task supplyAccessories;
+    private final Task orderSell;
 
-    public FactoryGUI(List<Supplier<BodyDetail>> bodySuppliers, List<Supplier<MotorDetail>> motorSuppliers,
-                      List<Supplier<AccessoryDetail>> accessorySuppliers, List<Dealer> dealers,
+    public FactoryGUI(Task supplyBodies, Task supplyMotos, Task supplyAccessories, Task orderSell,
                       int body_storage_capacity, int motor_storage_capacity,
                       int accessory_storage_capacity, int car_storage_capacity,
                       int body_supplier_delay, int motor_supplier_delay,
@@ -52,10 +47,10 @@ public class FactoryGUI extends JFrame {
         this.accessory_storage_capacity = accessory_storage_capacity;
         this.car_storage_capacity = car_storage_capacity;
 
-        this.bodySuppliers = bodySuppliers;
-        this.motorSuppliers = motorSuppliers;
-        this.accessorySuppliers = accessorySuppliers;
-        this.dealers = dealers;
+        this.supplyBodies = supplyBodies;
+        this.supplyMotos = supplyMotos;
+        this.supplyAccessories = supplyAccessories;
+        this.orderSell = orderSell;
 
         setTitle("Factory Control Panel");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -92,7 +87,8 @@ public class FactoryGUI extends JFrame {
         headerPanel.add(titleLabel);
 
         add(headerPanel, BorderLayout.NORTH);
-        setIconImage(Toolkit.getDefaultToolkit().getImage("C:/Users/rumit/IdeaProjects/23202-shalabaev-oop-java/task_3/src/main/resources/icon.jpg"));
+        // Убедитесь, что путь к иконке корректен
+        //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/resources/icon.jpg")));
         // Центрирование окна
         setLocationRelativeTo(null);
     }
@@ -124,7 +120,7 @@ public class FactoryGUI extends JFrame {
         car_storage_pb = new JProgressBar(0, car_storage_capacity);
         styleProgressBar(car_storage_pb);
 
-        sold_cars_label = createStyledLabel(" Sold cars: 0", labelFont, labelColor);
+        sold_cars_label = createStyledLabel("Sold cars: 0", labelFont, labelColor);
 
         stats_panel.add(body_storage_label);
         stats_panel.add(motor_storage_label);
@@ -253,22 +249,15 @@ public class FactoryGUI extends JFrame {
             int slider_value = slider.getValue();
             label.setText(label.getText().split(":")[0] + ": " + slider_value);
 
+            // Обновляем параметр задержки для соответствующей задачи
             if (e.getSource() == body_supplier_speed) {
-                for (Supplier<BodyDetail> supplier : bodySuppliers) {
-                    supplier.setDelay(body_supplier_speed.getValue());
-                }
+                supplyBodies.setParameters(slider_value);
             } else if (e.getSource() == motor_supplier_speed) {
-                for (Supplier<MotorDetail> supplier : motorSuppliers) {
-                    supplier.setDelay(motor_supplier_speed.getValue());
-                }
+                supplyMotos.setParameters(slider_value);
             } else if (e.getSource() == accessory_supplier_speed) {
-                for (Supplier<AccessoryDetail> supplier : accessorySuppliers) {
-                    supplier.setDelay(accessory_supplier_speed.getValue());
-                }
+                supplyAccessories.setParameters(slider_value);
             } else if (e.getSource() == dealer_speed) {
-                for (Dealer dealer : dealers) {
-                    dealer.setDelay(dealer_speed.getValue());
-                }
+                orderSell.setParameters(slider_value);
             }
         });
 
