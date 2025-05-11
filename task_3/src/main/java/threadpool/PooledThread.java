@@ -48,9 +48,9 @@ class PooledThread extends Thread {
             try {
                 task.execute();
             } catch (InterruptedException e){
-                logger.info("THREAD POOL :: INTERRUPTED " + task.getTaskName());
+                logger.info("Thread has been interrupted " + task.getTaskName());
             }
-            logger.info(getName() + " got the job " + task.getTaskName());
+            logger.info(getName() + " got the task " + task.getTaskName());
         }
         System.out.println(getName() + " is shutting down");
     }

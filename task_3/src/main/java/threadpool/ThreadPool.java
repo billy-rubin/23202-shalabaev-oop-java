@@ -24,7 +24,8 @@ public class ThreadPool{
         this.isRunning = true;
 
         for (int i = 0; i < threadsNum; i++) {
-            PooledThread thread = new PooledThread("Worker-" + i, taskQueue, isRunning);
+            PooledThread thread = new PooledThread("Pool " + poolName + " Thread-" + i, taskQueue, isRunning);
+            System.out.println("Pool " + poolName + " Thread-" + i);
             this.availableThreads.add(thread);
         }
         for (PooledThread thread : availableThreads){

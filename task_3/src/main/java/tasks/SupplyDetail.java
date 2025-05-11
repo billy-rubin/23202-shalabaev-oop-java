@@ -9,12 +9,12 @@ import threadpool.Task;
 import java.lang.reflect.InvocationTargetException;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Supply<T extends Detail> implements Task {
+public class SupplyDetail<T extends Detail> implements Task {
     private final Class<T> detailClass;
-    private final AtomicInteger delay; // Потокобезопасная задержка
+    private final AtomicInteger delay;
     private final Putable<T> detailStorage;
 
-    public Supply(Class<T> detailClass, Storage<T> detailStorage, int delay) {
+    public SupplyDetail(Class<T> detailClass, Storage<T> detailStorage, int delay) {
         this.detailClass = detailClass;
         this.detailStorage = detailStorage;
         this.delay = new AtomicInteger(delay);
@@ -34,7 +34,7 @@ public class Supply<T extends Detail> implements Task {
     public void execute() throws InterruptedException{
         while (!Thread.currentThread().isInterrupted()) {
             try {
-                Thread.sleep(delay.get()); // Используем текущую задержку
+                Thread.sleep(delay.get());
                 T detail = createDetail();
                 detailStorage.put(detail);
             } catch (InterruptedException e) {
@@ -50,6 +50,6 @@ public class Supply<T extends Detail> implements Task {
 
     @Override
     public void setParameters(int parameter) {
-        delay.set(parameter); // Атомарное обновление задержки
+        delay.set(parameter);
     }
 }

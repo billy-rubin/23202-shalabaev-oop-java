@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class SellCar implements Task {
     private final Storage<Car> carStorage;
-    private final AtomicInteger dealerDelay; // Потокобезопасная задержка
+    private final AtomicInteger dealerDelay;
     private int soldCarsNum;
 
     public SellCar(Storage<Car> carStorage, int dealerDelay) {
@@ -19,7 +19,7 @@ public class SellCar implements Task {
     public void execute() throws InterruptedException{
         while (!Thread.currentThread().isInterrupted()) {
             try {
-                Thread.sleep(dealerDelay.get()); // Используем текущую задержку
+                Thread.sleep(dealerDelay.get());
                 Car car = carStorage.get();
                 ++soldCarsNum;
             } catch (InterruptedException e) {
@@ -34,7 +34,7 @@ public class SellCar implements Task {
 
     @Override
     public String getTaskName() {
-        return "Dealer sold car: " + "car";
+        return "Dealer " + this +  " sold car: ";
     }
 
     @Override

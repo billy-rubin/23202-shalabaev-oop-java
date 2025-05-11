@@ -1,2 +1,2174 @@
-2025-05-06 13:36:37 INFO  factory.Factory - Production successfully initialized and ready to perform
-2025-05-06 13:36:37 INFO  factory.Factory - Production has been started
+2025-05-12 01:14:11 INFO  factory.Factory - Production successfully initialized and ready to perform
+2025-05-12 01:14:11 INFO  factory.Factory - Production has been started
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:14 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:17 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:18 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:19 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:20 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:21 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:22 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:23 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:24 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:25 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:27 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:30 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:31 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:34 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:35 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:36 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:37 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:38 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: BodyDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: MotorDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: Car
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Detail added: AccessoryDetail
+2025-05-12 01:14:39 INFO  factory.FactoryMonitor - Car removed from storage

@@ -20,16 +20,12 @@ public class FactoryMonitor implements StorageListener {
     }
 
     @Override
-    public synchronized void onCarRemoved() {
-        if (!carStorage.isFull()) {
-            logger.info("Car storage is no longer full, requesting new car assembly");
-            workers.addTask(new BuildCar(detailStorages));
-            notifyAll(); // Wake up any waiting threads
-        }
+    public void onDetailAdded(Class<?> detailClass) {
+        logger.info("Detail added: " + detailClass.getSimpleName());
     }
 
     @Override
-    public synchronized void onDetailAdded(Class<? extends Detail> detailType) {
-        notifyAll(); // Notify waiting threads that a detail has been added
+    public void onCarRemoved() {
+        logger.info("Car removed from storage");
     }
 }

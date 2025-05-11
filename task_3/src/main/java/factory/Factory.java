@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import tasks.*;
 
 public class Factory {
-    private final boolean logSale;
+    private static boolean logSale;
     private final Map<Class<? extends Detail>, Storage<? extends Detail>> detailStorages;
     private final int suppliersDelay = 3000;
     private FactoryMonitor factoryMonitor;
@@ -40,15 +40,20 @@ public class Factory {
             logger.info("Logging initialized");
         }
         this.detailStorages = new HashMap<>();
-        initializeStorages();
         initializeProduction();
+        initializeStorages();
     }
 
     private void initializeStorages() {
-        detailStorages.put(BodyDetail.class, new Storage<>(Integer.parseInt(config.getProperty("StorageBodySize"))) );
-        detailStorages.put(MotorDetail.class, new Storage<>(Integer.parseInt(config.getProperty("StorageMotorSize"))));
-        detailStorages.put(AccessoryDetail.class, new Storage<>(Integer.parseInt(config.getProperty("StorageAccessorySize"))));
-        detailStorages.put(Car.class, new Storage<>(Integer.parseInt(config.getProperty("StorageAutoSize"))));
+        // Передаем factoryMonitor как StorageListener в каждый склад
+        detailStorages.put(BodyDetail.class, new Storage<>(
+                Integer.parseInt(config.getProperty("StorageBodySize")), factoryMonitor));
+        detailStorages.put(MotorDetail.class, new Storage<>(
+                Integer.parseInt(config.getProperty("StorageMotorSize")), factoryMonitor));
+        detailStorages.put(AccessoryDetail.class, new Storage<>(
+                Integer.parseInt(config.getProperty("StorageAccessorySize")), factoryMonitor));
+        detailStorages.put(Car.class, new Storage<>(
+                Integer.parseInt(config.getProperty("StorageAutoSize")), factoryMonitor));
     }
 
     private void initializeProduction() {
@@ -59,8 +64,8 @@ public class Factory {
         motorSuppliersNum = Integer.parseInt(config.getProperty("MotorSuppliers"));
         int suppliersNum = accessorySuppliersNum + bodySuppliersNum + motorSuppliersNum;
         supplierThreadPool = new ThreadPool("Suppliers", suppliersNum);
-        workerThreadPool = new ThreadPool("Workers",workersNum);
-        dealerThreadPool = new ThreadPool("Dealers",dealersNum);
+        workerThreadPool = new ThreadPool("Workers", workersNum);
+        dealerThreadPool = new ThreadPool("Dealers", dealersNum);
 
         this.factoryMonitor = new FactoryMonitor(
                 (Storage<Car>) detailStorages.get(Car.class),
@@ -73,7 +78,6 @@ public class Factory {
         logger.info("Production has been started");
 
         Storage<Car> carStorage = (Storage<Car>) detailStorages.get(Car.class);
-        //carStorage.setListener(factoryMonitor);
 
         Storage<MotorDetail> motorDetailStorage = (Storage<MotorDetail>) detailStorages.get(MotorDetail.class);
         Storage<BodyDetail> bodyDetailStorage = (Storage<BodyDetail>) detailStorages.get(BodyDetail.class);
@@ -83,19 +87,21 @@ public class Factory {
         accessorySuppliersDelay = bodySuppliersDelay = motorSuppliersDelay = suppliersDelay;
         int dealerDelay = 3000;
 
-        supplyAccessories = new Supply<>(AccessoryDetail.class, accessoryDetailStorage, accessorySuppliersDelay);
-        supplyBodies = new Supply<>(BodyDetail.class, bodyDetailStorage, bodySuppliersDelay);
-        supplyMotos = new Supply<>(MotorDetail.class, motorDetailStorage, motorSuppliersDelay);
+        supplyAccessories = new SupplyDetail<>(AccessoryDetail.class, accessoryDetailStorage, accessorySuppliersDelay);
+        supplyBodies = new SupplyDetail<>(BodyDetail.class, bodyDetailStorage, bodySuppliersDelay);
+        supplyMotos = new SupplyDetail<>(MotorDetail.class, motorDetailStorage, motorSuppliersDelay);
 
         orderBuild = new BuildCar(detailStorages);
         orderSell = new SellCar(carStorage, dealerDelay);
 
         Thread production = new Thread(() -> {
-            while (carStorage.size() < carStorage.getCapacity()) {
-                supplierThreadPool.addTask(supplyAccessories);
-                supplierThreadPool.addTask(supplyBodies);
-                supplierThreadPool.addTask(supplyMotos);
-                workerThreadPool.addTask(orderBuild);
+            while (!Thread.currentThread().isInterrupted()) {
+                if (carStorage.size() < carStorage.getCapacity()) {
+                    supplierThreadPool.addTask(supplyAccessories);
+                    supplierThreadPool.addTask(supplyBodies);
+                    supplierThreadPool.addTask(supplyMotos);
+                    workerThreadPool.addTask(orderBuild);
+                }
                 dealerThreadPool.addTask(orderSell);
             }
         });
