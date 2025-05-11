@@ -4,24 +4,16 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import static controller.SwingConsole.run;
-
 public class MenuButton extends JButton {
-    private JButton button;
-    private JTextField txt = new JTextField(10);
-    private ButtonListener listener = new ButtonListener();
+    private ButtonType type;
 
-    class ButtonListener implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
-            String name = ((JButton)e.getSource()).getText();
-            txt.setText(name + " was pressed");
-        }
+    public MenuButton(ButtonType type) {
+        this.type = type;
+        setIcon(new ImageIcon(getClass().getResource("/images/" + type.toString().toLowerCase() + ".png")));
+        setBorderPainted(false);
+        setContentAreaFilled(false);
+        setFocusPainted(false);
     }
 
-    public MenuButton(String text) {
-        button = new JButton(text);
-        button.addActionListener(listener);
-        setLayout(new FlowLayout());
-        add(button);
-        add(txt);
-    }
+    public ButtonType getType() { return type; }
 }

@@ -1,18 +1,23 @@
 package model.entities;
 
-public class Missile extends Sprite{
+import model.Game;
+
+public abstract class Missile extends Sprite {
     protected boolean fromPlayer;
-    protected int width, height;
-    Missile(int x, int y, int speed, boolean fromPlayer){
-        super(x, y, speed);
+
+    public Missile(int x, int y, int speed, boolean fromPlayer, String[] framePaths) {
+        super(x, y, Math.abs(speed), framePaths);
         this.fromPlayer = fromPlayer;
+        this.speed = speed; // Может быть отрицательным для движения вверх
     }
+
     public void update() {
-        y += speed;
-        if (y < 0 || y > 600)
+        move(x, y + speed);
+        if (y < 0 || y > Game.BOTTOM_BOUND)
             state = false;
     }
-    public boolean isFromPlayer() { return fromPlayer; }
-    public int getWidth() { return width; }
-    public int getHeight() { return height; }
+
+    public boolean isFromPlayer() {
+        return fromPlayer;
+    }
 }

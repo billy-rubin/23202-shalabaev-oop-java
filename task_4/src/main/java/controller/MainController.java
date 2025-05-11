@@ -1,9 +1,8 @@
 package controller;
 
-import model.Game;
-import viewier.MenuView;
-
 import javax.swing.*;
+import model.Game;
+import viewier.*;
 
 public class MainController {
     private JFrame frame;
@@ -22,7 +21,7 @@ public class MainController {
         frame.setVisible(true);
         new MenuController(menuView, this);
     }
-    /*
+
     public void startGame() {
         Game game = new Game();
         GameView gameView = new GameView(game);
@@ -31,5 +30,4 @@ public class MainController {
         frame.setLocationRelativeTo(null);
         new GameController(game, gameView);
     }
-     */
 }

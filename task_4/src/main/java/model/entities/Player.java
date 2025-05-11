@@ -1,51 +1,50 @@
 package model.entities;
 
-import java.awt.*;
+import controller.ControllerCommand;
 
-public class Player extends Sprite implements Shooting{
-    private int x,y;
-    private boolean state;
-    private int heartsNum = 3;
-    private final int speed = 5;
-    private Image model;
-    private int bulletSpeed = 5;
-    private boolean moveLeft, moveRight, moveUp, moveDown;
+import java.util.LinkedList;
+
+public class Player extends Sprite implements Shooting {
+    private LinkedList<ControllerCommand> activeCommands;
+    private long lastShot;
+    private static final long SHOOT_COOLDOWN = 500;
 
     public Player(int x, int y) {
-        super(x,y,5);
-        setState(true);
+        super(x, y, 5, new String[]{"/images/player1.png", "/images/player2.png"});
+        activeCommands = new LinkedList<>();
+        lastShot = 0;
     }
+
     public void update() {
-        if (moveLeft && x > 0) x -= speed;
-        if (moveRight && x < 600 - 20) x += speed;
-        if (moveUp && y > 0) y -= speed;
-        if (moveDown && y < 600 - 20) y += speed;
+        for (ControllerCommand command : activeCommands) {
+            switch (command) {
+                case UP: move(x, y - speed); break;
+                case DOWN: move(x, y + speed); break;
+                case LEFT: move(x - speed, y); break;
+                case RIGHT: move(x + speed, y); break;
+            }
+        }
     }
 
-    public Missile shoot(){
-        return new Bullet(x + 8, y, -bulletSpeed, true, Bullet.Type.PLAYER);
-    }
-    public void hit() {
-        heartsNum--;
+    public void setActiveCommands(LinkedList<ControllerCommand> commands) {
+        this.activeCommands = commands;
     }
 
-    public int getHeartsNum() {
-        return heartsNum;
+    public LinkedList<ControllerCommand> getActiveCommands() {
+        return activeCommands;
     }
 
-    public void setMoveDown(boolean moveDown) {
-        this.moveDown = moveDown;
+    public boolean canShoot() {
+        long currentTime = System.currentTimeMillis();
+        if (currentTime - lastShot >= SHOOT_COOLDOWN) {
+            lastShot = currentTime;
+            return true;
+        }
+        return false;
     }
 
-    public void setMoveLeft(boolean moveLeft) {
-        this.moveLeft = moveLeft;
-    }
-
-    public void setMoveUp(boolean moveUp) {
-        this.moveUp = moveUp;
-    }
-
-    public void setMoveRight(boolean moveRight) {
-        this.moveRight = moveRight;
+    @Override
+    public Missile shoot() {
+        return new Bullet(x + 20, y - 10, -10, true, new String[]{"/images/bullet1.png"});
     }
 }

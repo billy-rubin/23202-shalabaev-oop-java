@@ -1,16 +1,14 @@
 package model.entities;
 
-import javax.swing.*;
+import model.Game;
 
 public class Bomber extends Enemy {
-    private int bulletSpeed;
-    public Bomber(int x, int y){
-        super(x,y);
-        this.speed = 3;
-        bulletSpeed = 3;
+    public Bomber(int x, int y, Game game) {
+        super(x, y, new String[]{"/images/player1.png", "/images/player2.png"}, game);
     }
+
     @Override
-    public Bomb shoot() {
-        return new Bomb(x + 8, y + 20, bulletSpeed, false);
+    public Missile shoot() {
+        return new Bomb(x + 20, y + 40, 3, false, new String[]{"/images/bullet1.png"});
     }
 }

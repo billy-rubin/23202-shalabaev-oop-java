@@ -1,76 +1,66 @@
 package model;
 
 import model.entities.*;
-
+import controller.*;
 import java.util.ArrayList;
-import java.util.Random;
+import java.util.List;
 
 public class Game {
+    public static final int LEFT_BOUND = 340;
+    public static final int RIGHT_BOUND = 1210;
+    public static final int TOP_BOUND = 0;
+    public static final int BOTTOM_BOUND = 789;
+
     private Player player;
-    private ArrayList<Enemy> enemies = new ArrayList<>();
-    private ArrayList<Missile> missiles = new ArrayList<>();
-    private Random random = new Random();
+    private List<Enemy> enemies;
+    private List<Missile> missiles;
+    private WaveGenerator waveGenerator;
     private CollisionDetector collisionDetector;
-    private boolean gameState;
+    private int kills;
+    private int lives;
+    private boolean running;
 
-    public Game(){
-        player = new Player(300, 500);
-        gameState = true;
-        collisionDetector = new CollisionDetector();
+    public Game() {
+        player = new Player((RIGHT_BOUND - LEFT_BOUND) / 2 + LEFT_BOUND, BOTTOM_BOUND - 50);
+        enemies = new ArrayList<>();
+        missiles = new ArrayList<>();
+        waveGenerator = new WaveGenerator(this);
+        collisionDetector = new CollisionDetector(this);
+        kills = 0;
+        lives = 3;
+        running = true;
     }
+
     public void update() {
-        if (!gameState)
-            return;
+        if (!running) return;
         player.update();
-        updateEnemies();
-        updateBullets();
-        spawnEnemies();
-        collisionDetector.checkCollisions(this);
-    }
-
-    private void spawnEnemies() {
-        if (random.nextInt(100) < 5) {
-            int x = random.nextInt(600);
-            if (random.nextBoolean()) {
-                enemies.add(new Fighter(x, 0));
-            } else {
-                enemies.add(new Bomber(x, 0));
-            }
+        if (player.getActiveCommands().contains(ControllerCommand.SHOOT) && player.canShoot()) {
+            missiles.add(player.shoot());
         }
-    }
-
-    private void updateEnemies() {
-        enemies.removeIf(enemy -> !enemy.isAlive());
-        for (Enemy enemy : enemies) {
+        waveGenerator.update();
+        for (Enemy enemy : new ArrayList<>(enemies)) {
             enemy.update();
-            if (random.nextInt(100) < 2) {
-                missiles.add(enemy.shoot());
+            if (!enemy.isAlive()) {
+                enemies.remove(enemy);
+                kills++;
             }
         }
-    }
-
-    private void updateBullets() {
-        missiles.removeIf(bullet -> !bullet.isAlive());
-        for (Missile missile : missiles) {
+        for (Missile missile : new ArrayList<>(missiles)) {
             missile.update();
+            if (!missile.isAlive()) missiles.remove(missile);
         }
+        collisionDetector.checkCollisions();
+        if (lives <= 0) running = false;
     }
 
-    public Player getPlayer() {
-        return player;
-    }
-
-    public ArrayList<Enemy> getEnemies() {
-        return enemies;
-    }
-
-    public ArrayList<Missile> getMissiles() {
-        return missiles;
-    }
-    public boolean isRunning() {
-        return gameState;
-    }
-    public void setGameState(boolean running) {
-        this.gameState = running;
-    }
+    public Player getPlayer() { return player; }
+    public List<Enemy> getEnemies() { return enemies; }
+    public List<Missile> getMissiles() { return missiles; }
+    public int getKills() { return kills; }
+    public int getLives() { return lives; }
+    public void reduceLives() { lives--; }
+    public int getWaveNumber() { return waveGenerator.getCurrentWave(); }
+    public int getTimeToNextWave() { return waveGenerator.getTimeToNextWave(); }
+    public boolean isRunning() { return running; }
+    public void addMissile(Missile missile) { missiles.add(missile); }
 }

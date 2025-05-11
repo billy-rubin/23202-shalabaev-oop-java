@@ -1,11 +1,10 @@
-import controller.*;
-import model.*;
-import viewier.*;
+import controller.MainController;
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
-
-        javax.swing.SwingUtilities.invokeLater(() -> {
-            MainController mainController = new controller.MainController();
+        SwingUtilities.invokeLater(() -> {
+            MainController mainController = new MainController();
             mainController.showMenu();
         });
     }
