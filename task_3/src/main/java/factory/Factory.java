@@ -45,7 +45,6 @@ public class Factory {
     }
 
     private void initializeStorages() {
-        // Передаем factoryMonitor как StorageListener в каждый склад
         detailStorages.put(BodyDetail.class, new Storage<>(
                 Integer.parseInt(config.getProperty("StorageBodySize")), factoryMonitor));
         detailStorages.put(MotorDetail.class, new Storage<>(
@@ -117,7 +116,7 @@ public class Factory {
         gui.setVisible(true);
 
         Timer timer = new Timer(1000, e -> {
-            int total_sold_cars = ((SellCar) orderSell).getSoldCarsNum(); // Получаем количество проданных машин
+            int total_sold_cars = ((SellCar) orderSell).getSoldCarsNum();
             gui.updateStats(
                     bodyDetailStorage.size(),
                     motorDetailStorage.size(),

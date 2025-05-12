@@ -33,7 +33,6 @@ class PooledThread extends Thread {
             synchronized (taskQueue) {
                 if (taskQueue.isEmpty() && isRunning) {
                     try {
-                        System.out.println("awaitning");
                         taskQueue.wait();
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
@@ -52,6 +51,6 @@ class PooledThread extends Thread {
             }
             logger.info(getName() + " got the task " + task.getTaskName());
         }
-        System.out.println(getName() + " is shutting down");
+        logger.info(getName() + " is shutting down");
     }
 }

@@ -36,7 +36,6 @@ public class ThreadPool{
     public void addTask(Task task){
         synchronized (taskQueue) {
             taskQueue.add(task);
-            //System.out.println(task.toString());
             taskQueue.notify();
         }
     }
