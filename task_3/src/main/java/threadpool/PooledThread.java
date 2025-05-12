@@ -43,7 +43,6 @@ class PooledThread extends Thread {
                     task = taskQueue.remove();
                 }
             }
-
             try {
                 task.execute();
             } catch (InterruptedException e){

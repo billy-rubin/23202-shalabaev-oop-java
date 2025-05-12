@@ -1,7 +1,7 @@
 package threadpool;
 
 public interface Task {
-    public void execute() throws InterruptedException;
-    public String getTaskName();
-    public void setParameters(int parameter);
+    void execute() throws InterruptedException;
+    String getTaskName();
+    void setParameters(int parameter);
 }

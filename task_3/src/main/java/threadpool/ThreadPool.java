@@ -33,7 +33,7 @@ public class ThreadPool{
         }
     }
 
-    public void addTask(Task task){
+    public void addTask(Task task) {
         synchronized (taskQueue) {
             taskQueue.add(task);
             taskQueue.notify();
