@@ -4,13 +4,13 @@ import controller.ControllerCommand;
 
 import java.util.LinkedList;
 
-public class Player extends Sprite implements Shooting {
+public class Player extends Sprite implements Shooting{
     private LinkedList<ControllerCommand> activeCommands;
     private long lastShot;
     private static final long SHOOT_COOLDOWN = 500;
 
     public Player(int x, int y) {
-        super(x, y, 5, new String[]{"/images/player1.png", "/images/player2.png"});
+        super(x, y, 5, 50, 50, new String[]{"/images/player1.png", "/images/player2.png"});
         activeCommands = new LinkedList<>();
         lastShot = 0;
     }
@@ -45,6 +45,6 @@ public class Player extends Sprite implements Shooting {
 
     @Override
     public Missile shoot() {
-        return new Bullet(x + 20, y - 10, -10, true, new String[]{"/images/bullet1.png"});
+        return new Bullet(x + 20, y - 10, -10, 50, 50, true, new String[]{"/images/bullet1.png"});
     }
 }

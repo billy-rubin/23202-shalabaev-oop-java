@@ -17,7 +17,7 @@ public class GameController {
         gameView.addKeyListener(new PlayerController(game.getPlayer()));
         gameView.setFocusable(true);
         gameView.requestFocusInWindow();
-        timer = new Timer(16, (ActionEvent e) -> {
+        timer = new Timer(10, (ActionEvent e) -> {
             game.update();
             gameView.repaint();
         });

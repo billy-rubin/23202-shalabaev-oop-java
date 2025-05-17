@@ -1,6 +1,7 @@
 package viewier;
 
 import model.Game;
+import model.Obstacle;
 import model.entities.Missile;
 import model.entities.Sprite;
 import javax.swing.*;
@@ -24,15 +25,25 @@ public class GameView extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
+        Graphics2D graphics2D;
         g.drawImage(background, 0, 0, getWidth(), getHeight(), this);
         for (Sprite enemy : game.getEnemies()) {
-            if (enemy.isVisible()) g.drawImage(enemy.getImage(), enemy.getX(), enemy.getY(), this);
+            if (enemy.isVisible()) {
+                g.drawImage(enemy.getImage(), enemy.getX() + enemy.getWidth() / 2, enemy.getY() + enemy.getHeight() / 2, this);
+            }
+        }
+        for (Obstacle obstacle : game.getObstacles()) { // Added
+            if (obstacle.isVisibility()) {
+                g.drawImage(obstacle.getImage(), obstacle.getX(), obstacle.getY(), this);
+            }
         }
         if (game.getPlayer().isVisible()) {
-            g.drawImage(game.getPlayer().getImage(), game.getPlayer().getX(), game.getPlayer().getY(), this);
+            g.drawImage(game.getPlayer().getImage(), game.getPlayer().getX() + game.getPlayer().getWidth() / 2, game.getPlayer().getY() + game.getPlayer().getHeight() / 2, this);
         }
         for (Missile missile : game.getMissiles()) {
-            if (missile.isVisible()) g.drawImage(missile.getImage(), missile.getX(), missile.getY(), this);
+            if (missile.isVisible()) {
+                g.drawImage(missile.getImage(), missile.getX() + missile.getWidth() / 2, missile.getY() + missile.getHeight() / 2, this);
+            }
         }
         hud.update();
         if (!game.isRunning()) {

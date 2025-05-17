@@ -1,9 +1,7 @@
 package controller;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import static controller.SwingConsole.run;
+
 public class MenuButton extends JButton {
     private ButtonType type;
 
