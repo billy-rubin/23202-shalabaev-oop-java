@@ -12,7 +12,7 @@ public abstract class Enemy extends Sprite implements Shooting {
     private java.util.Random random;
 
     public Enemy(int x, int y, String[] framePaths, Game game, int health, int scoreValue) {
-        super(x, y, 2, 70, 70, framePaths);
+        super(x, y, 1, 70, 70, framePaths);
         this.game = game;
         this.health = health;
         this.scoreValue = scoreValue;
@@ -34,9 +34,13 @@ public abstract class Enemy extends Sprite implements Shooting {
     public void takeDamage(int damage) {
         health -= damage;
         if (health <= 0) {
-            state = false;
+            setState(false);
             game.getScoreManager().addScore(scoreValue);
         }
+    }
+
+    public int getScoreValue() {
+        return scoreValue;
     }
 
     public boolean isDestroyed() {

@@ -10,21 +10,22 @@ import java.util.Random;
 public class WaveGenerator {
     private Game game;
     private int currentWave;
-    private Random random;
-    private final int enemiesInLine = 9;
-    private final int linesNum = 5;
+    private int enemiesInLine = 3;
+    private int linesNum = 2;
     private int enemiesCount;
 
     public WaveGenerator(Game game) {
         this.enemiesCount = enemiesInLine * linesNum;
         this.game = game;
         this.currentWave = 0;
-        this.random = new Random();
         spawnWave();
     }
 
     public void update() {
         if (enemiesCount == 0) {
+            linesNum += 1;
+            enemiesInLine += 1;
+            enemiesCount = enemiesInLine * linesNum;
             spawnWave();
         }
     }
@@ -44,6 +45,10 @@ public class WaveGenerator {
                 game.getEnemies().add(enemy);
             }
         }
+    }
+
+    public void decrementEnemyCount(){
+        enemiesCount--;
     }
 
     public int getCurrentWave() { return currentWave; }

@@ -1,14 +1,15 @@
 package model;
 
+import model.entities.Sprite;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Obstacle {
-    protected int x, y;
+public class Obstacle extends Sprite {
     protected boolean state;
-    private int protection = 5;
+    private int protection = 10;
     protected boolean visibility;
     private Image image;
     private int currentFrame;
@@ -16,6 +17,7 @@ public class Obstacle {
     protected final int height = 70;
 
     public Obstacle(int x, int y, String[] framePaths) {
+        super(x, y, 0, 150, 70, framePaths);
         this.x = x;
         this.y = y;
         this.state = true;
@@ -27,8 +29,8 @@ public class Obstacle {
         return image;
     }
 
-    public void hit(){
-        protection--;
+    public void hit(int damage){
+        protection -= damage;
     }
 
     public int getProtection(){

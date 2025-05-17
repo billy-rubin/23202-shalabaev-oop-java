@@ -1,5 +1,4 @@
 package model;
-
 public class ScoreManager {
     private int score;
     private String fileName = "score.txt";
@@ -16,11 +15,11 @@ public class ScoreManager {
         return score;
     }
 
-    public void saveScore() {
-        try (java.io.PrintWriter writer = new java.io.PrintWriter(fileName)) {
-            writer.println(score);
+    public void saveScoreWithName(String name) {
+        try (java.io.FileWriter writer = new java.io.FileWriter(fileName, true)) {
+            writer.write(name + ": " + score + "\n");
         } catch (java.io.IOException e) {
-            System.err.println("Ошибка сохранения счета: " + e.getMessage());
+            System.err.println("Error while saving progress: " + e.getMessage());
         }
     }
 }

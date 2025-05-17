@@ -14,10 +14,10 @@ public class CollisionDetector {
     public void checkCollisions() {
         Player player = game.getPlayer();
 
-        // Ограничение движения игрока с учетом размера 175x175
         if (player.getX() < Game.LEFT_BOUND) {
             player.setX(Game.LEFT_BOUND);
         }
+
         if (player.getX() + player.getWidth() > Game.RIGHT_BOUND) {
             player.setX(Game.RIGHT_BOUND - player.getWidth());
         }
@@ -31,17 +31,21 @@ public class CollisionDetector {
         // Проверка столкновений игрока со стенами
         for (Obstacle obstacle : game.getObstacles()) {
             if (collides(player, obstacle)) {
-                // Отталкиваем игрока назад
-                if (player.getX() < obstacle.getX() + obstacle.getWidth()) {
-                    player.setX(obstacle.getX() + obstacle.getWidth());
-                } else if (player.getX() + player.getWidth() > obstacle.getX()) {
-                    player.setX(obstacle.getX() - player.getWidth());
-                }
-                if (player.getY() < obstacle.getY() + obstacle.getHeight()) {
+                if (player.getY() <= obstacle.getY() + obstacle.getHeight()) {
                     player.setY(obstacle.getY() + obstacle.getHeight());
-                } else if (player.getY() + player.getHeight() > obstacle.getY()) {
+                } else if (player.getY() + player.getHeight() >= obstacle.getY()) {
                     player.setY(obstacle.getY() - player.getHeight());
                 }
+                // Отталкиваем игрока назад
+                if (player.getY() > obstacle.getY() + obstacle.getHeight() && player.getY() + player.getHeight() < obstacle.getY()){
+                    if (player.getX() <= obstacle.getX() + obstacle.getWidth()) {
+                        player.setX(obstacle.getX() + obstacle.getWidth());
+                    } else if (player.getX() + player.getWidth() >= obstacle.getX()) {
+                        player.setX(obstacle.getX() - player.getWidth());
+                    }
+                }
+
+
             }
         }
 
@@ -51,7 +55,7 @@ public class CollisionDetector {
             // Проверка столкновений пули со стенами
             for (Obstacle obstacle : game.getObstacles()) {
                 if (collides(missile, obstacle)) {
-                    obstacle.hit();
+                    obstacle.hit(missile.getDamage());
                     missileIterator.remove();
                     break;
                 }
@@ -68,6 +72,12 @@ public class CollisionDetector {
                 }
                 for (Missile other : game.getMissiles()) {
                     if (other instanceof Bomb && collides(missile, other)) {
+                        for (Enemy enemy : game.getEnemies()) {
+                            double distance = Math.sqrt(Math.pow(enemy.getX() - other.getX(), 2) + Math.pow(enemy.getY() - other.getY(), 2));
+                            if (distance <= ((Bomb) other).getExplosionRadius()) {
+                                enemy.takeDamage(3);
+                            }
+                        }
                         ((Destructible) other).takeDamage(missile.getDamage());
                         missileIterator.remove();
                         break;
@@ -75,13 +85,12 @@ public class CollisionDetector {
                 }
             } else {
                 if (collides(missile, player)) {
-                    game.reduceLives();
+                    game.reduceLives(missile.getDamage());
                     missileIterator.remove();
                 }
             }
         }
     }
-
     private boolean collides(Sprite a, Sprite b) {
         // Размеры хитбоксов
         int aWidth = a.getWidth();
@@ -89,65 +98,18 @@ public class CollisionDetector {
         int bWidth = b.getWidth();
         int bHeight = b.getHeight();
 
-        // Координаты границ хитбокса
-        int aLeft = a.getX();
+        // Координаты границ хитбокса, где (x, y) — центр
+        int aLeft = a.getX() - aWidth / 2;
         int aRight = aLeft + aWidth;
-        int aTop = a.getY();
+        int aTop = a.getY() - aHeight / 2;
         int aBottom = aTop + aHeight;
 
-        int bLeft = b.getX();
+        int bLeft = b.getX() - bWidth / 2;
         int bRight = bLeft + bWidth;
-        int bTop = b.getY();
+        int bTop = b.getY() - bHeight / 2;
         int bBottom = bTop + bHeight;
 
         // Проверка пересечения прямоугольников (AABB)
-        boolean collision = aRight > bLeft &&
-                aLeft < bRight &&
-                aBottom > bTop &&
-                aTop < bBottom;
-/*
-        if (collision) {
-            System.out.println("Collision: " + a.getClass().getSimpleName() +
-                    " (" + aLeft + "," + aTop + "," + aRight + "," + aBottom + ") with " +
-                    b.getClass().getSimpleName() +
-                    " (" + bLeft + "," + bTop + "," + bRight + "," + bBottom + ")");
-        }
-
- */
-
-        return collision;
-    }
-
-    private boolean collides(Sprite a, Obstacle b) {
-        // Размеры хитбокса для sprite
-        int aWidth = a.getWidth();
-        int aHeight = a.getHeight();
-
-        // Координаты границ хитбокса
-        int aLeft = a.getX();
-        int aRight = aLeft + aWidth;
-        int aTop = a.getY();
-        int aBottom = aTop + aHeight;
-
-        int bLeft = b.getX();
-        int bRight = bLeft + b.getWidth();
-        int bTop = b.getY();
-        int bBottom = bTop + b.getHeight();
-
-        // Проверка пересечения прямоугольников
-        boolean collision = aRight > bLeft &&
-                aLeft < bRight &&
-                aBottom > bTop &&
-                aTop < bBottom;
-         /*
-        if (collision) {
-            System.out.println("Collision: " + a.getClass().getSimpleName() +
-                    " (" + aLeft + "," + aTop + "," + aRight + "," + aBottom + ") with Obstacle" +
-                    " (" + bLeft + "," + bTop + "," + bRight + "," + bBottom + ")");
-        }
-
-d
-          */
-        return collision;
+        return aRight > bLeft && aLeft < bRight && aBottom > bTop && aTop < bBottom;
     }
 }

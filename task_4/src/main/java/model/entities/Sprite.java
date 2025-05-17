@@ -28,7 +28,7 @@ public abstract class Sprite {
             animationFrames.add(new ImageIcon(getClass().getResource(path)).getImage());
         }
         currentFrame = 0;
-        animationTimer = new Timer(200, e -> nextFrame());
+        animationTimer = new Timer(this instanceof Bomb ? 800 : 200, e -> nextFrame());
         animationTimer.start();
     }
 
@@ -51,7 +51,7 @@ public abstract class Sprite {
     public void setY(int y) { this.y = y; }
     public int getSpeed() { return speed; }
     public boolean isAlive() {
-        if (state == false) {
+        if (!state) {
             System.out.println(this);
         }
         return state;

@@ -7,12 +7,10 @@ public abstract class Missile extends Sprite {
     private int damage;
     protected Game game;
 
-    public Missile(int x, int y, int speed, int width, int height, boolean fromPlayer, String[] framePaths) {
+    public Missile(int x, int y, int speed, int width, int height, int damage, boolean fromPlayer, String[] framePaths) {
         super(x, y, Math.abs(speed), width, height, framePaths);
         this.fromPlayer = fromPlayer;
-        if (this instanceof Bomb) {
-            damage = 3;
-        }
+        this.damage = damage;
         this.speed = speed; // Может быть отрицательным для движения вверх
     }
 

@@ -7,7 +7,7 @@ import java.awt.*;
 
 public class HUDView extends JPanel {
     private Game game;
-    private JLabel killsLabel, waveLabel, livesLabel;
+    private JLabel killsLabel, waveLabel, livesLabel, scoreLabel;
 
     public HUDView(Game game) {
         this.game = game;
@@ -15,6 +15,9 @@ public class HUDView extends JPanel {
         killsLabel = new JLabel("Kills: 0");
         waveLabel = new JLabel("Wave: 0");
         livesLabel = new JLabel("Lives: 3");
+        scoreLabel = new JLabel("SCORE: 0");
+
+        add(scoreLabel);
         add(killsLabel);
         add(waveLabel);
         add(livesLabel);
@@ -22,6 +25,7 @@ public class HUDView extends JPanel {
     }
 
     public void update() {
+        scoreLabel.setText("SCORE: " + game.getScoreManager().getScore());
         killsLabel.setText("Kills: " + game.getKills());
         waveLabel.setText("Wave: " + game.getWaveNumber());
         livesLabel.setText("Lives: " + game.getLives());

@@ -10,6 +10,6 @@ public class Bomber extends Enemy {
 
     @Override
     public Missile shoot() {
-        return new Bomb(x + 20, y + 40, 2, false, new String[]{"/images/bomb1.png", "/images/bomb2.png"});
+        return new Bomb(x + 20, y + 40, 2, false, new String[]{"/images/bomb1.png"});
     }
 }

@@ -9,7 +9,7 @@ public class Game {
     public static final int LEFT_BOUND = 320;
     public static final int RIGHT_BOUND = 1200;
     public static final int TOP_BOUND = 0;
-    public static final int BOTTOM_BOUND = 785;
+    public static final int BOTTOM_BOUND = 750;
 
     private Player player;
     private List<Enemy> enemies;
@@ -26,7 +26,9 @@ public class Game {
     private ScoreManager scoreManager; // Самый правый враг
 
     public Game() {
-        player = new Player((RIGHT_BOUND - LEFT_BOUND) / 2 + LEFT_BOUND, BOTTOM_BOUND - 70);
+        player = new Player((RIGHT_BOUND - LEFT_BOUND) / 4 + LEFT_BOUND, BOTTOM_BOUND - 50);
+        System.out.println(player.getX() + " " + player.getY());
+
         enemies = new ArrayList<>();
         missiles = new ArrayList<>();
         obstacles = new ArrayList<>();
@@ -74,8 +76,10 @@ public class Game {
         // Удаление мертвых врагов и обновление крайних
         for (Enemy enemy : new ArrayList<>(enemies)) {
             if (!enemy.isAlive()) {
+                //System.out.println(enemy);
                 enemies.remove(enemy);
                 kills++;
+                waveGenerator.decrementEnemyCount();
                 updateExtremeEnemies(); // Обновляем крайних врагов
             }
         }
@@ -93,7 +97,6 @@ public class Game {
         }
         collisionDetector.checkCollisions();
         if (lives <= 0){
-            scoreManager.saveScore();
             running = false;
 
         }
@@ -120,21 +123,20 @@ public class Game {
                 }
             }
         }
-        System.out.println(leftMostEnemy.getX());
-        System.out.println(rightMostEnemy.getX());
     }
     public ScoreManager getScoreManager() { return scoreManager; }
 
-    public boolean isMoveDownSignal() { return moveDownSignal; }
-    public void setMoveDownSignal(boolean signal) { moveDownSignal = signal; }
     public Player getPlayer() { return player; }
     public List<Enemy> getEnemies() { return enemies; }
     public List<Missile> getMissiles() { return missiles; }
     public List<Obstacle> getObstacles() { return obstacles; } // Added getter
     public int getKills() { return kills; }
     public int getLives() { return lives; }
-    public void reduceLives() { lives--; }
+    public void reduceLives(int damage) { lives -= damage; }
     public int getWaveNumber() { return waveGenerator.getCurrentWave(); }
     public boolean isRunning() { return running; }
-    public void addMissile(Missile missile) { missiles.add(missile); }
-}
+    public void addMissile(Missile missile) {
+        if (missiles.size() < 20) {
+            missiles.add(missile);
+        }
+    }}
