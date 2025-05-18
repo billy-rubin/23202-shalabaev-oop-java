@@ -1,5 +1,6 @@
 package model;
 
+import model.entities.Destructible;
 import model.entities.Sprite;
 
 import javax.swing.*;
@@ -7,7 +8,7 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Obstacle extends Sprite {
+public class Obstacle extends Sprite implements Destructible {
     protected boolean state;
     private int protection = 10;
     protected boolean visibility;
@@ -25,12 +26,14 @@ public class Obstacle extends Sprite {
         image = new ImageIcon(getClass().getResource(framePaths[0])).getImage();
     }
 
-    public Image getImage() {
-        return image;
+    @Override
+    public void takeDamage(int damage){
+        protection -= damage;
     }
 
-    public void hit(int damage){
-        protection -= damage;
+    @Override
+    public boolean isDestroyed() {
+        return !state;
     }
 
     public int getProtection(){

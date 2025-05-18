@@ -52,64 +52,50 @@ public class CollisionDetector {
         Iterator<Missile> missileIterator = game.getMissiles().iterator();
         while (missileIterator.hasNext()) {
             Missile missile = missileIterator.next();
-            // Проверка столкновений пули со стенами
-            for (Obstacle obstacle : game.getObstacles()) {
-                if (collides(missile, obstacle)) {
-                    obstacle.hit(missile.getDamage());
-                    missileIterator.remove();
-                    break;
-                }
-            }
             if (missile.isFromPlayer()) {
-                Iterator<Enemy> enemyIterator = game.getEnemies().iterator();
-                while (enemyIterator.hasNext()) {
-                    Enemy enemy = enemyIterator.next();
-                    if (collides(missile, enemy)) {
-                        enemy.takeDamage(missile.getDamage());
-                        missileIterator.remove();
-                        break;
-                    }
-                }
-                for (Missile other : game.getMissiles()) {
-                    if (other instanceof Bomb && collides(missile, other)) {
-                        for (Enemy enemy : game.getEnemies()) {
-                            double distance = Math.sqrt(Math.pow(enemy.getX() - other.getX(), 2) + Math.pow(enemy.getY() - other.getY(), 2));
-                            if (distance <= ((Bomb) other).getExplosionRadius()) {
-                                enemy.takeDamage(3);
+                for (Destructible destructible : game.getDestructibles()) {
+                    if (collides(missile, (Sprite) destructible)) {
+                        if (destructible instanceof Bomb) {
+                            for (Enemy enemy : game.getEnemies()) {
+                                double distance = Math.sqrt(Math.pow(enemy.getX() - ((Bomb) destructible).getX(), 2) +
+                                        Math.pow(enemy.getY() - ((Bomb) destructible).getY(), 2));
+                                if (distance <= ((Bomb) destructible).getExplosionRadius()) {
+                                    enemy.takeDamage(3);
+                                }
                             }
                         }
-                        ((Destructible) other).takeDamage(missile.getDamage());
+                        destructible.takeDamage(missile.getDamage());
                         missileIterator.remove();
                         break;
                     }
                 }
             } else {
                 if (collides(missile, player)) {
-                    game.reduceLives(missile.getDamage());
+                    player.takeDamage(missile.getDamage());
                     missileIterator.remove();
+                    break;
+                }
+                for (Obstacle obstacle : game.getObstacles()) {
+                    if (collides(missile, obstacle)) {
+                        obstacle.takeDamage(missile.getDamage());
+                        missileIterator.remove();
+                        break;
+                    }
                 }
             }
         }
     }
     private boolean collides(Sprite a, Sprite b) {
-        // Размеры хитбоксов
-        int aWidth = a.getWidth();
-        int aHeight = a.getHeight();
-        int bWidth = b.getWidth();
-        int bHeight = b.getHeight();
+        int aLeft = a.getX();
+        int aRight = aLeft + a.getWidth();
+        int aTop = a.getY();
+        int aBottom = aTop + a.getHeight();
 
-        // Координаты границ хитбокса, где (x, y) — центр
-        int aLeft = a.getX() - aWidth / 2;
-        int aRight = aLeft + aWidth;
-        int aTop = a.getY() - aHeight / 2;
-        int aBottom = aTop + aHeight;
+        int bLeft = b.getX();
+        int bRight = bLeft + b.getWidth();
+        int bTop = b.getY();
+        int bBottom = bTop + b.getHeight();
 
-        int bLeft = b.getX() - bWidth / 2;
-        int bRight = bLeft + bWidth;
-        int bTop = b.getY() - bHeight / 2;
-        int bBottom = bTop + bHeight;
-
-        // Проверка пересечения прямоугольников (AABB)
         return aRight > bLeft && aLeft < bRight && aBottom > bTop && aTop < bBottom;
     }
 }

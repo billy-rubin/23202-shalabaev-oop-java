@@ -7,23 +7,23 @@ import java.util.List;
 
 public class Game {
     public static final int LEFT_BOUND = 320;
-    public static final int RIGHT_BOUND = 1200;
+    public static final int RIGHT_BOUND = 1170;
     public static final int TOP_BOUND = 0;
     public static final int BOTTOM_BOUND = 750;
 
     private Player player;
     private List<Enemy> enemies;
     private List<Missile> missiles;
-    private List<Obstacle> obstacles; // Added for walls
+    private List<Obstacle> obstacles;
     private WaveGenerator waveGenerator;
     private CollisionDetector collisionDetector;
     private int kills;
-    private int lives;
     private boolean running;
     private boolean moveDownSignal = false; // Сигнал для движения вниз
     private Enemy leftMostEnemy;  // Самый левый враг
-    private Enemy rightMostEnemy;
-    private ScoreManager scoreManager; // Самый правый враг
+    private Enemy rightMostEnemy; // Самый правый враг
+    private ScoreManager scoreManager;
+    private List<Destructible> destructibles;
 
     public Game() {
         player = new Player((RIGHT_BOUND - LEFT_BOUND) / 4 + LEFT_BOUND, BOTTOM_BOUND - 50);
@@ -32,17 +32,20 @@ public class Game {
         enemies = new ArrayList<>();
         missiles = new ArrayList<>();
         obstacles = new ArrayList<>();
+        destructibles = new ArrayList<>();
+
         scoreManager = new ScoreManager();
 
         // Initialize four walls
         for (int i = 0; i < 4; i++) {
-            obstacles.add(new Obstacle(LEFT_BOUND + i * 250, BOTTOM_BOUND -  4 * player.getHeight(), new String[]{"/images/obstacle1.png"}));
+            Obstacle obstacle = new Obstacle(LEFT_BOUND + i * 250, BOTTOM_BOUND - 4 * player.getHeight(), new String[]{"/images/obstacle1.png"});
+            obstacles.add(obstacle);
+            destructibles.add(obstacle);
         }
-         // Bottom wall
+        // Bottom wall
         waveGenerator = new WaveGenerator(this);
         collisionDetector = new CollisionDetector(this);
         kills = 0;
-        lives = 3;
         running = true;
         updateExtremeEnemies();
     }
@@ -76,27 +79,30 @@ public class Game {
         // Удаление мертвых врагов и обновление крайних
         for (Enemy enemy : new ArrayList<>(enemies)) {
             if (!enemy.isAlive()) {
-                //System.out.println(enemy);
                 enemies.remove(enemy);
+                destructibles.remove(enemy);
                 kills++;
                 waveGenerator.decrementEnemyCount();
                 updateExtremeEnemies(); // Обновляем крайних врагов
             }
         }
 
-        for (Obstacle obstacle : new ArrayList<>(obstacles)){
+        for (Obstacle obstacle : new ArrayList<>(obstacles)) {
             if (obstacle.getProtection() == 0) {
                 obstacles.remove(obstacle);
+                destructibles.remove(obstacle);
             }
         }
 
         for (Missile missile : new ArrayList<>(missiles)) {
             missile.update();
-            if (!missile.isAlive())
+            if (!missile.isAlive()) {
                 missiles.remove(missile);
+                destructibles.remove(missile);
+            }
         }
         collisionDetector.checkCollisions();
-        if (lives <= 0){
+        if (player.isDestroyed()) {
             running = false;
 
         }
@@ -124,19 +130,51 @@ public class Game {
             }
         }
     }
-    public ScoreManager getScoreManager() { return scoreManager; }
 
-    public Player getPlayer() { return player; }
-    public List<Enemy> getEnemies() { return enemies; }
-    public List<Missile> getMissiles() { return missiles; }
-    public List<Obstacle> getObstacles() { return obstacles; } // Added getter
-    public int getKills() { return kills; }
-    public int getLives() { return lives; }
-    public void reduceLives(int damage) { lives -= damage; }
-    public int getWaveNumber() { return waveGenerator.getCurrentWave(); }
-    public boolean isRunning() { return running; }
+
+    public ScoreManager getScoreManager() {
+        return scoreManager;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public List<Enemy> getEnemies() {
+        return enemies;
+    }
+
+    public List<Missile> getMissiles() {
+        return missiles;
+    }
+
+    public List<Obstacle> getObstacles() {
+        return obstacles;
+    }
+
+    public int getKills() {
+        return kills;
+    }
+
+    public int getLives() {
+        return player.getHealth();
+    }
+
+    public int getWaveNumber() {
+        return waveGenerator.getCurrentWave();
+    }
+
+    public boolean isRunning() {
+        return running;
+    }
+
+    public List<Destructible> getDestructibles() {
+        return destructibles;
+    }
+
     public void addMissile(Missile missile) {
         if (missiles.size() < 20) {
             missiles.add(missile);
         }
-    }}
+    }
+}

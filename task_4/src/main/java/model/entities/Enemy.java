@@ -2,35 +2,22 @@ package model.entities;
 
 import model.Game;
 
-import java.util.Random;
-
-public abstract class Enemy extends Sprite implements Shooting {
+public abstract class Enemy extends Sprite implements Destructible {
     protected Game game;
     protected int health;
     protected int scoreValue;
-    private long nextShootTime;
-    private java.util.Random random;
-
-    public Enemy(int x, int y, String[] framePaths, Game game, int health, int scoreValue) {
-        super(x, y, 1, 70, 70, framePaths);
-        this.game = game;
+    public Enemy(Game game, int x, int y, int width, int height, String[] framePaths, int health, int scoreValue) {
+        super(x, y, 1, width, height, framePaths);
         this.health = health;
         this.scoreValue = scoreValue;
-        this.random = new java.util.Random();
-        this.nextShootTime = System.currentTimeMillis() + 2000 + random.nextInt(5000); // Увеличенный кулдаун
+        this.game = game;
     }
 
     public void update() {
-        // Движение горизонтально
-        move(x + speed, y);
-
-        // Логика стрельбы
-        if (System.currentTimeMillis() >= nextShootTime && canShoot()) {
-            Missile missile = shoot();
-            game.addMissile(missile);
-            nextShootTime = System.currentTimeMillis() + 2000 + random.nextInt(5000);
-        }
+        move (speed, 0);
     }
+
+    @Override
     public void takeDamage(int damage) {
         health -= damage;
         if (health <= 0) {
@@ -43,6 +30,7 @@ public abstract class Enemy extends Sprite implements Shooting {
         return scoreValue;
     }
 
+    @Override
     public boolean isDestroyed() {
         return !state;
     }
@@ -55,7 +43,7 @@ public abstract class Enemy extends Sprite implements Shooting {
         speed = -speed;
     }
 
-    private boolean canShoot() {
+    boolean canShoot() {
         for (Enemy other : game.getEnemies()) {
             if (other != this && other.isAlive()) {
                 if (other.getX() >= x && other.getX() < x + getWidth() &&

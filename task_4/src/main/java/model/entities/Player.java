@@ -4,26 +4,46 @@ import controller.ControllerCommand;
 
 import java.util.LinkedList;
 
-public class Player extends Sprite implements Shooting{
+public class Player extends Sprite implements Shooting, Destructible, Movable{
     private LinkedList<ControllerCommand> activeCommands;
     private long lastShot;
     private static final long SHOOT_COOLDOWN = 500;
+    private int health;
 
     public Player(int x, int y) {
         super(x, y, 5, 50, 50, new String[]{"/images/player1.png", "/images/player2.png"});
         activeCommands = new LinkedList<>();
         lastShot = 0;
+        this.health = 3;
     }
 
+    @Override
     public void update() {
         for (ControllerCommand command : activeCommands) {
             switch (command) {
-                case UP: move(x, y - speed); break;
-                case DOWN: move(x, y + speed); break;
-                case LEFT: move(x - speed, y); break;
-                case RIGHT: move(x + speed, y); break;
+                case UP: move(0, (-1) * speed); break;
+                case DOWN: move(0, speed); break;
+                case LEFT: move((-1) * speed, 0); break;
+                case RIGHT: move(speed, 0); break;
             }
         }
+    }
+
+    @Override
+    public void takeDamage(int damage){
+        health -= damage;
+        if (health <= 0) {
+            setState(false);
+        }
+    }
+
+    @Override
+    public boolean isDestroyed(){
+        return !state;
+    }
+
+    public int getHealth() {
+        return health;
     }
 
     public void setActiveCommands(LinkedList<ControllerCommand> commands) {

@@ -2,7 +2,7 @@ package model.entities;
 
 import model.Game;
 
-public abstract class Missile extends Sprite {
+public abstract class Missile extends Sprite implements Movable {
     protected boolean fromPlayer;
     private int damage;
     protected Game game;
@@ -14,8 +14,9 @@ public abstract class Missile extends Sprite {
         this.speed = speed; // Может быть отрицательным для движения вверх
     }
 
+    @Override
     public void update() {
-        move(x, y + speed);
+        move(0, speed);
         if (y < 0 || y > Game.BOTTOM_BOUND)
             state = false;
     }

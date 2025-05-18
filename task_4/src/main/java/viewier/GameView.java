@@ -29,7 +29,7 @@ public class GameView extends JPanel {
         g.drawImage(background, 0, 0, getWidth(), getHeight(), this);
         for (Sprite enemy : game.getEnemies()) {
             if (enemy.isVisible()) {
-                g.drawImage(enemy.getImage(), enemy.getX() + enemy.getWidth() / 2, enemy.getY() + enemy.getHeight() / 2, this);
+                g.drawImage(enemy.getImage(), enemy.getX(), enemy.getY(), this);
             }
         }
         for (Obstacle obstacle : game.getObstacles()) { // Added
@@ -38,11 +38,11 @@ public class GameView extends JPanel {
             }
         }
         if (game.getPlayer().isVisible()) {
-            g.drawImage(game.getPlayer().getImage(), game.getPlayer().getX() + game.getPlayer().getWidth() / 2, game.getPlayer().getY() + game.getPlayer().getHeight() / 2, this);
+            g.drawImage(game.getPlayer().getImage(), game.getPlayer().getX(), game.getPlayer().getY(), this);
         }
         for (Missile missile : game.getMissiles()) {
             if (missile.isVisible()) {
-                g.drawImage(missile.getImage(), missile.getX() + missile.getWidth() / 2, missile.getY() + missile.getHeight() / 2, this);
+                g.drawImage(missile.getImage(), missile.getX(), missile.getY(), this);
             }
         }
         hud.update();

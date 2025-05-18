@@ -1,2 +1,9 @@
 bomba: 600
 timur: 4300
+  newbie: 2600
+roma: 2700
+bobik: 6100
+a: 2500
+ koloip: 5600
+pot: 5600
+timur: 2500
