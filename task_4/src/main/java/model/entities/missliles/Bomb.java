@@ -1,4 +1,6 @@
-package model.entities;
+package model.entities.missliles;
+
+import model.entities.Destructible;
 
 public class Bomb extends Missile implements Destructible {
     private final int width = 40;

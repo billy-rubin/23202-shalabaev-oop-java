@@ -1,6 +1,8 @@
-package model.entities;
+package model.entities.missliles;
 
 import model.Game;
+import model.entities.Movable;
+import model.entities.Sprite;
 
 public abstract class Missile extends Sprite implements Movable {
     protected boolean fromPlayer;

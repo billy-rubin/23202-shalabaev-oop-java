@@ -1,10 +1,13 @@
-package model.entities;
+package model.entities.enemies;
 
 import model.Game;
+import model.entities.*;
+import model.entities.missliles.Bomb;
+import model.entities.missliles.Missile;
 
 import java.util.Random;
 
-public class Bomber extends Enemy implements Shooting, Movable{
+public class Bomber extends Enemy implements Shooting, Movable {
     private final int value;
     private long nextShootTime;
     private final java.util.Random random = new Random();

@@ -1,6 +1,9 @@
  package model;
 
 import model.entities.*;
+import model.entities.enemies.Enemy;
+import model.entities.missliles.Bomb;
+import model.entities.missliles.Missile;
 
 import java.util.Iterator;
 
@@ -56,12 +59,17 @@ public class CollisionDetector {
                 for (Destructible destructible : game.getDestructibles()) {
                     if (collides(missile, (Sprite) destructible)) {
                         if (destructible instanceof Bomb) {
+                            double distance;
                             for (Enemy enemy : game.getEnemies()) {
-                                double distance = Math.sqrt(Math.pow(enemy.getX() - ((Bomb) destructible).getX(), 2) +
+                                distance = Math.sqrt(Math.pow(enemy.getX() - ((Bomb) destructible).getX(), 2) +
                                         Math.pow(enemy.getY() - ((Bomb) destructible).getY(), 2));
                                 if (distance <= ((Bomb) destructible).getExplosionRadius()) {
-                                    enemy.takeDamage(3);
+                                    enemy.takeDamage(((Bomb) destructible).getDamage());
                                 }
+                            }
+                            if (Math.sqrt(Math.pow(player.getX() - ((Bomb) destructible).getX(), 2) +
+                                    Math.pow(player.getY() - ((Bomb) destructible).getY(), 2)) <= ((Bomb) destructible).getExplosionRadius()) {
+                                player.takeDamage(((Bomb) destructible).getDamage());
                             }
                         }
                         destructible.takeDamage(missile.getDamage());

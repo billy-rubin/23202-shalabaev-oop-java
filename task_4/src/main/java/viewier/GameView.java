@@ -2,7 +2,7 @@ package viewier;
 
 import model.Game;
 import model.Obstacle;
-import model.entities.Missile;
+import model.entities.missliles.Missile;
 import model.entities.Sprite;
 import javax.swing.*;
 import java.awt.*;

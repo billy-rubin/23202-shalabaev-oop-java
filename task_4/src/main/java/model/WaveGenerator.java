@@ -1,10 +1,10 @@
 package model;
 
 import java.util.Timer;
-import java.util.TimerTask;import model.entities.Bomber;
-import model.entities.Drone;
-import model.entities.Enemy;
-import model.entities.Fighter;
+import java.util.TimerTask;import model.entities.enemies.Bomber;
+import model.entities.enemies.Drone;
+import model.entities.enemies.Enemy;
+import model.entities.enemies.Fighter;
 
 import java.util.Random;
 
@@ -47,7 +47,7 @@ public class WaveGenerator {
                 int x = Game.LEFT_BOUND + 70*j;
                 int y = Game.TOP_BOUND + 70 * i;
                 Enemy enemy;
-                if (i > 0) {
+                if (j % 3 != 0) {
                     enemy = new Fighter(x, y, game);
                 } else {
                     enemy = new Bomber(x,y,game);
@@ -65,7 +65,8 @@ public class WaveGenerator {
         int y = Game.TOP_BOUND;
         Drone drone = new Drone(x, y, game, !fromLeft);
         game.getEnemies().add(drone);
-        game.getDestructibles().add(drone); // Добавляем в разрушаемые объекты
+        enemiesCount++;
+        game.getDestructibles().add(drone);
     }
 
     public void decrementEnemyCount(){

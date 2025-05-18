@@ -1,6 +1,8 @@
-package model.entities;
+package model.entities.enemies;
 
 import model.Game;
+import model.entities.Destructible;
+import model.entities.Sprite;
 
 public abstract class Enemy extends Sprite implements Destructible {
     protected Game game;

@@ -2,6 +2,11 @@ package model;
 
 import model.entities.*;
 import controller.*;
+import model.entities.enemies.Drone;
+import model.entities.enemies.Enemy;
+import model.entities.missliles.Bomb;
+import model.entities.missliles.Missile;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +32,6 @@ public class Game {
 
     public Game() {
         player = new Player((RIGHT_BOUND - LEFT_BOUND) / 4 + LEFT_BOUND, BOTTOM_BOUND - 50);
-        System.out.println(player.getX() + " " + player.getY());
 
         enemies = new ArrayList<>();
         missiles = new ArrayList<>();
@@ -70,6 +74,9 @@ public class Game {
         // Обработка сигнала движения вниз
         if (moveDownSignal) {
             for (Enemy enemy : enemies) {
+                if (enemy instanceof Drone) {
+                    continue;
+                }
                 enemy.moveDown();
                 enemy.reverseDirection();
             }
@@ -98,7 +105,9 @@ public class Game {
             missile.update();
             if (!missile.isAlive()) {
                 missiles.remove(missile);
-                destructibles.remove(missile);
+                if (missile instanceof Bomb){
+                    destructibles.remove(missile);
+                }
             }
         }
         collisionDetector.checkCollisions();

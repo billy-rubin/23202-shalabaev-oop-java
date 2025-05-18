@@ -1,8 +1,6 @@
 package controller;
 
-import model.Game;
 import model.entities.Player;
-import model.entities.Missile;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;

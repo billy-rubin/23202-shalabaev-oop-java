@@ -5,8 +5,6 @@ import model.entities.Sprite;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Obstacle extends Sprite implements Destructible {
     protected boolean state;
@@ -29,6 +27,9 @@ public class Obstacle extends Sprite implements Destructible {
     @Override
     public void takeDamage(int damage){
         protection -= damage;
+        if (protection <= 0) {
+            setState(false);
+        }
     }
 
     @Override
@@ -40,11 +41,6 @@ public class Obstacle extends Sprite implements Destructible {
         return protection;
     }
 
-    public int getX() { return x; }
-    public int getY() { return y; }
-    public int getWidth() { return width; } // Added
-    public int getHeight() { return height; }
-    public boolean isState() { return state; }
     public boolean isVisibility() { return visibility; }
     public void setVisibility(boolean visibility) { this.visibility = visibility; }
 }

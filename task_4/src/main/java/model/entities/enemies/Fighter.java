@@ -1,6 +1,9 @@
-package model.entities;
+package model.entities.enemies;
 
 import model.Game;
+import model.entities.missliles.Bullet;
+import model.entities.missliles.Missile;
+import model.entities.Shooting;
 
 import java.util.Random;
 

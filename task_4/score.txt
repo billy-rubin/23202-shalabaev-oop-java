@@ -7,3 +7,6 @@ a: 2500
  koloip: 5600
 pot: 5600
 timur: 2500
+a: 6900
+THE STRONGEST: 19300
+bot1: 18800

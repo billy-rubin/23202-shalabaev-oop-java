@@ -1,6 +1,8 @@
 package model.entities;
 
 import controller.ControllerCommand;
+import model.entities.missliles.Bullet;
+import model.entities.missliles.Missile;
 
 import java.util.LinkedList;
 

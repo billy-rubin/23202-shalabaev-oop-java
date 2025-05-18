@@ -1,4 +1,4 @@
-package model.entities;
+package model.entities.missliles;
 
 public class Bullet extends Missile {
     public Bullet(int x, int y, int speed, int width, int height, boolean fromPlayer, String[] framePaths) {
