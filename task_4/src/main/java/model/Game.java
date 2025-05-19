@@ -95,7 +95,7 @@ public class Game {
         }
 
         for (Obstacle obstacle : new ArrayList<>(obstacles)) {
-            if (obstacle.getProtection() == 0) {
+            if (obstacle.isDestroyed()) {
                 obstacles.remove(obstacle);
                 destructibles.remove(obstacle);
             }

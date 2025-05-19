@@ -37,14 +37,14 @@ public class CollisionDetector {
                 if (player.getY() <= obstacle.getY() + obstacle.getHeight()) {
                     player.setY(obstacle.getY() + obstacle.getHeight());
                 } else if (player.getY() + player.getHeight() >= obstacle.getY()) {
-                    player.setY(obstacle.getY() - player.getHeight());
+                    player.setY(obstacle.getY());
                 }
-                // Отталкиваем игрока назад
+
                 if (player.getY() > obstacle.getY() + obstacle.getHeight() && player.getY() + player.getHeight() < obstacle.getY()){
                     if (player.getX() <= obstacle.getX() + obstacle.getWidth()) {
                         player.setX(obstacle.getX() + obstacle.getWidth());
                     } else if (player.getX() + player.getWidth() >= obstacle.getX()) {
-                        player.setX(obstacle.getX() - player.getWidth());
+                        player.setX(obstacle.getX());
                     }
                 }
 

@@ -34,7 +34,7 @@ public class Obstacle extends Sprite implements Destructible {
 
     @Override
     public boolean isDestroyed() {
-        return !state;
+        return protection <= 0;
     }
 
     public int getProtection(){

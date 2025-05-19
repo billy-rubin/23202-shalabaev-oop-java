@@ -14,3 +14,4 @@ billy: 4400
 newbie2: 3800
 marik: 5500
  prik: 8800
+I9H: 4600
