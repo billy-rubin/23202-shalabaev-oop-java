@@ -13,8 +13,8 @@ public class Fighter extends Enemy implements Shooting {
     private final java.util.Random random = new Random();
 
     public Fighter(int x, int y, Game game) {
-        super(game, x, y, 70, 70, new String[]{"/images/player1.png", "/images/player2.png"}, 1, 100);
-        this.nextShootTime = System.currentTimeMillis() + 2000 + random.nextInt(5000);
+        super(game, x, y, 70, 70, new String[]{"/images/enemy1.png", "/images/enemy2.png"}, 1, 100);
+        this.nextShootTime = System.currentTimeMillis() + 2000 + random.nextInt(3000);
         this.value = 100;
 
     }

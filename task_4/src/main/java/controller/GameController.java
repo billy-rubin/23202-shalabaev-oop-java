@@ -9,7 +9,7 @@ public class GameController {
     private Game game;
     private GameView gameView;
     private Timer timer;
-    private boolean gameOverHandled = false; // Flag to handle game over once
+    private boolean gameOverHandled = false;
 
     public GameController(Game game, GameView gameView) {
         this.game = game;
@@ -28,7 +28,7 @@ public class GameController {
     }
 
     private void handleGameOver() {
-        gameOverHandled = true; // Prevent multiple triggers
+        gameOverHandled = true;
         timer.stop(); // Stop the game loop
         String name = JOptionPane.showInputDialog(gameView, "Game Over! Enter your name:");
         if (name != null && !name.trim().isEmpty()) {

@@ -8,7 +8,7 @@ public class MainController {
     private JFrame frame;
 
     public MainController() {
-        frame = new JFrame("Space Invaders");
+        frame = new JFrame("ALAbuGA.game");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
     }

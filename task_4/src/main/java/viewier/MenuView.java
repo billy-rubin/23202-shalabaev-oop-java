@@ -14,13 +14,12 @@ public class MenuView extends JPanel {
     private Image backgroundImage;
 
     public MenuView() {
-        // Load background image
         URL imageURL = getClass().getResource("/images/loadingScreen.png");
         if (imageURL != null) {
             backgroundImage = new ImageIcon(imageURL).getImage();
         } else {
             backgroundImage = null;
-            setBackground(Color.DARK_GRAY); // Fallback background
+            setBackground(Color.DARK_GRAY);
         }
 
         // Set layout
@@ -31,24 +30,20 @@ public class MenuView extends JPanel {
         gbc.insets = new Insets(0, 20, 20, 20); // Padding between buttons
         gbc.anchor = GridBagConstraints.CENTER;
 
-        // Add vertical spacer to reserve space for title (0 to 165)
         gbc.gridy = 0;
-        gbc.weighty = 0; // No extra vertical space
+        gbc.weighty = 0;
         add(Box.createVerticalStrut(165), gbc);
 
-        // Initialize buttons
         soloGameButton = new MenuButton(ButtonType.singleGame);
         coopGameButton = new MenuButton(ButtonType.coopGame);
         exitButton = new MenuButton(ButtonType.exit);
 
-        // Set button sizes
         Dimension largeButtonSize = new Dimension(769, 190);
         Dimension smallButtonSize = new Dimension(350, 150);
         soloGameButton.setPreferredSize(largeButtonSize);
         coopGameButton.setPreferredSize(largeButtonSize);
         exitButton.setPreferredSize(smallButtonSize);
 
-        // Add buttons to layout
         gbc.insets = new Insets(0, 20, 20, 0); // No top inset for first button
         gbc.gridy = 1;
         add(soloGameButton, gbc);

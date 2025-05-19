@@ -13,7 +13,7 @@ public class Bomber extends Enemy implements Shooting, Movable {
     private final java.util.Random random = new Random();
 
     public Bomber(int x, int y, Game game) {
-        super(game, x, y,  70, 70, new String[]{"/images/player1.png", "/images/player2.png"}, 1, 200);
+        super(game, x, y,  70, 70, new String[]{"/images/enemy1.png", "/images/enemy2.png"}, 1, 200);
         this.value = 200;
         this.nextShootTime = System.currentTimeMillis() + 5000 + random.nextInt(5000);
     }

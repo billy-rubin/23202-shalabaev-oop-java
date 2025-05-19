@@ -2,8 +2,8 @@ package viewier;
 
 import model.Game;
 import model.Obstacle;
+import model.entities.enemies.Enemy;
 import model.entities.missliles.Missile;
-import model.entities.Sprite;
 import javax.swing.*;
 import java.awt.*;
 
@@ -25,9 +25,8 @@ public class GameView extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Graphics2D graphics2D;
         g.drawImage(background, 0, 0, getWidth(), getHeight(), this);
-        for (Sprite enemy : game.getEnemies()) {
+        for (Enemy enemy : game.getEnemies()) {
             if (enemy.isVisible()) {
                 g.drawImage(enemy.getImage(), enemy.getX(), enemy.getY(), this);
             }

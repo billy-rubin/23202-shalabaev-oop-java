@@ -10,3 +10,7 @@ timur: 2500
 a: 6900
 THE STRONGEST: 19300
 bot1: 18800
+billy: 4400
+newbie2: 3800
+marik: 5500
+ prik: 8800

@@ -110,10 +110,17 @@ public class Game {
                 }
             }
         }
+
         collisionDetector.checkCollisions();
         if (player.isDestroyed()) {
             running = false;
 
+        }
+
+        for (Destructible destructible : new ArrayList<>(destructibles)) {
+            if (destructible.isDestroyed()) {
+                destructibles.remove(destructible);
+            }
         }
     }
 
@@ -129,7 +136,7 @@ public class Game {
         leftMostEnemy = null;
         rightMostEnemy = null;
         for (Enemy enemy : enemies) {
-            if (enemy.isAlive()) {
+            if (enemy.isAlive() && !(enemy instanceof Drone)) {
                 if (leftMostEnemy == null || enemy.getX() < leftMostEnemy.getX()) {
                     leftMostEnemy = enemy;
                 }
