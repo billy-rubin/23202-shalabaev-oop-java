@@ -8,17 +8,17 @@ import model.entities.missliles.Bomb;
 import model.entities.missliles.Missile;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Game {
-    public static final int LEFT_BOUND = 320;
-    public static final int RIGHT_BOUND = 1170;
+    public static final int LEFT_BOUND = 310;
+    public static final int RIGHT_BOUND = 1200;
     public static final int TOP_BOUND = 0;
-    public static final int BOTTOM_BOUND = 750;
+    public static final int BOTTOM_BOUND = 789;
+    private boolean godMode = false;
 
     private Player player;
-    private List<Enemy> enemies;
-    private List<Missile> missiles;
     private List<Obstacle> obstacles;
     private WaveGenerator waveGenerator;
     private CollisionDetector collisionDetector;
@@ -29,24 +29,22 @@ public class Game {
     private Enemy rightMostEnemy; // Самый правый враг
     private ScoreManager scoreManager;
     private List<Destructible> destructibles;
+    private List<Movable> movables;
+    private List<Obstacle> boundaries; // Новый список для границ
 
     public Game() {
-        player = new Player((RIGHT_BOUND - LEFT_BOUND) / 4 + LEFT_BOUND, BOTTOM_BOUND - 50);
-
-        enemies = new ArrayList<>();
-        missiles = new ArrayList<>();
         obstacles = new ArrayList<>();
         destructibles = new ArrayList<>();
-
+        movables = new ArrayList<>();
+        player = new Player(532, 650, this);
+        movables.add(player);
+        destructibles.add(player);
         scoreManager = new ScoreManager();
-
-        // Initialize four walls
         for (int i = 0; i < 4; i++) {
-            Obstacle obstacle = new Obstacle(LEFT_BOUND + i * 250, BOTTOM_BOUND - 4 * player.getHeight(), new String[]{"/images/obstacle1.png"});
+            Obstacle obstacle = new Obstacle(LEFT_BOUND + i * 250, BOTTOM_BOUND - 4 * player.getHeight(), 150, 70, new String[]{"/images/obstacle1.png"});
             obstacles.add(obstacle);
-            destructibles.add(obstacle);
+            addDestructible(obstacle);
         }
-        // Bottom wall
         waveGenerator = new WaveGenerator(this);
         collisionDetector = new CollisionDetector(this);
         kills = 0;
@@ -57,68 +55,50 @@ public class Game {
     public void update() {
         if (!running)
             return;
-        player.update();
+
         if (player.getActiveCommands().contains(ControllerCommand.SHOOT) && player.canShoot()) {
-            missiles.add(player.shoot());
+            movables.add(player.shoot());
         }
+
         waveGenerator.update();
-
-        // Обновление врагов
-        for (Enemy enemy : enemies) {
-            enemy.update();
+        for (Movable movable : new ArrayList<>(movables)) {
+            movable.update();
+            if (movable instanceof Missile && !((Missile) movable).isAlive()) {
+                movables.remove(movable);
+                if (movable instanceof Bomb) {
+                    destructibles.remove(movable);
+                }
+            }
         }
 
-        // Проверка границ только для крайних врагов
         checkBoundary();
 
-        // Обработка сигнала движения вниз
         if (moveDownSignal) {
-            for (Enemy enemy : enemies) {
-                if (enemy instanceof Drone) {
-                    continue;
-                }
-                enemy.moveDown();
-                enemy.reverseDirection();
-            }
-            moveDownSignal = false; // Сброс сигнала
-        }
-
-        // Удаление мертвых врагов и обновление крайних
-        for (Enemy enemy : new ArrayList<>(enemies)) {
-            if (!enemy.isAlive()) {
-                enemies.remove(enemy);
-                destructibles.remove(enemy);
-                kills++;
-                waveGenerator.decrementEnemyCount();
-                updateExtremeEnemies(); // Обновляем крайних врагов
-            }
-        }
-
-        for (Obstacle obstacle : new ArrayList<>(obstacles)) {
-            if (obstacle.isDestroyed()) {
-                obstacles.remove(obstacle);
-                destructibles.remove(obstacle);
-            }
-        }
-
-        for (Missile missile : new ArrayList<>(missiles)) {
-            missile.update();
-            if (!missile.isAlive()) {
-                missiles.remove(missile);
-                if (missile instanceof Bomb){
-                    destructibles.remove(missile);
+            for (Movable enemy : movables) {
+                if (enemy instanceof Enemy) {
+                    if (enemy instanceof Drone) {
+                        continue;
+                    }
+                    ((Enemy) enemy).moveDown();
+                    ((Enemy) enemy).reverseDirection();
                 }
             }
+            moveDownSignal = false;
         }
 
         collisionDetector.checkCollisions();
-        if (player.isDestroyed()) {
-            running = false;
-
-        }
 
         for (Destructible destructible : new ArrayList<>(destructibles)) {
             if (destructible.isDestroyed()) {
+                if (destructible instanceof Player) {
+                    running = false;
+                }
+                if (destructible instanceof Enemy) {
+                    kills++;
+                    waveGenerator.decrementEnemyCount();
+                    updateExtremeEnemies();
+                    movables.remove(destructible);
+                }
                 destructibles.remove(destructible);
             }
         }
@@ -135,18 +115,23 @@ public class Game {
     private void updateExtremeEnemies() {
         leftMostEnemy = null;
         rightMostEnemy = null;
-        for (Enemy enemy : enemies) {
-            if (enemy.isAlive() && !(enemy instanceof Drone)) {
-                if (leftMostEnemy == null || enemy.getX() < leftMostEnemy.getX()) {
-                    leftMostEnemy = enemy;
-                }
-                if (rightMostEnemy == null || enemy.getX() > rightMostEnemy.getX()) {
-                    rightMostEnemy = enemy;
+        for (Movable enemy : movables) {
+            if (enemy instanceof Enemy) {
+                if (((Enemy) enemy).isAlive() && !(enemy instanceof Drone)) {
+                    if (leftMostEnemy == null || ((Enemy) enemy).getX() < leftMostEnemy.getX()) {
+                        leftMostEnemy = (Enemy) enemy;
+                    }
+                    if (rightMostEnemy == null || ((Enemy) enemy).getX() > rightMostEnemy.getX()) {
+                        rightMostEnemy = (Enemy) enemy;
+                    }
                 }
             }
         }
     }
 
+    public List<Obstacle> getBoundaries() {
+        return Collections.unmodifiableList(boundaries);
+    }
 
     public ScoreManager getScoreManager() {
         return scoreManager;
@@ -154,18 +139,6 @@ public class Game {
 
     public Player getPlayer() {
         return player;
-    }
-
-    public List<Enemy> getEnemies() {
-        return enemies;
-    }
-
-    public List<Missile> getMissiles() {
-        return missiles;
-    }
-
-    public List<Obstacle> getObstacles() {
-        return obstacles;
     }
 
     public int getKills() {
@@ -188,9 +161,27 @@ public class Game {
         return destructibles;
     }
 
-    public void addMissile(Missile missile) {
-        if (missiles.size() < 20) {
-            missiles.add(missile);
-        }
+    public void addDestructible(Destructible destructible) {
+        destructibles.add(destructible);
+    }
+
+    public List<Movable> getMovables() {
+        return movables;
+    }
+
+    public void setGodMode(boolean godMode) {
+        this.godMode = godMode;
+    }
+
+    public boolean isGodMode() {
+        return godMode;
+    }
+
+    public List<Obstacle> getObstacles() {
+        return obstacles;
+    }
+
+    public void addMovable(Movable movable) {
+        movables.add(movable);
     }
 }

@@ -1,6 +1,7 @@
 package model.entities.missliles;
 
 import model.entities.Destructible;
+import model.entities.Sprite;
 
 public class Bomb extends Missile implements Destructible {
     private final int width = 40;
@@ -8,8 +9,8 @@ public class Bomb extends Missile implements Destructible {
     private int explosionRadius = 100;
     private int health = 1;
 
-    public Bomb(int x, int y, int speed, boolean fromPlayer, String[] framePaths) {
-        super(x, y, speed, 40, 40, 3, fromPlayer, framePaths);
+    public Bomb(int x, int y, int speed, String source, String[] framePaths) {
+        super(x, y, speed, 40, 40, 3, source, framePaths);
     }
     public void takeDamage(int damage) {
         health -= damage;

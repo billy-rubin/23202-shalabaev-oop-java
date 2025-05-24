@@ -15,11 +15,10 @@ public class Drone extends Enemy {
     @Override
     public void update() {
         super.update();
-        // Проверка достижения границы
         if (movingRight && x >= Game.RIGHT_BOUND) {
-            setState(false); // Удаляем дрона при достижении правой границы
+            setState(false);
         } else if (!movingRight && x <= Game.LEFT_BOUND) {
-            setState(false); // Удаляем дрона при достижении левой границы
+            setState(false);
         }
     }
 

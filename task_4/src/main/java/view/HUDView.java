@@ -1,4 +1,4 @@
-package viewier;
+package view;
 
 import model.Game;
 

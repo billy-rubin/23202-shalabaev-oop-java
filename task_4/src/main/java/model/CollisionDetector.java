@@ -1,10 +1,12 @@
- package model;
+package model;
 
 import model.entities.*;
 import model.entities.enemies.Enemy;
 import model.entities.missliles.Bomb;
+import model.entities.missliles.Bullet;
 import model.entities.missliles.Missile;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 public class CollisionDetector {
@@ -17,10 +19,10 @@ public class CollisionDetector {
     public void checkCollisions() {
         Player player = game.getPlayer();
 
+        // Проверка выхода игрока за границы экрана
         if (player.getX() < Game.LEFT_BOUND) {
             player.setX(Game.LEFT_BOUND);
         }
-
         if (player.getX() + player.getWidth() > Game.RIGHT_BOUND) {
             player.setX(Game.RIGHT_BOUND - player.getWidth());
         }
@@ -31,79 +33,93 @@ public class CollisionDetector {
             player.setY(Game.BOTTOM_BOUND - player.getHeight());
         }
 
-        // Проверка столкновений игрока со стенами
-        for (Obstacle obstacle : game.getObstacles()) {
-            if (collides(player, obstacle)) {
-                if (player.getY() <= obstacle.getY() + obstacle.getHeight()) {
-                    player.setY(obstacle.getY() + obstacle.getHeight());
-                } else if (player.getY() + player.getHeight() >= obstacle.getY()) {
-                    player.setY(obstacle.getY());
-                }
-
-                if (player.getY() > obstacle.getY() + obstacle.getHeight() && player.getY() + player.getHeight() < obstacle.getY()){
-                    if (player.getX() <= obstacle.getX() + obstacle.getWidth()) {
-                        player.setX(obstacle.getX() + obstacle.getWidth());
-                    } else if (player.getX() + player.getWidth() >= obstacle.getX()) {
-                        player.setX(obstacle.getX());
+        for (Movable movable : new ArrayList<>(game.getMovables())) {
+            if (movable instanceof Missile) {
+                Missile missile = (Missile) movable;
+                for (Destructible destructible : game.getDestructibles()) {
+                    if (collides(missile, (Sprite) destructible)) {
+                        if (missile.canDamage(destructible.getClass().getSimpleName())) {
+                            destructible.takeDamage(missile.getDamage());
+                            if (!game.isGodMode() || !missile.getSource().equals("Player") || missile.getY() <= Game.TOP_BOUND) {
+                                missile.setState(false); // Destroy only if not in godMode, not player's, or at top
+                            }
+                            if (destructible instanceof Bomb && destructible.isDestroyed()) {
+                                Bomb bomb = (Bomb) destructible;
+                                int radius = bomb.getExplosionRadius();
+                                for (Destructible target : game.getDestructibles()) {
+                                    if (target != bomb) {
+                                        double distance = Math.sqrt(Math.pow(((Sprite) target).getX() - bomb.getX(), 2) +
+                                                Math.pow(((Sprite) target).getY() - bomb.getY(), 2));
+                                        if (distance <= radius) {
+                                            target.takeDamage(bomb.getDamage());
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
-
-
+                // Столкновения снарядов с препятствиями
+                for (Obstacle obstacle : game.getObstacles()) {
+                    if (collides(missile, obstacle)) {
+                        if (missile.canDamage("Obstacle")) {
+                            obstacle.takeDamage(missile.getDamage());
+                            missile.setState(false); // Снаряд исчезает
+                        }
+                    }
+                }
             }
         }
 
-        Iterator<Missile> missileIterator = game.getMissiles().iterator();
-        while (missileIterator.hasNext()) {
-            Missile missile = missileIterator.next();
-            if (missile.isFromPlayer()) {
-                for (Destructible destructible : game.getDestructibles()) {
-                    if (collides(missile, (Sprite) destructible)) {
-                        if (destructible instanceof Bomb) {
-                            double distance;
-                            for (Enemy enemy : game.getEnemies()) {
-                                distance = Math.sqrt(Math.pow(enemy.getX() - ((Bomb) destructible).getX(), 2) +
-                                        Math.pow(enemy.getY() - ((Bomb) destructible).getY(), 2));
-                                if (distance <= ((Bomb) destructible).getExplosionRadius()) {
-                                    enemy.takeDamage(((Bomb) destructible).getDamage());
-                                }
-                            }
-                            if (Math.sqrt(Math.pow(player.getX() - ((Bomb) destructible).getX(), 2) +
-                                    Math.pow(player.getY() - ((Bomb) destructible).getY(), 2)) <= ((Bomb) destructible).getExplosionRadius()) {
-                                player.takeDamage(((Bomb) destructible).getDamage());
-                            }
-                        }
-                        destructible.takeDamage(missile.getDamage());
-                        missileIterator.remove();
-                        break;
-                    }
-                }
-            } else {
-                if (collides(missile, player)) {
-                    player.takeDamage(missile.getDamage());
-                    missileIterator.remove();
-                    break;
-                }
+        // Столкновения движущихся объектов (игрок, враги) с препятствиями
+        for (Movable movable : game.getMovables()) {
+            if (movable instanceof Player || movable instanceof Enemy) {
                 for (Obstacle obstacle : game.getObstacles()) {
-                    if (collides(missile, obstacle)) {
-                        obstacle.takeDamage(missile.getDamage());
-                        missileIterator.remove();
-                        break;
+                    if (collides((Sprite) movable, obstacle)) {
+                        bounceObject((Sprite) movable, obstacle);
                     }
                 }
+            }
+        }
+
+        // Столкновения между игроком и врагами
+        for (Movable movable : game.getMovables()) {
+            if (movable instanceof Enemy && collides(player, (Sprite) movable)) {
+                bounceObject(player, (Sprite) movable);
+                // Здесь можно добавить дополнительную логику, например, урон игроку
             }
         }
     }
-    private boolean collides(Sprite a, Sprite b) {
-        int aLeft = a.getX();
-        int aRight = aLeft + a.getWidth();
-        int aTop = a.getY();
-        int aBottom = aTop + a.getHeight();
 
-        int bLeft = b.getX();
-        int bRight = bLeft + b.getWidth();
-        int bTop = b.getY();
-        int bBottom = bTop + b.getHeight();
+    private boolean collides(Sprite entity1, Sprite entity2) {
+        return entity1.getX() < entity2.getX() + entity2.getWidth() &&
+                entity1.getX() + entity1.getWidth() > entity2.getX() &&
+                entity1.getY() < entity2.getY() + entity2.getHeight() &&
+                entity1.getY() + entity1.getHeight() > entity2.getY();
+    }
 
-        return aRight > bLeft && aLeft < bRight && aBottom > bTop && aTop < bBottom;
+    private void bounceObject(Sprite entity1, Sprite entity2) {
+        float overlapX = Math.min(
+                entity1.getX() + entity1.getWidth() - entity2.getX(),
+                entity2.getX() + entity2.getWidth() - entity1.getX()
+        );
+        float overlapY = Math.min(
+                entity1.getY() + entity1.getHeight() - entity2.getY(),
+                entity2.getY() + entity2.getHeight() - entity1.getY()
+        );
+
+        if (overlapX < overlapY) {
+            if (entity1.getX() < entity2.getX()) {
+                entity1.move((-1) * entity1.getWidth(), 0);
+            } else {
+                entity1.move(entity2.getWidth(), 0);
+            }
+        } else {
+            if (entity1.getY() < entity2.getY()) {
+                entity1.move(0, (-1) * entity1.getHeight());
+            } else {
+                entity1.move(0, entity2.getHeight());
+            }
+        }
     }
 }

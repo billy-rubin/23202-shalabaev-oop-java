@@ -8,19 +8,21 @@ import java.awt.*;
 
 public class Obstacle extends Sprite implements Destructible {
     protected boolean state;
-    private int protection = 10;
+    private int protection = 1;
     protected boolean visibility;
     private Image image;
     private int currentFrame;
-    protected final int width = 150;
-    protected final int height = 70;
+    protected int width = 150;
+    protected int height = 70;
 
-    public Obstacle(int x, int y, String[] framePaths) {
+    public Obstacle(int x, int y, int width, int height, String[] framePaths) {
         super(x, y, 0, 150, 70, framePaths);
         this.x = x;
         this.y = y;
         this.state = true;
         this.visibility = true;
+        this.width = width;
+        this.height = height;
         image = new ImageIcon(getClass().getResource(framePaths[0])).getImage();
     }
 

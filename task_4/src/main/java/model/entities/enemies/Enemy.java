@@ -2,21 +2,28 @@ package model.entities.enemies;
 
 import model.Game;
 import model.entities.Destructible;
+import model.entities.Movable;
 import model.entities.Sprite;
 
-public abstract class Enemy extends Sprite implements Destructible {
+public abstract class Enemy extends Sprite implements Destructible, Movable {
     protected Game game;
     protected int health;
     protected int scoreValue;
+    protected String[] targets;
     public Enemy(Game game, int x, int y, int width, int height, String[] framePaths, int health, int scoreValue) {
         super(x, y, 1, width, height, framePaths);
         this.health = health;
         this.scoreValue = scoreValue;
         this.game = game;
+        targets = new String[]{"Player", "Obstacle"};
     }
 
     public void update() {
         move (speed, 0);
+        if (y >= 789){
+            state = false;
+            setState(false);
+        }
     }
 
     @Override
@@ -46,13 +53,16 @@ public abstract class Enemy extends Sprite implements Destructible {
     }
 
     boolean canShoot() {
-        for (Enemy other : game.getEnemies()) {
-            if (other != this && other.isAlive()) {
-                if (other.getX() >= x && other.getX() < x + getWidth() &&
-                        other.getY() > y && other.getY() <= y + getHeight() * 2) {
-                    return false;
+        for (Movable other : game.getMovables()) {
+            if (other instanceof Enemy) {
+                if (other != this && ((Enemy) other).isAlive()) {
+                    if (((Enemy) other).getX() >= x && ((Enemy) other).getX() < x + getWidth()/2 &&
+                            ((Enemy) other).getY() > y && ((Enemy) other).getY() <= y + getHeight()/2) {
+                        return false;
+                    }
                 }
             }
+
         }
         return true;
     }

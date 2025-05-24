@@ -45,15 +45,15 @@ public class WaveGenerator {
         for (int i = 1; i <= linesNum; i++) {
             for (int j = 1; j <= enemiesInLine; j++) {
                 int x = Game.LEFT_BOUND + 70*j;
-                int y = Game.TOP_BOUND + 70 * i;
+                int y = Game.TOP_BOUND + 70 *i;
                 Enemy enemy;
                 if (j % 3 != 0) {
                     enemy = new Fighter(x, y, game);
                 } else {
                     enemy = new Bomber(x,y,game);
                 }
-                game.getEnemies().add(enemy);
-                game.getDestructibles().add(enemy);
+                game.addMovable(enemy);
+                game.addDestructible(enemy);
             }
         }
     }
@@ -64,9 +64,9 @@ public class WaveGenerator {
         int x = !fromLeft ? Game.LEFT_BOUND : Game.RIGHT_BOUND;
         int y = Game.TOP_BOUND;
         Drone drone = new Drone(x, y, game, !fromLeft);
-        game.getEnemies().add(drone);
         enemiesCount++;
-        game.getDestructibles().add(drone);
+        game.addMovable(drone);
+        game.addDestructible(drone);
     }
 
     public void decrementEnemyCount(){

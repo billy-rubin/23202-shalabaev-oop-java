@@ -1,7 +1,7 @@
 package controller;
 
 import model.Game;
-import viewier.GameView;
+import view.GameView;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 

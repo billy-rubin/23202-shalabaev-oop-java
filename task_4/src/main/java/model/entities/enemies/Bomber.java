@@ -20,7 +20,7 @@ public class Bomber extends Enemy implements Shooting, Movable {
 
     @Override
     public Missile shoot() {
-        return new Bomb(x + 20, y + 40, 2, false, new String[]{"/images/bomb1.png"});
+        return new Bomb(x + 20, y + 40, 2, "Enemy", new String[]{"/images/bomb1.png"});
     }
 
     @Override
@@ -28,8 +28,9 @@ public class Bomber extends Enemy implements Shooting, Movable {
         super.update();
         if (System.currentTimeMillis() >= nextShootTime && canShoot()) {
             Bomb missile = (Bomb) shoot();
-            game.addMissile(missile);
-            game.getDestructibles().add(missile);
+            game.addMovable(missile);
+            //game.addMissile(missile);
+            game.addDestructible(missile);
             nextShootTime = System.currentTimeMillis() + 2000 + random.nextInt(5000);
         }
     }

@@ -21,7 +21,7 @@ public class Fighter extends Enemy implements Shooting {
 
     @Override
     public Missile shoot() {
-        return new Bullet(x + 20, y + 40, 5, 5, 20, false, new String[]{"/images/enemyBullet.png"});
+        return new Bullet(x + 20, y + 40, 5, 5, 20, "Enemy", new String[]{"/images/enemyBullet.png"});
     }
 
     @Override
@@ -29,7 +29,8 @@ public class Fighter extends Enemy implements Shooting {
         super.update();
         if (System.currentTimeMillis() >= nextShootTime && canShoot()) {
             Missile missile = shoot();
-            game.addMissile(missile);
+            game.addMovable(missile);
+            //game.addMissile(missile);
             nextShootTime = System.currentTimeMillis() + 2000 + random.nextInt(5000);
         }
     }

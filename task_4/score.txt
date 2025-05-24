@@ -15,3 +15,9 @@ newbie2: 3800
 marik: 5500
  prik: 8800
 I9H: 4600
+try 1: 3200
+romchik: 7700
+billy: 0
+ -2: 3500
+god1: 8500
+d: 0

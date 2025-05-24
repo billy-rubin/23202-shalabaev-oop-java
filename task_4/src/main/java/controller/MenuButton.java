@@ -14,4 +14,8 @@ public class MenuButton extends JButton {
     }
 
     public ButtonType getType() { return type; }
+
+    public void setType(ButtonType type) {
+        this.type = type;
+    }
 }

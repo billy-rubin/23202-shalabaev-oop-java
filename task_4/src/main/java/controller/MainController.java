@@ -2,15 +2,17 @@ package controller;
 
 import javax.swing.*;
 import model.Game;
-import viewier.*;
+import view.*;
 
 public class MainController {
     private JFrame frame;
+    private Game game;
 
     public MainController() {
         frame = new JFrame("ALAbuGA.game");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
+        game = new Game(); // Initialize Game instance
     }
 
     public void showMenu() {
@@ -19,12 +21,11 @@ public class MainController {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-        new MenuController(menuView, this);
+        new MenuController(menuView, this, game); // Pass Game instance
     }
 
     public void startGame() {
-        Game game = new Game();
-        GameView gameView = new GameView(game);
+        GameView gameView = new GameView(game); // Use existing Game instance
         frame.setContentPane(gameView);
         frame.pack();
         frame.setLocationRelativeTo(null);
