@@ -22,7 +22,7 @@ public class ClientController implements KeyListener {
         this.client = client;
         this.playerId = playerId;
         this.clientGameView = clientGameView;
-        clientGameView.setLocalPlayerId(playerId); // Устанавливаем ID локального игрока
+        clientGameView.setLocalPlayerId(playerId);
         clientGameView.addKeyListener(this);
         clientGameView.setFocusable(true);
         clientGameView.requestFocusInWindow();

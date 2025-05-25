@@ -17,19 +17,11 @@ public class SettingsView extends JPanel {
     public SettingsView() {
         // Загрузка фонового изображения
         URL imageURL = getClass().getResource("/images/loadingScreen.png");
-        if (imageURL != null) {
-            backgroundImage = new ImageIcon(imageURL).getImage();
-        } else {
-            backgroundImage = null;
-            setBackground(Color.DARK_GRAY);
-        }
-
-        // Установка layout
+        backgroundImage = new ImageIcon(imageURL).getImage();
         setLayout(new GridBagLayout());
         setPreferredSize(new Dimension(1525, 789));
         GridBagConstraints gbc = new GridBagConstraints();
 
-        // Инициализация кнопок
         exitButton = new MenuButton(ButtonType.exit);
         godModeButton = new MenuButton(SettingsController.isNewState() ? ButtonType.godModeOn : ButtonType.godModeOff);
 

@@ -32,7 +32,6 @@ public class GameView extends JPanel {
         Graphics2D graphics2D = (Graphics2D) graphics;
         graphics2D.drawImage(background, 0, 0, getWidth(), getHeight(), this);
 
-        // Отрисовка всех движущихся объектов
         for (Movable movable : new ArrayList<>(game.getMovables())) {
             if (movable instanceof Sprite && ((Sprite) movable).isVisible()) {
                 Sprite sprite = (Sprite) movable;
@@ -41,20 +40,16 @@ public class GameView extends JPanel {
             }
         }
 
-        // Отрисовка препятствий
         for (Obstacle obstacle : new ArrayList<>(game.getObstacles())) {
             if (obstacle.isVisibility()) {
                 graphics2D.drawImage(obstacle.getImage(), obstacle.getX(), obstacle.getY(),
                         obstacle.getWidth(), obstacle.getHeight(), this);
             }
         }
-
-        // Обновление HUD для всех игроков
         GameState gameState = game.getGameState();
         hud.update(gameState, getPlayerIds());
         System.out.println("Отрисован GameView, GameState: " + gameState);
 
-        // Отображение "Game Over", если игра завершена
         if (!game.isRunning()) {
             graphics2D.setColor(Color.WHITE);
             graphics2D.setFont(new Font("Arial", Font.BOLD, 50));

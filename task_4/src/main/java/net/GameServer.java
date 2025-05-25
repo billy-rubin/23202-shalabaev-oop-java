@@ -6,17 +6,17 @@ import java.net.DatagramSocket;
 import java.util.HashMap;
 
 public class GameServer {
-    private final HashMap<String, PlayerHandler> clientHandlers;
+    private final HashMap<String, PlayerHandler> playerHandlers = new HashMap<>();
     private final HostListener hostListener;
     private DatagramSocket serverSocket;
     private volatile boolean isRunning;
     private static final int PORT = 12345;
     private final int packetSize = 4096;
+    private byte[] serializedSavedGame;
 
     public GameServer(HostListener hostListener) {
         this.hostListener = hostListener;
         isRunning = true;
-        clientHandlers = new HashMap<>();
         try {
             serverSocket = new DatagramSocket(PORT);
             System.out.println("Сервер запущен на порту " + PORT);
@@ -27,8 +27,6 @@ public class GameServer {
         new Thread(this::start).start();
     }
 
-    private byte[] serializedSavedGame;
-
     public void start() {
         while (isRunning) {
             try {
@@ -37,18 +35,18 @@ public class GameServer {
                 serverSocket.receive(packet);
                 System.out.println("Получен пакет от " + packet.getAddress() + ":" + packet.getPort());
 
-                PlayerInput inputInfo = (PlayerInput) PlayerHandler.receiveGameState(packet.getData());
-                System.out.println("Десериализован PlayerInput: " + inputInfo);
+                PlayerInput playerInput = (PlayerInput) PlayerHandler.receiveGameState(packet.getData());
+                System.out.println("Десериализован PlayerInput: " + playerInput);
 
-                String playerId = inputInfo.getId();
-                PlayerHandler playerHandler = clientHandlers.get(playerId);
+                String playerId = playerInput.getId();
+                PlayerHandler playerHandler = playerHandlers.get(playerId);
                 if (playerHandler == null) {
                     playerHandler = new PlayerHandler(playerId);
                     hostListener.addOnlinePlayer(playerHandler);
-                    clientHandlers.put(playerId, playerHandler);
+                    playerHandlers.put(playerId, playerHandler);
                     System.out.println("Новый игрок подключён: " + playerId);
                 } else {
-                    playerHandler.setPlayerInputInfo(inputInfo);
+                    playerHandler.setPlayerInputInfo(playerInput);
                     System.out.println("Обновлён PlayerInput для игрока: " + playerId);
                 }
 

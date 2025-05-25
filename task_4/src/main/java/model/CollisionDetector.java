@@ -14,12 +14,11 @@ public class CollisionDetector {
     }
 
     public void checkCollisions() {
-        // Проверка границ для всех живых игроков
         for (Player player : game.getPlayers()) {
             if (!player.isAlive() || !player.isVisible()) {
-                continue; // Пропускаем мёртвых или невидимых игроков
+                continue;
             }
-            // Ограничение движения игрока в пределах игрового поля
+
             if (player.getX() < Game.LEFT_BOUND) {
                 player.setX(Game.LEFT_BOUND);
             }
@@ -34,27 +33,24 @@ public class CollisionDetector {
             }
         }
 
-        // Столкновение снарядов с объектами
-        for (Movable movable : new ArrayList<>(game.getMovables())) {
+        for (Movable movable : game.getMovables()) {
             if (movable instanceof Missile) {
                 Missile missile = (Missile) movable;
-                for (Destructible destructible : new ArrayList<>(game.getDestructibles())) {
+                for (Destructible destructible : game.getDestructibles()) {
                     if (!destructible.isDestroyed() && collides(missile, (Sprite) destructible)) {
                         if (missile.canDamage(destructible.getClass().getSimpleName())) {
                             destructible.takeDamage(missile.getDamage());
-                            // Уничтожаем снаряд, если не в godMode, не принадлежит игроку, или достиг верхней границы
+
                             if (!game.isGodMode() || !missile.getSource().equals("Player") || missile.getY() <= Game.TOP_BOUND) {
                                 missile.setState(false);
                             }
-                            // Обработка взрыва бомбы
                             if (destructible instanceof Bomb && destructible.isDestroyed()) {
                                 Bomb bomb = (Bomb) destructible;
                                 int radius = bomb.getExplosionRadius();
                                 for (Destructible target : game.getDestructibles()) {
                                     if (target != bomb && !target.isDestroyed()) {
-                                        double distance = Math.sqrt(
-                                                Math.pow(((Sprite) target).getX() - bomb.getX(), 2) +
-                                                        Math.pow(((Sprite) target).getWidth() - bomb.getWidth(), 2));
+                                        double distance = Math.sqrt(Math.pow(((Sprite) target).getX() - bomb.getX(), 2) +
+                                                Math.pow(((Sprite) target).getY() - bomb.getY(), 2));
                                         if (distance <= radius) {
                                             target.takeDamage(bomb.getDamage());
                                         }
@@ -65,7 +61,7 @@ public class CollisionDetector {
                     }
                 }
                 // Столкновение снарядов с препятствиями
-                for (Obstacle obstacle : new ArrayList<>(game.getObstacles())) {
+                for (Obstacle obstacle : game.getObstacles()) {
                     if (collides(missile, obstacle)) {
                         if (missile.canDamage("Obstacle")) {
                             obstacle.takeDamage(missile.getDamage());
@@ -77,7 +73,7 @@ public class CollisionDetector {
         }
 
         // Столкновения движущихся объектов (игроки и враги) с препятствиями
-        for (Movable movable : new ArrayList<>(game.getMovables())) {
+        for (Movable movable : game.getMovables()) {
             if (movable instanceof Player || movable instanceof Enemy) {
                 Sprite sprite = (Sprite) movable;
                 if (!sprite.isAlive() || !sprite.isVisible()) {
@@ -95,8 +91,8 @@ public class CollisionDetector {
             if (!player.isAlive() || !player.isVisible()) {
                 continue;
             }
-            for (Movable movable : new ArrayList<>(game.getMovables())) {
-                if (movable instanceof Enemy && collides(player, (Sprite) movable)) {
+            for (Movable movable : game.getMovables()) {
+                if ((movable instanceof Enemy || (movable instanceof Player) && movable != player)  && collides(player, (Sprite) movable)) {
                     bounceObject(player, (Sprite) movable);
                 }
             }

@@ -67,7 +67,6 @@ public class Game implements HostListener {
             return;
         }
 
-        // Обработка выстрелов для всех игроков
         for (Player player : new ArrayList<>(players)) {
             if (player.isAlive() && player.getActiveCommands().contains(ControllerCommand.SHOOT) && player.canShoot()) {
                 Missile bullet = player.shoot();
@@ -105,7 +104,7 @@ public class Game implements HostListener {
             if (destructible.isDestroyed()) {
                 if (destructible instanceof Player) {
                     ((Player) destructible).setVisibility(false); // Игрок становится невидимым
-                    movables.remove(destructible); // Убираем из активных движущихся объектов
+                    movables.remove(destructible);
                 } else if (destructible instanceof Enemy) {
                     kills++;
                     waveGenerator.decrementEnemyCount();
@@ -119,7 +118,10 @@ public class Game implements HostListener {
         }
 
         // Проверяем, все ли игроки мертвы
-        running = players.stream().anyMatch(player -> player.getHealth() > 0);
+        if (areAllPlayersDead()){
+            running = false;
+        }
+        //running = players.stream().anyMatch(player -> player.getHealth() > 0);
     }
 
     private void checkBoundary() {
@@ -137,7 +139,7 @@ public class Game implements HostListener {
         playerHandler.setPlayer(newPlayer);
         players.add(newPlayer);
         movables.add(newPlayer);
-        destructibles.add(newPlayer); // Добавляем в destructibles для обработки урона
+        destructibles.add(newPlayer);
         System.out.println("Добавлен новый игрок: " + playerId);
     }
 
@@ -170,7 +172,16 @@ public class Game implements HostListener {
     }
 
     public boolean areAllPlayersDead() {
-        return players.stream().noneMatch(player -> player.getHealth() > 0);
+        int count = players.size();
+        for (Player player : players) {
+            if (player.isDestroyed()){
+                count--;
+            }
+        }
+        if (count <= 0){
+            return true;
+        }
+        return false;
     }
 
     public int getKills() {

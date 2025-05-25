@@ -44,7 +44,7 @@ public class MenuController {
         settingsDialog.pack();
         settingsDialog.setLocationRelativeTo(parentFrame);
 
-        settingsController = new SettingsController(settingsView, parentFrame); // Инициализация контроллера
+        settingsController = new SettingsController(settingsView, parentFrame);
 
         settingsDialog.setVisible(true);
     }

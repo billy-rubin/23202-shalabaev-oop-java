@@ -17,7 +17,7 @@ public class MainController {
         frame = new JFrame("ALAbuGA.game");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setResizable(false);
-        game = new Game(); // Initialize Game instance
+        game = new Game();
     }
 
     public void showMenu() {
@@ -26,20 +26,20 @@ public class MainController {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-        new MenuController(menuView, this, game); // Pass Game instance
+        new MenuController(menuView, this, game);
     }
 
     public void startGame() {
-        GameView gameView = new GameView(game); // Use existing Game instance
+        GameView gameView = new GameView(game);
         frame.setContentPane(gameView);
         frame.pack();
         frame.setLocationRelativeTo(null);
         game.setGodMode(SettingsController.isNewState());
         new GameController(game, gameView, null);
     }
+
     public void startHost() {
         gameServer = new GameServer(game);
-        //game = new Game();
         GameView gameView = new GameView(game);
         frame.setContentPane(gameView);
         frame.pack();

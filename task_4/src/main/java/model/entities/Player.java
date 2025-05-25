@@ -34,18 +34,10 @@ public class Player extends Sprite implements Shooting, Destructible, Movable, S
         }
         for (ControllerCommand command : activeCommands) {
             switch (command) {
-                case UP:
-                    if (y > Game.TOP_BOUND) move(0, -speed);
-                    break;
-                case DOWN:
-                    if (y < Game.BOTTOM_BOUND - height) move(0, speed);
-                    break;
-                case LEFT:
-                    if (x > Game.LEFT_BOUND) move(-speed, 0);
-                    break;
-                case RIGHT:
-                    if (x < Game.RIGHT_BOUND - width) move(speed, 0);
-                    break;
+                case UP: move(0, (-1) * speed); break;
+                case DOWN: move(0, speed); break;
+                case LEFT: move((-1) * speed, 0); break;
+                case RIGHT: move(speed, 0); break;
             }
         }
     }

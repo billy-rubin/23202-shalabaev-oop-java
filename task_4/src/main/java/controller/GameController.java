@@ -22,7 +22,6 @@ public class GameController {
 
         // Привязываем PlayerController только к локальному игроку хоста
         if (gameServer != null) {
-            // В сетевом режиме берём первого игрока из списка (хост)
             for (Player player : game.getPlayers()) {
                 if (player.getId().startsWith("host-")) {
                     gameView.addKeyListener(new PlayerController(player));
@@ -30,7 +29,6 @@ public class GameController {
                 }
             }
         } else {
-            // В одиночном режиме берём всех игроков (обычно один)
             for (Player player : game.getPlayers()) {
                 gameView.addKeyListener(new PlayerController(player));
             }
@@ -61,7 +59,6 @@ public class GameController {
         timer.stop();
         System.out.println("Игра завершена, обработка Game Over");
 
-        // Запрашиваем имя для сохранения счёта у каждого игрока
         StringBuilder scoresText = new StringBuilder("Game Over! Scores:\n");
         for (Player player : game.getPlayers()) {
             scoresText.append("Player ").append(player.getId(), 0, 4)

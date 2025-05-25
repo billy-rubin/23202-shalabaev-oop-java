@@ -16,7 +16,7 @@ public class HUDView extends JPanel {
         setLayout(new GridLayout(4, 1));
         killsLabel = new JLabel("Kills: 0");
         waveLabel = new JLabel("Wave: 0");
-        livesLabel = new JLabel("Lives: None");
+        livesLabel = new JLabel("Lives: N/A");
         scoreLabel = new JLabel("SCORE: 0");
 
         add(scoreLabel);
@@ -46,14 +46,12 @@ public class HUDView extends JPanel {
                     }
                 }
             }
-            // Сокращаем ID до первых 4 символов для читаемости
-            String shortId = playerId.length() > 4 ? playerId.substring(0, 4) : playerId;
+            String shortId = playerId.length() > 4 ? playerId.substring(0, 4) : playerId; // первые 4 символа айди
             livesText.append("P").append(shortId).append(": ").append(lives).append(", ");
         }
 
-        // Удаляем последнюю запятую или показываем "None", если нет игроков
         if (hasPlayers) {
-            livesText.setLength(livesText.length() - 2); // Убираем ", "
+            livesText.setLength(livesText.length() - 2);
         } else {
             livesText.append("None");
         }
