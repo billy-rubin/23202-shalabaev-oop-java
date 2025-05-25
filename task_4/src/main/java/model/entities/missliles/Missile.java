@@ -8,6 +8,7 @@ public abstract class Missile extends Sprite implements Movable {
     private int damage;
     protected Game game;
     protected final String source;
+    private static final long serialVersionUID = 1L;
     protected String[] targets;
 
     public Missile(int x, int y, int speed, int width, int height, int damage, String source, String[] framePaths) {
@@ -30,7 +31,6 @@ public abstract class Missile extends Sprite implements Movable {
     }
 
     public boolean canDamage(String destination){
-        System.out.println(destination);
         for (String target : targets){
             if (target.equals(destination)){
                 return true;

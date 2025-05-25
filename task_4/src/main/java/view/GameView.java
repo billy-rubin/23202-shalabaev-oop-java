@@ -39,7 +39,7 @@ public class GameView extends JPanel {
                 graphics2D.drawImage(obstacle.getImage(), obstacle.getX(), obstacle.getY(), this);
             }
         }
-        hud.update();
+        hud.update(game.getGameState(), game.getPlayer().getId());
         if (!game.isRunning()) {
             graphics2D.setColor(Color.WHITE);
             graphics2D.setFont(new Font("Arial", Font.BOLD, 50));

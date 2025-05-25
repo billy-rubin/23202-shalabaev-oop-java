@@ -8,19 +8,32 @@ import javax.swing.*;
 public class MenuController {
     private MenuView menuView;
     private MainController mainController;
-    private Game game;// Assume Game model is passed or accessible
     private SettingsView settingsView;
+    private SettingsController settingsController;
 
     public MenuController(MenuView menuView, MainController mainController, Game game) {
         this.menuView = menuView;
-        settingsView = new SettingsView(game);
+        settingsView = new SettingsView();
         this.mainController = mainController;
-        this.game = game;
 
         menuView.getSoloGameButton().addActionListener(e -> mainController.startGame());
-        menuView.getCoopGameButton().addActionListener(e -> JOptionPane.showMessageDialog(menuView, "Co-op mode not implemented yet."));
+        //menuView.getCoopGameButton().addActionListener(e -> JOptionPane.showMessageDialog(menuView, "Co-op mode not implemented yet."));
         menuView.getSettingsButton().addActionListener(e -> openSettings());
         menuView.getExitButton().addActionListener(e -> System.exit(0));
+        menuView.getCoopGameButton().addActionListener(e -> {
+            String[] options = {"Host", "Join"};
+            int choice = JOptionPane.showOptionDialog(menuView, "Choose mode", "Co-op Game",
+                    JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+            if (choice == 0) { // Host
+                mainController.startHost();
+            } else if (choice == 1) { // Join
+                String hostIp = JOptionPane.showInputDialog(menuView, "Enter host IP:");
+                if (hostIp != null && !hostIp.trim().isEmpty()) {
+                    mainController.startClient(hostIp);
+                }
+            }
+        });
+
     }
 
     private void openSettings() {
@@ -32,7 +45,7 @@ public class MenuController {
         settingsDialog.pack();
         settingsDialog.setLocationRelativeTo(parentFrame);
 
-        new SettingsController(settingsView, game, parentFrame); // Инициализация контроллера
+        settingsController = new SettingsController(settingsView, parentFrame); // Инициализация контроллера
 
         settingsDialog.setVisible(true);
     }

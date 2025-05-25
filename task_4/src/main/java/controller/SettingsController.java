@@ -7,17 +7,16 @@ import javax.swing.*;
 
 public class SettingsController {
     private SettingsView settingsView;
-    private Game game;
     private JFrame parentFrame;
+    private static boolean newState = false;
 
-    public SettingsController(SettingsView settingsView, Game game, JFrame parentFrame) {
+    public SettingsController(SettingsView settingsView, JFrame parentFrame) {
         this.settingsView = settingsView;
-        this.game = game;
         this.parentFrame = parentFrame;
 
         settingsView.getGodModeButton().addActionListener(e -> {
-            boolean newState = !game.isGodMode();  // Переключаем состояние
-            game.setGodMode(newState);             // Обновляем состояние в игре
+            newState = !newState;  // Переключаем состояние
+            //game.setGodMode(newState);             // Обновляем состояние в игре
             settingsView.updateGodModeButton(newState);  // Обновляем кнопку
         });
 
@@ -25,5 +24,9 @@ public class SettingsController {
             parentFrame.setVisible(true); // Показать меню
             SwingUtilities.getWindowAncestor(settingsView).dispose(); // Закрыть настройки
         });
+    }
+
+    public static boolean isNewState() {
+        return newState;
     }
 }

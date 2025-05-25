@@ -2,11 +2,16 @@ package controller;
 
 import javax.swing.*;
 import model.Game;
+import net.Client;
+import net.GameServer;
 import view.*;
+
+import java.util.UUID;
 
 public class MainController {
     private JFrame frame;
     private Game game;
+    private GameServer gameServer;
 
     public MainController() {
         frame = new JFrame("ALAbuGA.game");
@@ -29,6 +34,30 @@ public class MainController {
         frame.setContentPane(gameView);
         frame.pack();
         frame.setLocationRelativeTo(null);
-        new GameController(game, gameView);
+        game.setGodMode(SettingsController.isNewState());
+        new GameController(game, gameView, null);
+    }
+    public void startHost() {
+        gameServer = new GameServer(game);
+        game = new Game();
+        GameView gameView = new GameView(game);
+        frame.setContentPane(gameView);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        new GameController(game, gameView, gameServer);
+    }
+
+    public void startClient(String hostIp) {
+        try {
+            Client client = new Client(hostIp);
+            String playerId = UUID.randomUUID().toString();
+            ClientGameView clientGameView = new ClientGameView(game);
+            frame.setContentPane(clientGameView);
+            frame.pack();
+            frame.setLocationRelativeTo(null);
+            new ClientController(client, playerId, clientGameView);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(frame, "Failed to connect to host.");
+        }
     }
 }

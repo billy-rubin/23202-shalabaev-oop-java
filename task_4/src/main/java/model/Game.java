@@ -6,18 +6,24 @@ import model.entities.enemies.Drone;
 import model.entities.enemies.Enemy;
 import model.entities.missliles.Bomb;
 import model.entities.missliles.Missile;
+import net.GameState;
+import net.HostListener;
+import net.PlayerHandler;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Game {
+public class Game implements HostListener {
     public static final int LEFT_BOUND = 310;
     public static final int RIGHT_BOUND = 1200;
     public static final int TOP_BOUND = 0;
     public static final int BOTTOM_BOUND = 789;
     private boolean godMode = false;
 
+    private final ArrayList<Player> players = new ArrayList<>();
     private Player player;
     private List<Obstacle> obstacles;
     private WaveGenerator waveGenerator;
@@ -36,12 +42,16 @@ public class Game {
         obstacles = new ArrayList<>();
         destructibles = new ArrayList<>();
         movables = new ArrayList<>();
-        player = new Player(532, 650, this);
+
+        player = new Player(532, 650, "1",this);
         movables.add(player);
+        players.add(player);
         destructibles.add(player);
+        System.out.println(getHostLocalIP());
+
         scoreManager = new ScoreManager();
         for (int i = 0; i < 4; i++) {
-            Obstacle obstacle = new Obstacle(LEFT_BOUND + i * 250, BOTTOM_BOUND - 4 * player.getHeight(), 150, 70, new String[]{"/images/obstacle1.png"});
+            Obstacle obstacle = new Obstacle(LEFT_BOUND + i * 250, BOTTOM_BOUND - 4 * 70, 150, 70, new String[]{"/images/obstacle1.png"});
             obstacles.add(obstacle);
             addDestructible(obstacle);
         }
@@ -91,7 +101,7 @@ public class Game {
         for (Destructible destructible : new ArrayList<>(destructibles)) {
             if (destructible.isDestroyed()) {
                 if (destructible instanceof Player) {
-                    running = false;
+                    players.remove(destructible);
                 }
                 if (destructible instanceof Enemy) {
                     kills++;
@@ -99,8 +109,14 @@ public class Game {
                     updateExtremeEnemies();
                     movables.remove(destructible);
                 }
+                if (destructible instanceof Obstacle){
+                    obstacles.remove(destructible);
+                }
                 destructibles.remove(destructible);
             }
+        }
+        if (players.isEmpty()) {
+            running = false;
         }
     }
 
@@ -110,6 +126,21 @@ public class Game {
         } else if (rightMostEnemy != null && rightMostEnemy.isAlive() && rightMostEnemy.getSpeed() > 0 && rightMostEnemy.getX() + rightMostEnemy.getWidth() >= RIGHT_BOUND) {
             moveDownSignal = true;
         }
+    }
+
+    @Override
+    public void addOnlinePlayer(PlayerHandler playerHandler) {
+        String id = playerHandler.getPlayerId();
+        Player player = new Player(RIGHT_BOUND - LEFT_BOUND + players.size() * 70,
+                BOTTOM_BOUND - 2 * 70, id, this);
+        playerHandler.setPlayer(player);
+        movables.add(player);
+        players.add(player);
+    }
+
+    public GameState getGameState() {
+        return new GameState(obstacles, movables, destructibles, running, kills,
+                waveGenerator.getCurrentWave(), scoreManager.getScore());
     }
 
     private void updateExtremeEnemies() {
@@ -141,6 +172,15 @@ public class Game {
         return player;
     }
 
+    public boolean arePlayersDead() {
+        return players.isEmpty();
+    }
+
+    public void addPlayer(Player player) {
+        movables.add(player);
+        players.add(player);
+    }
+
     public int getKills() {
         return kills;
     }
@@ -152,7 +192,15 @@ public class Game {
     public int getWaveNumber() {
         return waveGenerator.getCurrentWave();
     }
-
+    public String getHostLocalIP() {
+        try {
+            InetAddress localhost = InetAddress.getLocalHost();
+            return localhost.getHostAddress();
+        } catch (UnknownHostException e) {
+            System.err.println("Ошибка при получении IP: " + e.getMessage());
+            return "Неизвестный IP";
+        }
+    }
     public boolean isRunning() {
         return running;
     }

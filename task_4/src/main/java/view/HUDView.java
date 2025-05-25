@@ -1,6 +1,9 @@
 package view;
 
 import model.Game;
+import model.entities.Movable;
+import model.entities.Player;
+import net.GameState;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,10 +27,17 @@ public class HUDView extends JPanel {
         setOpaque(false);
     }
 
-    public void update() {
-        scoreLabel.setText("SCORE: " + game.getScoreManager().getScore());
-        killsLabel.setText("Kills: " + game.getKills());
-        waveLabel.setText("Wave: " + game.getWaveNumber());
-        livesLabel.setText("Lives: " + game.getLives());
+    public void update(GameState gameState, String playerId) {
+        scoreLabel.setText("SCORE: " + gameState.score());
+        killsLabel.setText("Kills: " + gameState.kills());
+        waveLabel.setText("Wave: " + gameState.waveNumber());
+        int lives = 0;
+        for (Movable movable : gameState.movables()) {
+            if (movable instanceof Player && ((Player) movable).getId().equals(playerId)) {
+                lives = ((Player) movable).getHealth();
+                break;
+            }
+        }
+        livesLabel.setText("Lives: " + lives);
     }
 }

@@ -7,6 +7,7 @@ import model.entities.Sprite;
 
 public abstract class Enemy extends Sprite implements Destructible, Movable {
     protected Game game;
+    private static final long serialVersionUID = 1L;
     protected int health;
     protected int scoreValue;
     protected String[] targets;

@@ -2,6 +2,8 @@ package model.entities;
 
 import javax.swing.*;
 import java.awt.Image;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +16,7 @@ public abstract class Sprite {
     private int currentFrame;
     protected int width, height;
     private Timer animationTimer;
+    private final String[] framePaths;
 
     public Sprite(int x, int y, int speed, int width, int height, String[] framePaths) {
         this.x = x;
@@ -23,10 +26,8 @@ public abstract class Sprite {
         this.visibility = true;
         this.width = width;
         this.height = height;
-        animationFrames = new ArrayList<>();
-        for (String path : framePaths) {
-            animationFrames.add(new ImageIcon(getClass().getResource(path)).getImage());
-        }
+        this.framePaths = framePaths;
+        loadImages();
         currentFrame = 0;
         animationTimer = new Timer(200, e -> nextFrame());
         animationTimer.start();
@@ -70,6 +71,21 @@ public abstract class Sprite {
 
     public int getHeight() {
         return this.height;
+    }
+
+
+    private void loadImages() {
+        animationFrames = new ArrayList<>();
+        for (String path : framePaths) {
+            animationFrames.add(new ImageIcon(getClass().getResource(path)).getImage());
+        }
+    }
+
+    private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
+        ois.defaultReadObject();
+        loadImages();
+        animationTimer = new Timer(200, e -> nextFrame());
+        animationTimer.start();
     }
 
     public void setState(boolean state) { this.state = state; }

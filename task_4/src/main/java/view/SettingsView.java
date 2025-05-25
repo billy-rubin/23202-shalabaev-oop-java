@@ -2,6 +2,7 @@ package view;
 
 import controller.ButtonType;
 import controller.MenuButton;
+import controller.SettingsController;
 import model.Game;
 
 import javax.swing.*;
@@ -12,11 +13,8 @@ public class SettingsView extends JPanel {
     private MenuButton godModeButton;  // Изменен тип на MenuButton для консистентности
     private JButton exitButton;
     private Image backgroundImage;
-    private Game game;  // Добавлена ссылка на игру
 
-    public SettingsView(Game game) {
-        this.game = game;
-
+    public SettingsView() {
         // Загрузка фонового изображения
         URL imageURL = getClass().getResource("/images/loadingScreen.png");
         if (imageURL != null) {
@@ -33,7 +31,7 @@ public class SettingsView extends JPanel {
 
         // Инициализация кнопок
         exitButton = new MenuButton(ButtonType.exit);
-        godModeButton = new MenuButton(game.isGodMode() ? ButtonType.godModeOn : ButtonType.godModeOff);
+        godModeButton = new MenuButton(SettingsController.isNewState() ? ButtonType.godModeOn : ButtonType.godModeOff);
 
         Dimension mediumButtonSize = new Dimension(618, 250);
         Dimension smallButtonSize = new Dimension(350, 150);

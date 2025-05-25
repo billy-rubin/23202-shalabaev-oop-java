@@ -9,15 +9,18 @@ import java.util.LinkedList;
 
 public class Player extends Sprite implements Shooting, Destructible, Movable{
     private LinkedList<ControllerCommand> activeCommands;
+    private static final long serialVersionUID = 1L;
     private long lastShot;
     private static final long SHOOT_COOLDOWN = 500;
     private int health;
     private Game game;
-    public Player(int x, int y, Game game) {
+    private String id;
+    public Player(int x, int y, String id, Game game) {
         super(x, y, 5, 70, 70, new String[]{"/images/player1.png", "/images/player2.png"});
         activeCommands = new LinkedList<>();
         lastShot = 0;
         this.game = game;
+        this.id = id;
         this.health = 3;
     }
 
@@ -71,5 +74,9 @@ public class Player extends Sprite implements Shooting, Destructible, Movable{
     @Override
     public Missile shoot() {
         return new Bullet(x + 20, y - 10, -10, 25, 25, "Player", new String[]{"/images/bullet1.png"});
+    }
+
+    public String getId() {
+        return id;
     }
 }

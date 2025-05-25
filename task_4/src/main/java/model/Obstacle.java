@@ -8,7 +8,8 @@ import java.awt.*;
 
 public class Obstacle extends Sprite implements Destructible {
     protected boolean state;
-    private int protection = 1;
+    private static final long serialVersionUID = 1L;
+    private int protection = 10;
     protected boolean visibility;
     private Image image;
     private int currentFrame;
@@ -29,9 +30,7 @@ public class Obstacle extends Sprite implements Destructible {
     @Override
     public void takeDamage(int damage){
         protection -= damage;
-        if (protection <= 0) {
-            setState(false);
-        }
+        System.out.println(protection);
     }
 
     @Override

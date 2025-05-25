@@ -19,7 +19,6 @@ public class CollisionDetector {
     public void checkCollisions() {
         Player player = game.getPlayer();
 
-        // Проверка выхода игрока за границы экрана
         if (player.getX() < Game.LEFT_BOUND) {
             player.setX(Game.LEFT_BOUND);
         }
@@ -86,7 +85,6 @@ public class CollisionDetector {
         for (Movable movable : game.getMovables()) {
             if (movable instanceof Enemy && collides(player, (Sprite) movable)) {
                 bounceObject(player, (Sprite) movable);
-                // Здесь можно добавить дополнительную логику, например, урон игроку
             }
         }
     }

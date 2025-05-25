@@ -21,7 +21,6 @@ public class WaveGenerator {
         this.game = game;
         this.currentWave = 0;
         spawnWave();
-        // Инициализация таймера для спавна Drone
         droneSpawnTimer = new Timer();
         droneSpawnTimer.scheduleAtFixedRate(new TimerTask() {
             @Override
