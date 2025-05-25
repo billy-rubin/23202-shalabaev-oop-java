@@ -4,7 +4,9 @@ import model.Game;
 import model.entities.Movable;
 import model.entities.Sprite;
 
-public abstract class Missile extends Sprite implements Movable {
+import java.io.Serializable;
+
+public abstract class Missile extends Sprite implements Movable, Serializable {
     private int damage;
     protected Game game;
     protected final String source;

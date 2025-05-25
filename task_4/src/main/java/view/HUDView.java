@@ -9,11 +9,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class HUDView extends JPanel {
-    private Game game;
     private JLabel killsLabel, waveLabel, livesLabel, scoreLabel;
 
-    public HUDView(Game game) {
-        this.game = game;
+    public HUDView() {
         setLayout(new GridLayout(4, 1));
         killsLabel = new JLabel("Kills: 0");
         waveLabel = new JLabel("Wave: 0");

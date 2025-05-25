@@ -4,8 +4,6 @@ import model.entities.Player;
 
 import java.io.*;
 
-import static net.GameServer.gameState;
-
 public class PlayerHandler {
     private final String playerId;
     private Player player;

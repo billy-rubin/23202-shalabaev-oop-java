@@ -5,13 +5,14 @@ import model.entities.Sprite;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.Serializable;
 
-public class Obstacle extends Sprite implements Destructible {
+public class Obstacle extends Sprite implements Destructible, Serializable {
     protected boolean state;
     private static final long serialVersionUID = 1L;
     private int protection = 10;
     protected boolean visibility;
-    private Image image;
+    private transient Image image;
     private int currentFrame;
     protected int width = 150;
     protected int height = 70;

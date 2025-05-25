@@ -19,7 +19,7 @@ public class ClientGameView extends JPanel {
         this.game = game;
         setPreferredSize(new Dimension(1525, 789));
         background = new ImageIcon(getClass().getResource("/images/background.png")).getImage();
-        hud = new HUDView(game);
+        hud = new HUDView();
         setLayout(null);
         hud.setBounds(10, 10, 200, 100);
         add(hud);
@@ -50,11 +50,13 @@ public class ClientGameView extends JPanel {
                             ((Sprite) movable).getHeight(), this);
                 }
             }
+
             for (Obstacle obstacle : gameState.obstacles()) {
                 if (obstacle.isVisibility()) {
                     graphics2D.drawImage(obstacle.getImage(), obstacle.getX(), obstacle.getY(), this);
                 }
             }
+
             if (!gameState.isRunning()) {
                 graphics2D.setColor(Color.WHITE);
                 graphics2D.setFont(new Font("Arial", Font.BOLD, 50));

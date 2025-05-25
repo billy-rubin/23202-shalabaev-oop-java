@@ -43,7 +43,7 @@ public class Game implements HostListener {
         destructibles = new ArrayList<>();
         movables = new ArrayList<>();
 
-        player = new Player(532, 650, "1",this);
+        player = new Player(532, 650, "1",godMode);
         movables.add(player);
         players.add(player);
         destructibles.add(player);
@@ -130,9 +130,8 @@ public class Game implements HostListener {
 
     @Override
     public void addOnlinePlayer(PlayerHandler playerHandler) {
-        String id = playerHandler.getPlayerId();
-        Player player = new Player(RIGHT_BOUND - LEFT_BOUND + players.size() * 70,
-                BOTTOM_BOUND - 2 * 70, id, this);
+        String playerId = playerHandler.getPlayerId();
+        Player player = new Player(RIGHT_BOUND - LEFT_BOUND + players.size() * 70, BOTTOM_BOUND - 2 * 70, playerId, isGodMode());
         playerHandler.setPlayer(player);
         movables.add(player);
         players.add(player);
@@ -219,6 +218,7 @@ public class Game implements HostListener {
 
     public void setGodMode(boolean godMode) {
         this.godMode = godMode;
+        player.setGodMode(godMode);
     }
 
     public boolean isGodMode() {

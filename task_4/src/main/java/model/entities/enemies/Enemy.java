@@ -5,8 +5,10 @@ import model.entities.Destructible;
 import model.entities.Movable;
 import model.entities.Sprite;
 
-public abstract class Enemy extends Sprite implements Destructible, Movable {
-    protected Game game;
+import java.io.Serializable;
+
+public abstract class Enemy extends Sprite implements Destructible, Movable, Serializable {
+    protected transient Game game;
     private static final long serialVersionUID = 1L;
     protected int health;
     protected int scoreValue;

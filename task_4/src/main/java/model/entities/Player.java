@@ -5,22 +5,24 @@ import model.Game;
 import model.entities.missliles.Bullet;
 import model.entities.missliles.Missile;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
-public class Player extends Sprite implements Shooting, Destructible, Movable{
+public class Player extends Sprite implements Shooting, Destructible, Movable, Serializable {
     private LinkedList<ControllerCommand> activeCommands;
     private static final long serialVersionUID = 1L;
     private long lastShot;
     private static final long SHOOT_COOLDOWN = 500;
     private int health;
-    private Game game;
     private String id;
-    public Player(int x, int y, String id, Game game) {
+    private boolean isGodMode;
+
+    public Player(int x, int y, String id, boolean isGodMode) {
         super(x, y, 5, 70, 70, new String[]{"/images/player1.png", "/images/player2.png"});
         activeCommands = new LinkedList<>();
         lastShot = 0;
-        this.game = game;
         this.id = id;
+        this.isGodMode = isGodMode;
         this.health = 3;
     }
 
@@ -38,7 +40,7 @@ public class Player extends Sprite implements Shooting, Destructible, Movable{
 
     @Override
     public void takeDamage(int damage) {
-        if (!game.isGodMode()) {
+        if (!isGodMode) {
             health -= damage;
             if (health <= 0)
                 setState(false);
@@ -60,6 +62,10 @@ public class Player extends Sprite implements Shooting, Destructible, Movable{
 
     public LinkedList<ControllerCommand> getActiveCommands() {
         return activeCommands;
+    }
+
+    public void setGodMode(boolean godMode) {
+        isGodMode = godMode;
     }
 
     public boolean canShoot() {

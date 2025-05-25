@@ -10,10 +10,7 @@ public class GameServer {
     private final HostListener hostListener;
     private DatagramSocket serverSocket;
     private volatile boolean isRunning;
-
     private static final int PORT = 12345;
-    static GameState gameState;
-
     private final int packetSize = 4096;
 
     public GameServer(HostListener hostListener) {
@@ -65,7 +62,8 @@ public class GameServer {
         try {
             serializedSavedGame = PlayerHandler.sendGameState(gameState);
         } catch (IOException e) {
-            System.err.println("update " + e.getMessage());
+            System.err.println("Ошибка сериализации: " + e.getClass().getName() + " - " + e.getMessage());
+            e.printStackTrace(); // Выводим полный stack trace для диагностики
             serializedSavedGame = null;
         }
     }

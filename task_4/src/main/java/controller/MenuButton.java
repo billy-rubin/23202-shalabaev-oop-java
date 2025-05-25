@@ -7,7 +7,7 @@ public class MenuButton extends JButton {
 
     public MenuButton(ButtonType type) {
         this.type = type;
-        setIcon(new ImageIcon(getClass().getResource("/images/" + type.toString().toLowerCase() + ".png")));
+        setIcon(new ImageIcon(getClass().getResource("/images/" + type.toString() + ".png")));
         setBorderPainted(false);
         setContentAreaFilled(false);
         setFocusPainted(false);

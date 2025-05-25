@@ -16,12 +16,7 @@ public class MenuView extends JPanel {
 
     public MenuView() {
         URL imageURL = getClass().getResource("/images/loadingScreen.png");
-        if (imageURL != null) {
-            backgroundImage = new ImageIcon(imageURL).getImage();
-        } else {
-            backgroundImage = null;
-            setBackground(Color.DARK_GRAY);
-        }
+        backgroundImage = new ImageIcon(imageURL).getImage();
 
         // Set layout
         setLayout(new GridBagLayout());

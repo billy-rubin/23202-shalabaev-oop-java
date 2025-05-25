@@ -16,7 +16,7 @@ public class GameView extends JPanel {
         this.game = game;
         setPreferredSize(new Dimension(1525, 789));
         background = new ImageIcon(getClass().getResource("/images/background.png")).getImage();
-        hud = new HUDView(game);
+        hud = new HUDView();
         setLayout(null);
         hud.setBounds(10, 10, 200, 100);
         add(hud);

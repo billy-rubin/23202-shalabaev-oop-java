@@ -9,7 +9,7 @@ import java.net.InetAddress;
 public class Client {
     private final DatagramSocket server;
     private final InetAddress ip;
-    private final int port = 49001;
+    private final int port = 12345;
     private final int packetSize = 4096;
     private final int timeout = 1000;
 

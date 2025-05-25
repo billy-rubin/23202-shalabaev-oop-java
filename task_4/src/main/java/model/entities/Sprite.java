@@ -4,19 +4,21 @@ import javax.swing.*;
 import java.awt.Image;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Sprite {
+public abstract class Sprite implements Serializable {
+    private static final long serialVersionUID = 1L;
     protected int x, y;
     protected int speed;
     protected boolean state;
     protected boolean visibility;
-    private List<Image> animationFrames;
+    private transient List<Image> animationFrames;
     private int currentFrame;
     protected int width, height;
-    private Timer animationTimer;
-    private final String[] framePaths;
+    private transient Timer animationTimer;
+    private transient final String[] framePaths;
 
     public Sprite(int x, int y, int speed, int width, int height, String[] framePaths) {
         this.x = x;
