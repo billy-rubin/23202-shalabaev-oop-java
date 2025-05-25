@@ -17,8 +17,8 @@ public abstract class Sprite implements Serializable {
     private transient List<Image> animationFrames;
     private int currentFrame;
     protected int width, height;
+    private final String[] framePaths; // Убрали transient, чтобы сериализовалось
     private transient Timer animationTimer;
-    private transient final String[] framePaths;
 
     public Sprite(int x, int y, int speed, int width, int height, String[] framePaths) {
         this.x = x;
@@ -52,34 +52,34 @@ public abstract class Sprite implements Serializable {
         this.y += dy;
     }
 
-    public int getX() {
-        return x;
-    }
-    public int getY() {
-        return y;
-    }
-    public void setX(int x) {
-        this.x = x;
-    }
-    public void setY(int y) {
-        this.y = y; }
+    public int getX() { return x; }
+    public int getY() { return y; }
+    public void setX(int x) { this.x = x; }
+    public void setY(int y) { this.y = y; }
     public int getSpeed() { return speed; }
-    public boolean isAlive() {
-        return state;
-    }
-    public int getWidth() {
-        return this.width;
-    }
+    public boolean isAlive() { return state; }
+    public int getWidth() { return width; }
+    public int getHeight() { return height; }
+    public void setState(boolean state) { this.state = state; }
+    public boolean isVisible() { return visibility; }
 
-    public int getHeight() {
-        return this.height;
+    public void setVisibility(boolean visibility) {
+        this.visibility = visibility;
     }
-
 
     private void loadImages() {
         animationFrames = new ArrayList<>();
+        if (framePaths == null || framePaths.length == 0) {
+            System.err.println("Ошибка: framePaths пустой или null, изображения не загружены");
+            return;
+        }
         for (String path : framePaths) {
-            animationFrames.add(new ImageIcon(getClass().getResource(path)).getImage());
+            ImageIcon icon = new ImageIcon(getClass().getResource(path));
+            if (icon.getImage() != null) {
+                animationFrames.add(icon.getImage());
+            } else {
+                System.err.println("Ошибка: Не удалось загрузить изображение по пути: " + path);
+            }
         }
     }
 
@@ -89,7 +89,4 @@ public abstract class Sprite implements Serializable {
         animationTimer = new Timer(200, e -> nextFrame());
         animationTimer.start();
     }
-
-    public void setState(boolean state) { this.state = state; }
-    public boolean isVisible() { return visibility; }
 }

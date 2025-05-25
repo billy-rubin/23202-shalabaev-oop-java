@@ -17,6 +17,7 @@ public class Client {
         this.ip = InetAddress.getByName(ip);
         server = new DatagramSocket();
         server.setSoTimeout(timeout);
+        System.out.println("Клиент запущен, подключение к " + ip + ":" + port);
     }
 
     public void sendPlayerData(Player player) {
@@ -29,7 +30,9 @@ public class Client {
             byte[] data = PlayerHandler.sendGameState(playerInput);
             DatagramPacket packet = new DatagramPacket(data, data.length, ip, port);
             server.send(packet);
+            System.out.println("Отправлен PlayerInput: " + playerInput);
         } catch (IOException e) {
+            System.err.println("Ошибка отправки данных: " + e.getMessage());
             throw new RuntimeException(e);
         }
     }
@@ -39,13 +42,17 @@ public class Client {
         DatagramPacket packet = new DatagramPacket(data, packetSize);
         try {
             server.receive(packet);
-            return (GameState) PlayerHandler.receiveGameState(packet.getData());
+            GameState gameState = (GameState) PlayerHandler.receiveGameState(packet.getData());
+            System.out.println("Получен GameState: " + gameState);
+            return gameState;
         } catch (IOException | ClassNotFoundException e) {
+            System.err.println("Ошибка получения данных: " + e.getMessage());
             throw new RuntimeException(e);
         }
     }
 
     public void closeConnection() {
         server.close();
+        System.out.println("Клиент отключён");
     }
 }

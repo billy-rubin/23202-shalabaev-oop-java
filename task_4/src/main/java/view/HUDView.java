@@ -1,12 +1,13 @@
 package view;
 
-import model.Game;
 import model.entities.Movable;
 import model.entities.Player;
 import net.GameState;
+import net.PlayerHandler;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Arrays;
 
 public class HUDView extends JPanel {
     private JLabel killsLabel, waveLabel, livesLabel, scoreLabel;
@@ -15,7 +16,7 @@ public class HUDView extends JPanel {
         setLayout(new GridLayout(4, 1));
         killsLabel = new JLabel("Kills: 0");
         waveLabel = new JLabel("Wave: 0");
-        livesLabel = new JLabel("Lives: 3");
+        livesLabel = new JLabel("Lives: None");
         scoreLabel = new JLabel("SCORE: 0");
 
         add(scoreLabel);
@@ -25,17 +26,40 @@ public class HUDView extends JPanel {
         setOpaque(false);
     }
 
-    public void update(GameState gameState, String playerId) {
+    public void update(GameState gameState, String[] playerIds) {
         scoreLabel.setText("SCORE: " + gameState.score());
         killsLabel.setText("Kills: " + gameState.kills());
         waveLabel.setText("Wave: " + gameState.waveNumber());
-        int lives = 0;
-        for (Movable movable : gameState.movables()) {
-            if (movable instanceof Player && ((Player) movable).getId().equals(playerId)) {
-                lives = ((Player) movable).getHealth();
-                break;
+
+        // Формируем строку с жизнями всех игроков
+        StringBuilder livesText = new StringBuilder("Lives: ");
+        boolean hasPlayers = false;
+        for (String playerId : playerIds) {
+            int lives = 0;
+            for (Movable movable : gameState.movables()) {
+                if (movable instanceof Player){
+                    Player player = (Player) movable;
+                    if (player.getId().equals(playerId)) {
+                        lives = player.getHealth();
+                        hasPlayers = true;
+                        break;
+                    }
+                }
             }
+            // Сокращаем ID до первых 4 символов для читаемости
+            String shortId = playerId.length() > 4 ? playerId.substring(0, 4) : playerId;
+            livesText.append("P").append(shortId).append(": ").append(lives).append(", ");
         }
-        livesLabel.setText("Lives: " + lives);
+
+        // Удаляем последнюю запятую или показываем "None", если нет игроков
+        if (hasPlayers) {
+            livesText.setLength(livesText.length() - 2); // Убираем ", "
+        } else {
+            livesText.append("None");
+        }
+
+        livesLabel.setText(livesText.toString());
+        System.out.println("HUD обновлён: " + livesText + ", Players: " + Arrays.toString(playerIds));
+        repaint();
     }
 }

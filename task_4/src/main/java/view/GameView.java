@@ -3,12 +3,16 @@ package view;
 import model.Game;
 import model.Obstacle;
 import model.entities.Movable;
+import model.entities.Player;
 import model.entities.Sprite;
+import net.GameState;
+
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class GameView extends JPanel {
-    private Game game;
+    private final Game game;
     private Image background;
     private HUDView hud;
 
@@ -26,24 +30,41 @@ public class GameView extends JPanel {
     protected void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);
         Graphics2D graphics2D = (Graphics2D) graphics;
-        graphics2D.drawImage(background, 0, 0, this);
+        graphics2D.drawImage(background, 0, 0, getWidth(), getHeight(), this);
 
-        for (Movable movable : game.getMovables()) {
-            if (((Sprite) movable).isVisible()){
-                graphics2D.drawImage(((Sprite) movable).getImage(), ((Sprite) movable).getX(), ((Sprite) movable).getY(), ((Sprite) movable).getWidth(), ((Sprite) movable).getHeight(), this);
+        // Отрисовка всех движущихся объектов
+        for (Movable movable : new ArrayList<>(game.getMovables())) {
+            if (movable instanceof Sprite && ((Sprite) movable).isVisible()) {
+                Sprite sprite = (Sprite) movable;
+                graphics2D.drawImage(sprite.getImage(), sprite.getX(), sprite.getY(),
+                        sprite.getWidth(), sprite.getHeight(), this);
             }
         }
 
-        for (Obstacle obstacle : game.getObstacles()) {
+        // Отрисовка препятствий
+        for (Obstacle obstacle : new ArrayList<>(game.getObstacles())) {
             if (obstacle.isVisibility()) {
-                graphics2D.drawImage(obstacle.getImage(), obstacle.getX(), obstacle.getY(), this);
+                graphics2D.drawImage(obstacle.getImage(), obstacle.getX(), obstacle.getY(),
+                        obstacle.getWidth(), obstacle.getHeight(), this);
             }
         }
-        hud.update(game.getGameState(), game.getPlayer().getId());
+
+        // Обновление HUD для всех игроков
+        GameState gameState = game.getGameState();
+        hud.update(gameState, getPlayerIds());
+        System.out.println("Отрисован GameView, GameState: " + gameState);
+
+        // Отображение "Game Over", если игра завершена
         if (!game.isRunning()) {
             graphics2D.setColor(Color.WHITE);
             graphics2D.setFont(new Font("Arial", Font.BOLD, 50));
             graphics2D.drawString("Game Over", 600, 400);
         }
+    }
+
+    private String[] getPlayerIds() {
+        return game.getPlayers().stream()
+                .map(Player::getId)
+                .toArray(String[]::new);
     }
 }

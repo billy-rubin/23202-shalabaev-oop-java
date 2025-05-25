@@ -1,11 +1,12 @@
 package model;
 
 import model.entities.*;
-import controller.*;
+import controller.ControllerCommand;
 import model.entities.enemies.Drone;
 import model.entities.enemies.Enemy;
 import model.entities.missliles.Bomb;
 import model.entities.missliles.Missile;
+import model.entities.missliles.Bullet;
 import net.GameState;
 import net.HostListener;
 import net.PlayerHandler;
@@ -15,6 +16,7 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.UUID;
 
 public class Game implements HostListener {
     public static final int LEFT_BOUND = 310;
@@ -24,50 +26,56 @@ public class Game implements HostListener {
     private boolean godMode = false;
 
     private final ArrayList<Player> players = new ArrayList<>();
-    private Player player;
     private List<Obstacle> obstacles;
     private WaveGenerator waveGenerator;
     private CollisionDetector collisionDetector;
     private int kills;
     private boolean running;
-    private boolean moveDownSignal = false; // Сигнал для движения вниз
-    private Enemy leftMostEnemy;  // Самый левый враг
-    private Enemy rightMostEnemy; // Самый правый враг
+    private boolean moveDownSignal = false;
+    private Enemy leftMostEnemy;
+    private Enemy rightMostEnemy;
     private ScoreManager scoreManager;
     private List<Destructible> destructibles;
     private List<Movable> movables;
-    private List<Obstacle> boundaries; // Новый список для границ
 
     public Game() {
         obstacles = new ArrayList<>();
         destructibles = new ArrayList<>();
         movables = new ArrayList<>();
 
-        player = new Player(532, 650, "1",godMode);
-        movables.add(player);
-        players.add(player);
-        destructibles.add(player);
-        System.out.println(getHostLocalIP());
+        Player hostPlayer = new Player(530, BOTTOM_BOUND - 100, "host-" + UUID.randomUUID().toString(), godMode);
+        players.add(hostPlayer);
+        movables.add(hostPlayer);
+        destructibles.add(hostPlayer);
 
         scoreManager = new ScoreManager();
         for (int i = 0; i < 4; i++) {
             Obstacle obstacle = new Obstacle(LEFT_BOUND + i * 250, BOTTOM_BOUND - 4 * 70, 150, 70, new String[]{"/images/obstacle1.png"});
             obstacles.add(obstacle);
-            addDestructible(obstacle);
+            destructibles.add(obstacle);
         }
         waveGenerator = new WaveGenerator(this);
         collisionDetector = new CollisionDetector(this);
         kills = 0;
         running = true;
         updateExtremeEnemies();
+        System.out.println("Локальный IP хоста: " + getHostLocalIP());
     }
 
     public void update() {
-        if (!running)
+        if (!running) {
             return;
+        }
 
-        if (player.getActiveCommands().contains(ControllerCommand.SHOOT) && player.canShoot()) {
-            movables.add(player.shoot());
+        // Обработка выстрелов для всех игроков
+        for (Player player : new ArrayList<>(players)) {
+            if (player.isAlive() && player.getActiveCommands().contains(ControllerCommand.SHOOT) && player.canShoot()) {
+                Missile bullet = player.shoot();
+                movables.add(bullet);
+                if (bullet instanceof Destructible) {
+                    destructibles.add((Destructible) bullet);
+                }
+            }
         }
 
         waveGenerator.update();
@@ -75,9 +83,7 @@ public class Game implements HostListener {
             movable.update();
             if (movable instanceof Missile && !((Missile) movable).isAlive()) {
                 movables.remove(movable);
-                if (movable instanceof Bomb) {
-                    destructibles.remove(movable);
-                }
+                destructibles.remove(movable);
             }
         }
 
@@ -85,10 +91,7 @@ public class Game implements HostListener {
 
         if (moveDownSignal) {
             for (Movable enemy : movables) {
-                if (enemy instanceof Enemy) {
-                    if (enemy instanceof Drone) {
-                        continue;
-                    }
+                if (enemy instanceof Enemy && !(enemy instanceof Drone)) {
                     ((Enemy) enemy).moveDown();
                     ((Enemy) enemy).reverseDirection();
                 }
@@ -101,23 +104,22 @@ public class Game implements HostListener {
         for (Destructible destructible : new ArrayList<>(destructibles)) {
             if (destructible.isDestroyed()) {
                 if (destructible instanceof Player) {
-                    players.remove(destructible);
-                }
-                if (destructible instanceof Enemy) {
+                    ((Player) destructible).setVisibility(false); // Игрок становится невидимым
+                    movables.remove(destructible); // Убираем из активных движущихся объектов
+                } else if (destructible instanceof Enemy) {
                     kills++;
                     waveGenerator.decrementEnemyCount();
                     updateExtremeEnemies();
                     movables.remove(destructible);
-                }
-                if (destructible instanceof Obstacle){
+                } else if (destructible instanceof Obstacle) {
                     obstacles.remove(destructible);
                 }
                 destructibles.remove(destructible);
             }
         }
-        if (players.isEmpty()) {
-            running = false;
-        }
+
+        // Проверяем, все ли игроки мертвы
+        running = players.stream().anyMatch(player -> player.getHealth() > 0);
     }
 
     private void checkBoundary() {
@@ -131,10 +133,12 @@ public class Game implements HostListener {
     @Override
     public void addOnlinePlayer(PlayerHandler playerHandler) {
         String playerId = playerHandler.getPlayerId();
-        Player player = new Player(RIGHT_BOUND - LEFT_BOUND + players.size() * 70, BOTTOM_BOUND - 2 * 70, playerId, isGodMode());
-        playerHandler.setPlayer(player);
-        movables.add(player);
-        players.add(player);
+        Player newPlayer = new Player(LEFT_BOUND + players.size() * 100, BOTTOM_BOUND - 100, playerId, godMode);
+        playerHandler.setPlayer(newPlayer);
+        players.add(newPlayer);
+        movables.add(newPlayer);
+        destructibles.add(newPlayer); // Добавляем в destructibles для обработки урона
+        System.out.println("Добавлен новый игрок: " + playerId);
     }
 
     public GameState getGameState() {
@@ -146,60 +150,46 @@ public class Game implements HostListener {
         leftMostEnemy = null;
         rightMostEnemy = null;
         for (Movable enemy : movables) {
-            if (enemy instanceof Enemy) {
-                if (((Enemy) enemy).isAlive() && !(enemy instanceof Drone)) {
-                    if (leftMostEnemy == null || ((Enemy) enemy).getX() < leftMostEnemy.getX()) {
-                        leftMostEnemy = (Enemy) enemy;
-                    }
-                    if (rightMostEnemy == null || ((Enemy) enemy).getX() > rightMostEnemy.getX()) {
-                        rightMostEnemy = (Enemy) enemy;
-                    }
+            if (enemy instanceof Enemy && !(enemy instanceof Drone) && ((Enemy) enemy).isAlive()) {
+                if (leftMostEnemy == null || ((Enemy) enemy).getX() < leftMostEnemy.getX()) {
+                    leftMostEnemy = (Enemy) enemy;
+                }
+                if (rightMostEnemy == null || ((Enemy) enemy).getX() > rightMostEnemy.getX()) {
+                    rightMostEnemy = (Enemy) enemy;
                 }
             }
         }
-    }
-
-    public List<Obstacle> getBoundaries() {
-        return Collections.unmodifiableList(boundaries);
     }
 
     public ScoreManager getScoreManager() {
         return scoreManager;
     }
 
-    public Player getPlayer() {
-        return player;
+    public List<Player> getPlayers() {
+        return Collections.unmodifiableList(players);
     }
 
-    public boolean arePlayersDead() {
-        return players.isEmpty();
-    }
-
-    public void addPlayer(Player player) {
-        movables.add(player);
-        players.add(player);
+    public boolean areAllPlayersDead() {
+        return players.stream().noneMatch(player -> player.getHealth() > 0);
     }
 
     public int getKills() {
         return kills;
     }
 
-    public int getLives() {
-        return player.getHealth();
-    }
-
     public int getWaveNumber() {
         return waveGenerator.getCurrentWave();
     }
+
     public String getHostLocalIP() {
         try {
-            InetAddress localhost = InetAddress.getLocalHost();
-            return localhost.getHostAddress();
+            return InetAddress.getLocalHost().getHostAddress();
         } catch (UnknownHostException e) {
             System.err.println("Ошибка при получении IP: " + e.getMessage());
-            return "Неизвестный IP";
+            return "Unknown IP";
         }
     }
+
     public boolean isRunning() {
         return running;
     }
@@ -208,17 +198,15 @@ public class Game implements HostListener {
         return destructibles;
     }
 
-    public void addDestructible(Destructible destructible) {
-        destructibles.add(destructible);
-    }
-
     public List<Movable> getMovables() {
         return movables;
     }
 
     public void setGodMode(boolean godMode) {
         this.godMode = godMode;
-        player.setGodMode(godMode);
+        for (Player player : players) {
+            player.setGodMode(godMode);
+        }
     }
 
     public boolean isGodMode() {
@@ -229,7 +217,15 @@ public class Game implements HostListener {
         return obstacles;
     }
 
+    public void addObstacle(Obstacle obstacle){
+        obstacles.add(obstacle);
+    }
+
     public void addMovable(Movable movable) {
         movables.add(movable);
+    }
+
+    public void addDestructible(Destructible destructible) {
+        destructibles.add(destructible);
     }
 }

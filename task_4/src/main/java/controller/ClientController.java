@@ -5,6 +5,7 @@ import net.Client;
 import net.GameState;
 import net.PlayerInput;
 import view.ClientGameView;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.LinkedList;
@@ -21,11 +22,12 @@ public class ClientController implements KeyListener {
         this.client = client;
         this.playerId = playerId;
         this.clientGameView = clientGameView;
-        clientGameView.setPlayerId(playerId);
+        clientGameView.setLocalPlayerId(playerId); // Устанавливаем ID локального игрока
         clientGameView.addKeyListener(this);
         clientGameView.setFocusable(true);
         clientGameView.requestFocusInWindow();
         new Thread(this::networkLoop).start();
+        System.out.println("ClientController запущен для игрока: " + playerId);
     }
 
     private void networkLoop() {
@@ -33,6 +35,7 @@ public class ClientController implements KeyListener {
             try {
                 PlayerInput playerInput = new PlayerInput(playerId, new LinkedList<>(activeCommands));
                 client.sendPlayerData(playerInput);
+                System.out.println("Клиент отправил PlayerInput: " + playerInput);
                 GameState gameState = client.receiveSavedData();
                 SwingUtilities.invokeLater(() -> {
                     clientGameView.setGameState(gameState);
@@ -44,9 +47,11 @@ public class ClientController implements KeyListener {
                 });
                 Thread.sleep(20); // 50 Hz
             } catch (Exception e) {
+                System.err.println("Ошибка в networkLoop: " + e.getMessage());
+                e.printStackTrace();
                 running = false;
                 SwingUtilities.invokeLater(() ->
-                        JOptionPane.showMessageDialog(clientGameView, "Connection lost."));
+                        JOptionPane.showMessageDialog(clientGameView, "Connection lost: " + e.getMessage()));
                 break;
             }
         }
@@ -57,6 +62,7 @@ public class ClientController implements KeyListener {
         ControllerCommand cmd = getCommandFromKey(e.getKeyCode());
         if (cmd != null && !activeCommands.contains(cmd)) {
             activeCommands.add(cmd);
+            System.out.println("Команда добавлена: " + cmd + " для игрока " + playerId);
         }
     }
 
@@ -65,6 +71,7 @@ public class ClientController implements KeyListener {
         ControllerCommand cmd = getCommandFromKey(e.getKeyCode());
         if (cmd != null) {
             activeCommands.remove(cmd);
+            System.out.println("Команда удалена: " + cmd + " для игрока " + playerId);
         }
     }
 

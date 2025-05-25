@@ -19,8 +19,10 @@ public class GameServer {
         clientHandlers = new HashMap<>();
         try {
             serverSocket = new DatagramSocket(PORT);
+            System.out.println("Сервер запущен на порту " + PORT);
         } catch (IOException e) {
-            System.err.println("error " + e.getMessage());
+            System.err.println("Ошибка запуска сервера: " + e.getMessage());
+            e.printStackTrace();
         }
         new Thread(this::start).start();
     }
@@ -33,8 +35,10 @@ public class GameServer {
                 byte[] buffer = new byte[packetSize];
                 DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
                 serverSocket.receive(packet);
+                System.out.println("Получен пакет от " + packet.getAddress() + ":" + packet.getPort());
 
                 PlayerInput inputInfo = (PlayerInput) PlayerHandler.receiveGameState(packet.getData());
+                System.out.println("Десериализован PlayerInput: " + inputInfo);
 
                 String playerId = inputInfo.getId();
                 PlayerHandler playerHandler = clientHandlers.get(playerId);
@@ -42,18 +46,21 @@ public class GameServer {
                     playerHandler = new PlayerHandler(playerId);
                     hostListener.addOnlinePlayer(playerHandler);
                     clientHandlers.put(playerId, playerHandler);
-                    continue;
+                    System.out.println("Новый игрок подключён: " + playerId);
+                } else {
+                    playerHandler.setPlayerInputInfo(inputInfo);
+                    System.out.println("Обновлён PlayerInput для игрока: " + playerId);
                 }
-                playerHandler.setPlayerInputInfo(inputInfo);
 
-                if (serializedSavedGame == null) {
-                    continue;
+                if (serializedSavedGame != null) {
+                    byte[] response = serializedSavedGame;
+                    DatagramPacket responsePacket = new DatagramPacket(response, response.length, packet.getAddress(), packet.getPort());
+                    serverSocket.send(responsePacket);
+                    System.out.println("Отправлен GameState клиенту: " + playerId);
                 }
-                byte[] response = serializedSavedGame;
-                DatagramPacket responsePacket = new DatagramPacket(response, response.length, packet.getAddress(), packet.getPort());
-                serverSocket.send(responsePacket);
             } catch (IOException | ClassNotFoundException e) {
-                closeConnection();
+                System.err.println("Ошибка обработки пакета: " + e.getMessage());
+                e.printStackTrace();
             }
         }
     }
@@ -61,9 +68,10 @@ public class GameServer {
     public void sendUpdate(GameState gameState) {
         try {
             serializedSavedGame = PlayerHandler.sendGameState(gameState);
+            System.out.println("GameState сериализован для отправки");
         } catch (IOException e) {
-            System.err.println("Ошибка сериализации: " + e.getClass().getName() + " - " + e.getMessage());
-            e.printStackTrace(); // Выводим полный stack trace для диагностики
+            System.err.println("Ошибка сериализации GameState: " + e.getMessage());
+            e.printStackTrace();
             serializedSavedGame = null;
         }
     }
@@ -75,5 +83,6 @@ public class GameServer {
     public void closeConnection() {
         setRunning(false);
         serverSocket.close();
+        System.out.println("Сервер остановлен");
     }
 }

@@ -39,7 +39,7 @@ public class MainController {
     }
     public void startHost() {
         gameServer = new GameServer(game);
-        game = new Game();
+        //game = new Game();
         GameView gameView = new GameView(game);
         frame.setContentPane(gameView);
         frame.pack();
