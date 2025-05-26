@@ -1,0 +1,25 @@
+bomba: 600
+timur: 4300
+  newbie: 2600
+roma: 2700
+bobik: 6100
+a: 2500
+ koloip: 5600
+pot: 5600
+timur: 2500
+a: 6900
+THE STRONGEST: 19300
+bot1: 18800
+billy: 4400
+newbie2: 3800
+marik: 5500
+ prik: 8800
+I9H: 4600
+try 1: 3200
+romchik: 7700
+billy: 0
+ -2: 3500
+god1: 8500
+d: 0
+da: 4800
+botik: 9900
