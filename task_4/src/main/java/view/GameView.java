@@ -48,7 +48,7 @@ public class GameView extends JPanel {
         }
         GameState gameState = game.getGameState();
         hud.update(gameState, getPlayerIds());
-        System.out.println("Отрисован GameView, GameState: " + gameState);
+        //System.out.println("Отрисован GameView, GameState: " + gameState);
 
         if (!game.isRunning()) {
             graphics2D.setColor(Color.WHITE);

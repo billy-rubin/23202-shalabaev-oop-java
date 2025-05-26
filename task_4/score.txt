@@ -22,3 +22,4 @@ billy: 0
 god1: 8500
 d: 0
 da: 4800
+botik: 9900

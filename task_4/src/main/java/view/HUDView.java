@@ -57,7 +57,7 @@ public class HUDView extends JPanel {
         }
 
         livesLabel.setText(livesText.toString());
-        System.out.println("HUD обновлён: " + livesText + ", Players: " + Arrays.toString(playerIds));
+        //System.out.println("HUD обновлён: " + livesText + ", Players: " + Arrays.toString(playerIds));
         repaint();
     }
 }

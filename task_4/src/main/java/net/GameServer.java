@@ -3,6 +3,7 @@ package net;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class GameServer {
@@ -50,11 +51,16 @@ public class GameServer {
                     System.out.println("Обновлён PlayerInput для игрока: " + playerId);
                 }
 
-                if (serializedSavedGame != null) {
-                    byte[] response = serializedSavedGame;
-                    DatagramPacket responsePacket = new DatagramPacket(response, response.length, packet.getAddress(), packet.getPort());
+                if (serializedSavedGame != null && serializedSavedGame.length > 0) {
+                    DatagramPacket responsePacket = new DatagramPacket(serializedSavedGame, serializedSavedGame.length, packet.getAddress(), packet.getPort());
                     serverSocket.send(responsePacket);
                     System.out.println("Отправлен GameState клиенту: " + playerId);
+                } else {
+                    GameState emptyState = new GameState(new ArrayList<>(), new ArrayList<>(), new ArrayList<>(), true, 0, 0, 0);
+                    byte[] emptyData = PlayerHandler.sendGameState(emptyState);
+                    DatagramPacket emptyPacket = new DatagramPacket(emptyData, emptyData.length, packet.getAddress(), packet.getPort());
+                    serverSocket.send(emptyPacket);
+                    System.out.println("Отправлен пустой GameState клиенту: " + playerId);
                 }
             } catch (IOException | ClassNotFoundException e) {
                 System.err.println("Ошибка обработки пакета: " + e.getMessage());
@@ -66,7 +72,7 @@ public class GameServer {
     public void sendUpdate(GameState gameState) {
         try {
             serializedSavedGame = PlayerHandler.sendGameState(gameState);
-            System.out.println("GameState сериализован для отправки");
+            System.out.println("GameState сериализован для отправки, размер: " + serializedSavedGame.length + " байт");
         } catch (IOException e) {
             System.err.println("Ошибка сериализации GameState: " + e.getMessage());
             e.printStackTrace();

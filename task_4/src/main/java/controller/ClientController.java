@@ -37,17 +37,21 @@ public class ClientController implements KeyListener {
                 client.sendPlayerData(playerInput);
                 System.out.println("Клиент отправил PlayerInput: " + playerInput);
                 GameState gameState = client.receiveSavedData();
-                SwingUtilities.invokeLater(() -> {
-                    clientGameView.setGameState(gameState);
-                    clientGameView.repaint();
-                    if (!gameState.isRunning()) {
-                        running = false;
-                        JOptionPane.showMessageDialog(clientGameView, "Game Over");
-                    }
-                });
+                if (gameState != null) {
+                    SwingUtilities.invokeLater(() -> {
+                        clientGameView.setGameState(gameState);
+                        clientGameView.repaint();
+                        if (!gameState.isRunning()) {
+                            running = false;
+                            JOptionPane.showMessageDialog(clientGameView, "Game Over");
+                        }
+                    });
+                } else {
+                    System.out.println("Пропущен GameState, продолжаем цикл");
+                }
                 Thread.sleep(20); // 50 Hz
             } catch (Exception e) {
-                System.err.println("Ошибка в networkLoop: " + e.getMessage());
+                System.err.println("Критическая ошибка в networkLoop: " + e.getMessage());
                 e.printStackTrace();
                 running = false;
                 SwingUtilities.invokeLater(() ->
